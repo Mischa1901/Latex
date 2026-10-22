@@ -1,0 +1,326 @@
+%Dokumentenklasse
+\documentclass[
+	a4paper,										%Format
+	12pt,											%Schriftgröße
+	twoside,										%Zweiseitig
+	headsepline,								%horizontale Linie oben
+	footsepline,									%horizontale Linie unten
+	captions=tableheading,					%Überschrift über Tabelle (nicht unter)
+]{scrartcl}
+\brokenpenalty=1000000
+%Pakete einbinden
+\usepackage{floatrow}
+\floatsetup[table]{style=plaintop}
+\floatsetup[longtable]{LTcapwidth=table}
+\usepackage{overcite}
+\usepackage{siunitx}
+\usepackage[ngerman]{babel} 			%Neue deutsche Rechtschreibung
+\usepackage{grffile}
+\usepackage{graphicx} 					%Bilder einbinden
+\usepackage{xcolor}						%Farben für Schrift und Plots
+\usepackage{pgfplots}					%Plots und Tabellen aus Datensätzen.
+\usepackage{amsmath}						%Mathe
+\usepackage{amssymb}					%Mathesymbole
+\usepackage{longtable}					%Seitenübergreifende Tabellen zulassen
+\usepackage{tabularx}
+\usepackage{geometry}					%Seitenränder
+\usepackage{ae}								%skalierbare Schriften (im PDF-File)
+\usepackage[activate]{pdfcprot}		%optischer Randausgleich
+\usepackage{setspace}					%Zeilenabstand: \onehalfspacing
+\usepackage[utf8]{inputenc}				%Zeichenkodierung für Umlaute
+\usepackage{scrlayer-scrpage}
+\usepackage{mhchem}						%Chemische Formeln (mit \ce )
+\usepackage{chemfig}
+\usepackage{caption}										%Überschriften formatieren
+\captionsetup{labelfont={bf,it},tablename=Tab.,figurename=Abb.}				%Überschriften formatieren
+\captionsetup[table]{singlelinecheck=false,justification=raggedright}
+\captionsetup[figure]{justification=raggedright}				
+
+%Abbildungs und Tabellennummerierung anpassen
+\renewcommand*\figureformat {\figurename~\arabic{section}.\arabic{subsection}.\thefigure.}	%Punkt nach Abb. #
+\renewcommand*\tableformat {\tablename~\arabic{section}.\arabic{subsection}.\thetable:}		%Doppelpunkt nach Tab. #
+\renewcommand*\captionformat {~}								%Nur Abstand, kein Zeichen nach Tab. #: bzw Abb. #. 
+
+%Literatur als Subsubsection definieren und von Literaturverzeichnis in Literatur umbenennen
+\makeatletter
+\renewcommand*\bib@heading{\section{\bibname}			
+\@mkboth{\sectionmarkformat \bibname}{\sectionmarkformat \bibname}}
+\makeatother
+\addto\captionsngerman{\renewcommand*\bibname{Literatur}} 
+
+
+\usepackage{prettyref}						%Nummerierung der Tabellen und Abbildungen im Text an Tab. x.x.# anpassen
+%%% Für Abbildungen %%%
+\newrefformat{fig}{Abb.~\arabic{section}.\arabic{subsection}.\ref{#1}.}
+%%% Für Tabellen %%%
+\newrefformat{tab}{Tab.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+
+
+%Links im Dokument:
+\usepackage[									%als letztes Paktet einbinden!
+	linkcolor=black,							%Farbe der Links
+	citecolor=black,							%Farbe der Link-Ziele
+	urlcolor=black,								%Farbe von URLs
+	colorlinks=true,							%Links nicht als Kasten, sondern direkt als Text anzeigen
+]{hyperref}										%Links im PDF-File, unterstützung von URLs mit /url{}
+\renewcommand\citeform[1]{[#1]}
+%Dokumentformatierungen
+\usepackage{titlesec}
+
+\titleformat{\section}
+	{\normalfont\Large\bfseries}{\arabic{section}.}{1.5em}{}
+\titleformat{\subsection}
+	{\normalfont\Large\bfseries}{\arabic{section}.\arabic{subsection}.}{1.0em}{}
+\titleformat{\subsubsection}
+	{\normalfont\Large\bfseries}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}{0.75em}{}
+
+\setkomafont{sectioning}{\bfseries} 	%Serifenschrift in Überschriften
+\setkomafont{subsubsection}{\large}
+\pagenumbering{arabic}					%arabische Seitenzahlen
+\geometry{left=3cm, right=2cm, top=2.5cm, bottom=2cm} 	%Seitenränder
+\parindent 0pt 									%Absätze einrücken um 0Pt
+\parskip 10pt									%Abstand nach Absatz
+\onehalfspacing								%Zeilenabstand
+\pagestyle{scrheadings}					%Kopf- und Fussleistenformatierung
+\headsep0.4cm								%Abstand Kopfleiste-Text
+\footskip0.8cm									%Abstand Fussleiste-Text
+\urlstyle{same}								%URLs normal formatieren, nicht als Typewriter
+\raggedbottom
+
+%Tabellenkram
+
+
+%Befehle definieren
+
+%%%%% create chemequation environment
+
+\newcounter{chemequation}
+\renewcommand*\thechemequation{(\Roman{chemequation})}
+\newenvironment{chemequation}{%
+	\stepcounter{chemequation}%
+	\begin{equation}}%
+{\tag*{\thechemequation}%
+	\end{equation}}
+
+%%%%% create chemtag to iterate and ref chemequations in an align environment
+
+\newcommand*\chemtag{%
+	\stepcounter{chemequation}%
+	\tag*{\thechemequation}}
+	
+	\counterwithin*{equation}{section}
+\counterwithin*{chemequation}{section}
+\counterwithin*{table}{subsection}
+\counterwithin*{figure}{subsection}
+
+%%%%% to create a chemicalequation float
+
+\usepackage{float}
+\newfloat{chemicalequation}{htbp}{cex}%[chapter]
+\floatname{chemicalequation}{}
+
+\newcommand{\zitat}[1]{\textsuperscript{[\cite{#1}]}}
+
+\newcommand{\bild}[4]{					%Bilder mit Beschriftung einfügen
+	\begin{figure}[#4]						%#4: Platzierung (htbp)
+		\centering								%Bilder mittig einfügen
+		\captionbox								%Beschriftungsumgebung
+			{#2\label{fig: #1}}				%#2: Beschriftung
+			{\includegraphics[#3]{#1}}	%#1: Dateiname, #3: Bildeigenschaften
+	\end{figure}}
+
+\newcommand{\formel}[2]{				%Formel einfügen und Referenz erzeugen
+	\begin{equation}
+		\label{eq: #1}							%#1: Formelname
+		#2											%Formelinhalt
+	\end{equation}}
+
+\newcommand{\cformel}[2]{				%Chemische Formel einfügen und Referenz erzeugen
+	\begin{chemequation}
+		\label{ceq: #1}					%#1: Formelname (optional)
+		\ce{#2}							%#2: Formelinhalt
+	\end{chemequation}\\}
+
+\newcommand{\ox}[2]{
+	\overset{\text{#2}}{\ce{#1}}}
+	
+\newcommand{\tabelle}[6]{				%Tabelle mit Beschriftung einfügen
+\begin{table}[#3]							%#3: Platzierung (htbp)
+\centering										%Tabelle mittig einfügen
+\captionbox										%Beschriftungsumgebung
+{#2												%#2: Tabellenbeschriftung
+\label{tab: #1}}								%#1: Tabellenname
+{\begin{tabular}{#4}						%#4: Anzahl und Ausrichtung Spalten (l c p{xcm} r)     Bei p-Spalten wird Text atomatisch umgebrochen
+\hline 											%horizontale Linie
+#5													%#5: Obere Zeile
+\hline
+#6													%#6: Datenzeilen
+\hline 
+\end{tabular}}
+\end{table}}
+
+\newcommand{\langetabelle}[6]{  %Seitenübergreifende Tabelle, Kopfzeile wird 
+	\begin{centering}           %auf jeder neuen Seite ebenfalls angezeigt
+		{\begin{longtable}[#3]{#4}
+				\caption{#2\label{tab: #1}}\\				
+				\hline
+				#5
+				\hline
+				\endfirsthead
+				\hline
+				#5
+				\hline
+				\endhead
+				#6												
+				\hline 
+		\end{longtable}}
+\end{centering}}
+
+%Plots erstellen&&&&&&&&
+
+%#1: Referenz
+%#2: Name
+%#3: x label
+%#4: y label
+%#5: x-werte,y-werte (Spaltenweise)
+%#6: Quelle (.txt Datei)
+%#7: "Nummerierung" (manuell) <.<
+
+\newcommand{\plot}[6]{
+	\begin{figure}[H]	
+		\centering
+		\begin{tikzpicture}
+	
+		\begin{axis}[
+		title style={at={(0.5,0)},
+		anchor=north,
+		yshift=-40},
+		xlabel={#3},
+		ylabel={#4},
+		legend pos=south east,
+		legend entries={},
+		]
+		\addplot[color=black,mark=*,only marks] table [#5] {#6};
+		\label{plot: plot1}
+		\end{axis}
+		\end{tikzpicture}
+		\caption{#2}
+		\label{fig: #1}
+	\end{figure}
+}
+
+\newcommand{\Rn}[1]{\romannumeral#1\relax}                   %\Rn{1} = i
+\newcommand{\RN}[1]{\uppercase\expandafter{\romannumeral#1}} %\RN{1} = I
+
+%Dokument:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\thispagestyle{empty}
+	
+%Titelseite
+\begin{titlepage}
+	\begin{center}
+		\hrule													%waagerechte Linie		\vspace*{5cm}		\Huge {\bf {Titel}}\\							%Titel		\vspace*{0.5cm}		\large {\bf {Untertitel}}\\						%Untertitel
+		\vspace*{\fill}
+		\Huge {\textbf {Rasterelektronenmikroskopie und EDX-Elementanalyse}}\\
+		\vspace*{1cm}
+		\normalsize {\textbf {Praktikum Nanostrukturphysik}}\\
+		\vspace*{1cm}
+		\large {\textbf{Victor Kemme, Kilian Krötzsch}}\\
+		\normalsize{Gruppe 9}								%Gruppe
+		\vfill
+	\end{center}
+	\begin{tabbing}
+		\hspace{3cm}\=\kill
+		Assistenten: \> Sarah Scheitz, Dr. Robert Frömter \\						%Assistent
+		Version: \> 1\\										%Version
+		Datum: \> \today \\								%Datum
+	\end{tabbing}
+	\hrule														%Waagerechte Linie
+\end{titlepage}
+\setcounter{section}{0}								%Versuchstag #.x.x
+\setcounter{subsection}{0}							%Versuchsnummer x.#.x
+\normalsize
+\setcounter{page}{1}
+
+\section{Einleitung und Aufgabenstellung}
+
+\section{Theoretischer Hintergrund}
+
+\section{Experimenteller Teil}
+
+\section{Ergebnisse und Diskussion}
+
+\section{Zusammenfassung}
+
+\section{Sicherheit und Entsorgung}
+
+\begin{thebibliography}{}
+	\bibitem{MC}
+	PD Dr. Ulrich Handge; Prof. Dr. Gerrit Albert Luinstra; Dr. Axel Thomas Neffe und Dr. Werner Pauer im \textit{Skript zur Vorlesung 2 im Modul makromolekulare Chemie}, Universität Hamburg, \textbf{2019}
+	\bibitem{Praktikumsskript S.34}
+	H.Heller im \textit{Praktikumsskript zum Praktikum „Grundlagenpraktikum der Chemie für
+	Studierende der Nanowissenschaften“}, Universität Hamburg, Hamburg, \textbf{2019}, S. 34.
+	\bibitem{xxx}
+	H.Heller im \textit{Seminarfoliensatz 5 zum Praktikum „Grundlagenpraktikum der Chemie für
+	Studierende der Nanowissenschaften“}, Universität Hamburg, Hamburg, \textbf{2019}, S. 8ff.
+	
+\end{thebibliography}
+
+\formel{mom}{g^{(1)}(\tau) = \sqrt{g^{(2)}(\tau) - 1}}
+\formel{}{\ln(g^{(1)}) = -\Gamma \tau = -q^2 D_0 \tau}
+\formel{}{R_H = \frac{-k T 8 \pi n^2 \sin^2({\frac{\theta}{2}})}{3 \eta m \lambda^2}}
+\formel{}{D_0 = \frac{- m \ \lambda^2}{16 \ \pi^2 \ n^2 \ \sin^2(\frac{\theta}{2})}}
+
+aus \ref{eq: mom} folgt
+aus \prettyref{eq: mom} folgt
+
+\formel{}{\phi = k(b-a) = \vec{r} \cdot \vec{k}_S - \vec{r} \cdot \vec{k}_0}
+\formel{}{|\vec{k}_0| = |\vec{k}_S| = k = \frac{2\pi}{\lambda}}
+\formel{}{|\vec{q}| = q = \frac{4\pi}{\lambda}\sin{\frac{\theta}{2}},  \ \text{mit} \ \lambda = \frac{\lambda_0}{n}}
+
+
+\formel{}{g^{(2)}(\tau) \lim \limits_{\text{T} \to \infty} \frac{1}{\text{T}} \int_{0}^{\text{T}} I(t) \cdot I(t+\tau) dt = \langle I(t) \cdot I(t+\tau) \rangle}
+\formel{}{\lim \limits_{\tau \to 0} \langle I(t) \cdot I(t+\tau) \rangle = \langle I^2(t) \rangle}
+\formel{}{\lim \limits_{\tau \to \infty} \langle I(t) \cdot I(t+\tau) \rangle = \langle I(t) \rangle^2}
+
+\formel{}{v_m = \sqrt{\frac{2 \cdot k \cdot T}{m}}}
+
+\formel{}{I(t) = \vec{E}(t) V^2}
+\formel{}{g^{(1)}(\tau) = \langle E_S(t) \cdot E_S(t+ \tau) \rangle}
+\formel{}{g^{(2)}(\tau) = 1 + \bigg(g^{(1)}(\tau) \bigg)^2}
+\formel{}{g_n^{(1)}(\tau) = \frac{ \langle E_S(t) \cdot E_S(t+ \tau) \rangle}{\langle E_S(t) \cdot E_S(t) \rangle} = \frac{ \langle E_S(t) \cdot E_S(t+ \tau) \rangle}{\langle I(t) \rangle} }
+\formel{}{g_n^{(1)}(\tau) = e^{-\Gamma \tau} = e^{-q^2D_0 \tau}}
+\formel{}{D_0= \frac{kT}{6 \pi \eta R_H}}
+\formel{}{D = \frac{kT}{f}}
+\formel{}{f = 6 \pi \eta R_H}
+
+\formel{}{g^{(1)}(\tau) = \int_{0}^{\infty} G(\Gamma) \cdot e^{-\Gamma \tau} d\Gamma , \ \text{mit} \int_{0}^{\infty} G(\Gamma) d\Gamma = 1}
+\formel{}{\ln{\bigg(g^{(1)}(\tau)\bigg)} = \sum_{n = 1}^{\infty} \Gamma_n \frac{(-\tau)^n}{n!} = -\Gamma_1 \tau + \frac{\Gamma_2 \tau^2}{2} \pm \mathcal{O}(\tau^n)}
+\formel{}{\Gamma_n = \frac{\partial^n \ln{\big(g^{(1)}(\tau)\big)}}{\partial (-\tau)^n} \Bigg|_{\tau = 0}}
+\formel{}{\sigma^2 = \frac{\langle (\Gamma - \langle \Gamma \rangle )^2 \rangle}{\langle \Gamma \rangle}}
+
+\end{document}
+
+
+% <- Für Kommentare oder Code der gerade nicht gebraucht wird, wird beim kompilieren nicht beachtet
+%Um Bilder einzufügen: \bild{'Dateiname' (Datei muss im gleichem Ordner mit der TeX Datei liegen)}{'Bildunterschrift'}{width= ...cm (Größe des Bildes)}{H (Ort des Bildes, H=Hier)}
+
+%Für Summenformeln im Text: \ce{z.B.: H2SO4 (Zahlen werden automtisch tief gestellt)}
+
+% Um Formeln im Text zu referieren: \prettyref{fig (für Bilder und Graphen)/ eq (für mathematische Formeln)/ ceq (für chemische Formeln): 'Referenz'}
+
+%Für chemische Formeln: \cformel['Referenz']{2\ox{Fe}{+\RN{3}}Cl3 + \ox{Fe}{+\RN{2}}Cl2 + 8NH4+ + 8 OH- \ce{<=>[{N2H4}]} \ox{Fe}{+\RN{2}}O\cdot \ox{Fe}{+\RN{3}}2O3 \ce{v} + 4 H2O + 8NH4+ + 4 Cl-}
+
+%Für mathematische Formeln: \formel{'Referenz'}{2\cdot d\cdot \ce{sin}(\theta)= n \lambda}
+
+%Tabellen: Online Converter um Exel Tabellen in LaTeX Format zu bringen: https://www.tablesgenerator.com
+%\tabelle{'Referenz'}{'Tabellenüberschrift'}{H}{'Breite der Spalte bzw. Textausrichtung' (Spaltenbreite passt sich Textlänge an: l=links, r=rechts, c=zentriert. Spaltenbreite fest und Blocksatz: p{...cm}), Jede Spalte muss einzeln definiert werden, z.B l l l = 3 Spalten}{'Spaltenüberschrift' muss der Anzahl an Spalten entsprechen. Spaltenüberschriften müssen durch ein & getrennt werden. Außerdem wichtig am Ende: \\}{'Tabelleneinträge', müssen ebenfalls durch ein & getrennt werden und am Ende der Zeile ein \\ haben
+%	- & - & - & \\
+%	- & - & - & \\}
+%Beispiel für eine Tabelle (zum Ausführen '%' entfernen):
+%\tabelle{Auflösungsvermögen}{Experimentell ermitteltes und theoretisches Auflösungsvermögen für Objektiv 20X und 63X bei schräger und gerader Beleuchtung.}{H}{l l p{2cm} p{3cm}  p{3cm}}{Objektiv&Beleuchtung& Spalt mit einem Peak&experimentelles Auflösungsvermögen~/~nm&theoretisches Auflösungsvermögen~/~nm\\}
+%	{20X&gerade&16&>750&1125\\
+%	20X&schräg&9&690&563\\
+%	63X&gerade&11&>750&600\\
+%	63X&schräg&7&584&300\\}
+

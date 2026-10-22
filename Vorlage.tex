@@ -1,0 +1,618 @@
+%Dokumentenklasse
+\documentclass[
+	a4paper,										%Format
+	12pt,											%Schriftgröße
+	twoside,										%Zweiseitig
+	headsepline,								%horizontale Linie oben
+	footsepline,									%horizontale Linie unten
+	captions=tableheading,					%Überschrift über Tabelle (nicht unter)
+]{scrartcl}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\thesection.\arabic{subsection}.\arabic{subsubsection}. \hspace{2pt}}
+\renewcommand{\theparagraph}{\thesection.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.}
+
+%Pakete:
+\usepackage[exponent-product = \cdot, output-decimal-marker = {,}]{siunitx}
+\usepackage{textalpha}
+\usepackage{floatrow}
+\floatsetup[table]{style=plaintop}
+\floatsetup[longtable]{LTcapwidth=table}
+%\usepackage{overcite}
+\usepackage{siunitx}
+\usepackage[ngerman]{babel} 			%Neue deutsche Rechtschreibung
+\usepackage{grffile}
+\usepackage{graphicx} 					%Bilder einbinden
+\usepackage{xcolor}						%Farben für Schrift und Plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}					%Plots und Tabellen aus Datensätzen.
+\usepackage{amsmath}						%Mathe
+\usepackage{amssymb}					%Mathesymbole
+\usepackage{longtable}					%Seitenübergreifende Tabellen zulassen
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{geometry}					%Seitenränder
+\usepackage{ae}								%skalierbare Schriften (im PDF-File)
+\usepackage[activate]{microtype}		%optischer Randausgleich
+\usepackage{setspace}					%Zeilenabstand: \onehalfspacing
+\usepackage[utf8]{inputenc}				%Zeichenkodierung für Umlaute
+\usepackage{scrlayer-scrpage}					%für Dokumentformatierung mit Pagestyle
+\usepackage[version=4]{mhchem}						%Chemische Formeln (mit \ce )
+\usepackage{chemfig}
+\usepackage{siunitx}
+\usepackage{caption}										%Überschriften formatieren
+\captionsetup{labelfont={bf,it},tablename=Tab.,figurename=Abb.}				%Überschriften formatieren
+\captionsetup[table]{singlelinecheck=false,justification=raggedright}
+\captionsetup[figure]{justification=raggedright}				
+
+%Abbildungs und Tabellennummerierung anpassen
+\renewcommand*\figureformat {\figurename~\arabic{section}.\arabic{subsection}.\thefigure.}	%Punkt nach Abb. #
+\renewcommand*\tableformat {\tablename~\arabic{section}.\arabic{subsection}.\thetable:}		%Doppelpunkt nach Tab. #
+\renewcommand*\captionformat {~}								%Nur Abstand, kein Zeichen nach Tab. #: bzw Abb. #. 
+
+%Literatur als Subsubsection definieren und von Literaturverzeichnis in Literatur umbenennen
+\makeatletter
+\renewcommand*\bib@heading{\subsubsection{\bibname}			
+\@mkboth{\subsubsectionmarkformat \bibname}{\subsubsectionmarkformat \bibname}}
+\makeatother
+\addto\captionsngerman{\renewcommand*\bibname{Literatur}} 
+
+\usepackage{prettyref}						%Nummerierung der Tabellen und Abbildungen im Text an Tab. x.x.# anpassen
+%%% Für Abbildungen %%%
+\newrefformat{fig}{Abb.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+%%% Für Tabellen %%%
+\newrefformat{tab}{Tab.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+
+%Links im Dokument:
+\usepackage[									%als letztes Paktet einbinden!
+	linkcolor=black,							%Farbe der Links
+	citecolor=black,							%Farbe der Link-Ziele
+	urlcolor=black,								%Farbe von URLs
+	colorlinks=true,							%Links nicht als Kasten, sondern direkt als Text anzeigen
+]{hyperref}										%Links im PDF-File, unterstützung von URLs mit /url{}
+
+%Dokumentformatierungen
+\setkomafont{sectioning}{\bfseries} 	%Serifenschrift in Überschriften
+\setkomafont{subsection}{\LARGE}
+\setkomafont{subsubsection}{\large}
+\pagenumbering{arabic}					%arabische Seitenzahlen
+\geometry{left=3cm, right=2cm, top=2.5cm, bottom=2cm} 	%Seitenränder
+\parindent0pt 									%Absätze einrücken um 0Pt
+\parskip 10pt									%Abstand nach Absatz
+\onehalfspacing								%Zeilenabstand
+\pagestyle{scrheadings}					%Kopf- und Fussleistenformatierung
+\headsep0.4cm								%Abstand Kopfleiste-Text
+\footskip0.8cm									%Abstand Fussleiste-Text
+\urlstyle{same}								%URLs normal formatieren, nicht als Typewriter
+
+%Befehle definieren
+
+%%%%% create chemequation environment
+
+\newcounter{chemequation}
+\renewcommand*\thechemequation{(\Roman{chemequation})}
+\newenvironment{chemequation}{%
+	\stepcounter{chemequation}%
+	\begin{equation}}%
+{\tag*{\thechemequation}%
+	\end{equation}}
+
+%%%%% create chemtag to iterate and ref chemequations in an align environment
+
+\newcommand*\chemtag{%
+	\stepcounter{chemequation}%
+	\tag*{\thechemequation}}
+
+%%%%% to create a chemicalequation float
+
+\usepackage{float}
+\newfloat{chemicalequation}{htbp}{cex}%[chapter]
+\floatname{chemicalequation}{}
+
+\newcommand{\zitat}[1]{\textsuperscript{\cite{#1}}}
+
+\newcommand{\bild}[4]{					%Bilder mit Beschriftung einfügen
+	\begin{figure}[#4]						%#4: Platzierung (htbp)
+		\centering								%Bilder mittig einfügen
+		\captionbox								%Beschriftungsumgebung
+			{#2\label{fig: #1}}				%#2: Beschriftung
+			{\includegraphics[#3]{#1}}	%#1: Dateiname, #3: Bildeigenschaften
+	\end{figure}} 
+
+\newcommand{\formel}[2]{				%Formel einfügen und Referenz erzeugen
+	\begin{equation}
+		\label{eq: #1}							%#1: Formelname
+		#2											%Formelinhalt
+	\end{equation}}
+
+\newcommand{\cformel}[2][]{				%Chemische Formel einügen und Referenz erzeugen
+	\begin{chemequation}
+		\label{ceq: #1}					%#1: Formelname (optional)
+		\ce{#2}							%#2: Formelinhalt
+	\end{chemequation}\\}
+
+\newcommand{\ox}[2]{
+	\overset{\text{#2}}{\ce{#1}}}
+	
+\newcommand{\tabelle}[6]{				%Tabelle mit Beschriftung einfügen
+\begin{table}[#3]							%#3: Platzierung (htbp)
+\centering										%Tabelle mittig einfügen
+\captionbox										%Beschriftungsumgebung
+{#2												%#2: Tabellenbeschriftung
+\label{tab: #1}}								%#1: Tabellenname
+{\begin{tabular}{#4}						%#4: Anzahl und Ausrichtung Spalten (l c r)
+\hline 											%horizontale Linie
+#5													%#5: Obere Zeile
+\hline
+#6													%#6: Datenzeilen
+\hline 
+\end{tabular}}
+\end{table}}
+
+\usepackage{array,ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}} %Verhindert ungewollte Lücken in Tabellen
+
+\newcommand{\langetabelle}[6]{  %Seitenübergreifende Tabelle, Kopfzeile wird 
+	\begin{centering}           %auf jeder neuen Seite ebenfalls angezeigt
+		{\begin{longtable}[#3]{#4}
+				\caption{#2\label{tab: #1}}\\				
+				\hline
+				#5
+				\hline
+				\endfirsthead
+                \caption{#2\label{tab: #1}}\\
+				\hline
+				#5
+				\hline
+				\endhead
+				#6												
+				\hline 
+		\end{longtable}}
+\end{centering}}
+
+%Plots erstellen&&&&&&&&
+
+%#1: Referenz
+%#2: Name
+%#3: x label
+%#4: y label
+%#5: x-werte,y-werte (Spaltenweise)
+%#6: Quelle (.txt Datei)
+%#7: "Nummerierung" (manuell) <.<
+
+\newcommand{\plot}[6]{
+	\begin{figure}[H]	
+		\centering
+		\begin{tikzpicture}
+	
+		\begin{axis}[
+		title style={at={(0.5,0)},
+		anchor=north,
+		yshift=-40},
+		xlabel={#3},
+		ylabel={#4},
+		legend pos=south east,
+		legend entries={},
+		]
+		\addplot[color=black,mark=*,only marks] table [#5] {#6};
+		\label{plot: plot1}
+		\end{axis}
+		\end{tikzpicture}
+		\caption{#2}
+		\label{fig: #1}
+	\end{figure}
+}
+
+\newcommand{\molL}[1]{\ensuremath{\mathrm{\SI{#1}{\frac{mol}{L}}}}} % \molL{1} => \SI{1}{\frac{mol}{L}}
+\newcommand{\mL}[1]{\ensuremath{\mathrm{\SI{#1}{mL}}}} % \mL{1} => \SI{1}{mL}
+
+\newcommand{\Rn}[1]{\romannumeral#1\relax}                   %\Rn{1} = i
+\newcommand{\RN}[1]{\uppercase\expandafter{\romannumeral#1}} %\RN{1} = I
+
+%Dokument:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%Titelseite
+	\begin{titlepage}
+		\begin{center}
+			\hrule													%waagerechte Linie
+			\vspace*{5cm}
+			\Huge {\textbf {Versuchsreihe 3}}\\						%Titel Versuchsreihe
+			\vspace*{0.5cm}
+			%		\large {\bf {Untertitel}}\\						%Untertitel
+			\vspace*{1cm}
+			\normalsize
+			Protokoll	\\									
+			Praktikum für Nanowissenschaftler:innen\\
+			im Studiengang Nanowissenschaften\\
+			\vspace*{0.5cm}
+			\Large {\textbf{Michael Quint}}		\\						%Name
+			\vspace*{0.5cm}
+					\normalsize{Platz 9a}								%Platznummer
+			\vfill
+		\end{center}
+		\begin{tabbing}
+			\hspace{3cm}\=\kill
+			Assistent: \> Dr. Hauke Heller \\						% Name Assistent
+			Version: \> 1 \\									%Version
+			Datum: \> 25.10.2026 \\								%Datum
+		\end{tabbing}
+		\hrule														%Waagerechte Linie
+\end{titlepage}
+
+\setcounter{page}{1}
+\setcounter{section}{3}								%Versuchstag #.x.x bzw Versuchsreihe
+\setcounter{subsection}{0}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Verschieben eines heterogenen Gleichgewichts}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+\subsubsection{Theoretischer Hintergrund}
+
+\subsubsection{Experimenteller Teil}
+
+\subsubsection{Ergebnisse und Diskussion}
+
+\subsubsection{Zusammenfassung}
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt. Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.\zitat{entsorgung1}
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ \ce{KClO4} & - & - & - & - \\}
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] 
+    \item[(2)] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{entsorgung1} %Diese Quelle muss Jahrspezifisch angepasst werden
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.16}, 
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2021}, 
+			S.			{106-107}.
+			
+\end{thebibliography}
+
+\newpage
+
+\setcounter{subsection}{1}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Fällung und Komplexierung von Silberionen}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+\subsubsection{Theoretischer Hintergrund}
+
+\subsubsection{Experimenteller Teil}
+
+\subsubsection{Ergebnisse und Diskussion}
+
+\subsubsection{Zusammenfassung}
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt. Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.\zitat{entsorgung1}
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ - & - & - & - & - \\}
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] 
+    \item[(2)] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{entsorgung1} %Diese Quelle muss Jahrspezifisch angepasst werden
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.16}, 
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2021}, 
+			S.			{106-107}.
+			
+\end{thebibliography}
+
+\newpage
+
+\setcounter{subsection}{2}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Komplexe des Kupfers}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+\subsubsection{Theoretischer Hintergrund}
+
+\subsubsection{Experimenteller Teil}
+
+\subsubsection{Ergebnisse und Diskussion}
+
+\subsubsection{Zusammenfassung}
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt. Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.\zitat{entsorgung1}
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ - & - & - & - & - \\}
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] 
+    \item[(2)] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{entsorgung1} %Diese Quelle muss Jahrspezifisch angepasst werden
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.16}, 
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2021}, 
+			S.			{106-107}.
+			
+\end{thebibliography}
+
+\end{document}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Neuer Versuch:
+\subsection{Versuchsname}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+\subsubsection{Theoretischer Hintergrund}
+\subsubsection{Experimenteller Teil}
+\subsubsection{Ergebnisse und Diskussion}
+\subsubsection{Zusammenfassung}
+\subsubsection{Sicherheit und Entsorgung}	
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gefahren1} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{\\}
+    
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+	\bibitem{Gefahren1}
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.18},
+                        {Universität Hamburg},
+						{Hamburg}, 
+			\textbf	{2023}, 
+			S.{34}.
+			
+			
+\end{thebibliography} 
+\newpage
+
+Nützliche Beispiele:
+
+%Tabelle für Reagenzgläserinhalte
+\tabelle
+	{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.}	%Inhalt der Reagenzgläser ... bis...
+		{htb}	
+		{l l l}					
+		{Reagenzglas & Inhalt & Beschreibung}				
+		{1 & 2~mL NaOH & klare, farblose Lsg.\\
+		2 & & 
+		}										
+
+
+%Formel Löslichkeit KClO4 -> chemische Formel
+\begin{align}
+    \chemtag
+    \ce{KClO4(aq) <=> K+(aq) + ClO4-(aq)}
+\end{align}
+
+%hier allgemeine Formel 
+\formel
+		{formel2}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{L_{\mathrm{A}_{a} B_{b}} = \sqrt[m+n]{\frac{K_{\mathrm{L}}}{a^{a} \cdot b^{b}}}  }
+
+
+Bilder:
+	\bild
+		{bildname}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Bildbeschreibung.		%Text, der unter dem Bild erscheint
+		\zitat{Quelle}}			%Name der Quelle im Literaturverzeichnis
+		{Bildeigenschaften}		%angle, draft, scale, height, width
+		{Platzierung}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+	
+		
+	Bildeigenschaften:
+		angle - Bestimmt den Drehwinkel um einen Referenzpunkt für die Grafik. Positive Werte drehen die Grafik gegen den Uhrzeigersinn, negative mit ihm. 
+		draft - Ist draft gesetzt, wird nur ein Platzhalter der Grafik angezeigt. Beschleunigt den Übersetzungsvorgang des Dokuments erheblich. 
+		scale - Skaliert die Grafik anhand eines Skalierungsfaktors. 
+		height - Skaliert die Grafik auf die angegebene Höhe. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 
+		width - Skaliert die Grafik auf die angegebene Breite. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 	
+	
+
+Formeln:
+	\formel
+		{formelname}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{Formel}						%
+
+
+Tabellen:
+	\tabelle
+		{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.\zitat{Quelle}}						%Text, der über der Tabelle erscheint, Quelle der Daten
+		{Platzierung}													%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.		
+		{Spaltenanzahl_und_Ausrichtung}						%{ l c r }: 3 Spalten, links mittig und rechts; { c c c c }: 4 Spalten, alle mittig
+		{Titelzeile}														%Obere Zeile(n), danach folgt ein waagerechter Strich, Spalten durch & trennen, Neue Zeile durch \\
+		{Datenzeilen}													%Zeilen unter dem waagerechten Strich, Spalten durch & trennen, Neue Zeile durch \\
+		
+	Zellen verbinden:	
+		\multicolumn{Anzahl_der_verbunden_Spalten}{Ausrichtung (l/c/r}{Inhalt}
+	
+Reaktionen:
+Formeln: 
+\begin{center}
+\ce{NH+4}, \ce{Fe3(CO)12}, \ce{Al^{3+}},\ce{Cr2O^{2-}7}
+\end{center}
+
+Isotope:
+\begin{center}
+\ce{^{37}_{17}Cl}, \ce{^{32}_{16}S^{2-}}
+\end{center}
+
+Bindungen: 
+\begin{center}
+\ce{H-O-N=S}, \ce{Cl-C#N}
+\end{center}
+
+Reaktionsgleichungen: 
+\begin{center}
+\ce{2H2 + O2 -> 2H2O}
+\ce{MgCl2 ->[\text{Elektrolyse}] Mg\,(l) + Cl_{2}\,(g)}
+\end{center}
+
+Redoxreaktion:
+\begin{center}
+$\overset{0}{\ce{S}} + \overset{0}{\ce{O2}} \ce{->} \overset{+\text{IV}}{\ce{S}}+\overset{-\text{II}}{\ce{O2}}$
+\end{center}
+
+
+Literaturverweise:
+		\bibitem{zeitschrift}
+						{A. Autor}, 
+			\textit	{Zeitschrift} 
+			\textbf	{Jahr}, 
+			\textit	{Band} 
+						{Seite-Seite}.
+		
+		\bibitem{buch_ohne_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{buch_mit_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Auflage}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{dissertation}
+						{A. Autor}, 
+						{Dissertation}, 
+						{Universität}, 
+			\textbf	{Jahr}.
+			
+		\bibitem{internetseite}
+						{A. Autor}, 
+						„{Titel}“, zu finden unter 
+			\url		{www.xyz.de}, 
+			\textbf	{Jahr}.
+
+% Kommentare Sophie:
+
+% <- Für Kommentare oder Code der gerade nicht gebraucht wird, wird beim kompilieren nicht beachtet
+%Um Bilder einzufügen: \bild{'Dateiname' (Datei muss im gleichem Ordner mit der TeX Datei liegen)}{'Bildunterschrift'}{width= ...cm (Größe des Bildes)}{H (Ort des Bildes, H=Hier)}
+
+%Für Summenformeln im Text: \ce{z.B.: H2SO4 (Zahlen werden automtisch tief gestellt)}
+
+% Um Formeln im Text zu referieren: \prettyref{fig (für Bilder und Graphen)/ eq (für mathematische Formeln)/ ceq (für chemische Formeln): 'Referenz'}
+
+%Für chemische Formeln: \cformel['Referenz']{2\ox{Fe}{+\RN{3}}Cl3 + \ox{Fe}{+\RN{2}}Cl2 + 8NH4+ + 8 OH- \ce{<=>[{N2H4}]} \ox{Fe}{+\RN{2}}O\cdot \ox{Fe}{+\RN{3}}2O3 \ce{v} + 4 H2O + 8NH4+ + 4 Cl-}
+
+%Für mathematische Formeln: \formel{'Referenz'}{2\cdot d\cdot \ce{sin}(\theta)= n \lambda}
+
+%Tabellen: Online Converter um Exel Tabellen in LaTeX Format zu bringen: https://www.tablesgenerator.com
+%\tabelle{'Referenz'}{'Tabellenüberschrift'}{H}{'Breite der Spalte bzw. Textausrichtung' (Spaltenbreite passt sich Textlänge an: l=links, r=rechts, c=zentriert. Spaltenbreite fest und Blocksatz: p{...cm}), Jede Spalte muss einzeln definiert werden, z.B l l l = 3 Spalten}{'Spaltenüberschrift' muss der Anzahl an Spalten entsprechen. Spaltenüberschriften müssen durch ein & getrennt werden. Außerdem wichtig am Ende: \\}{'Tabelleneinträge', müssen ebenfalls durch ein & getrennt werden und am Ende der Zeile ein \\ haben
+%	- & - & - & \\
+%	- & - & - & \\}
+%Beispiel für eine Tabelle (zum Ausführen '%' entfernen):
+%\tabelle{Auflösungsvermögen}{Experimentell ermitteltes und theoretisches Auflösungsvermögen für Objektiv 20X und 63X bei schräger und gerader Beleuchtung.}{H}{l l p{2cm} p{3cm}  p{3cm}}{Objektiv&Beleuchtung& Spalt mit einem Peak&experimentelles Auflösungsvermögen~/~nm&theoretisches Auflösungsvermögen~/~nm\\}
+%	{20X&gerade&16&>750&1125\\
+%	20X&schräg&9&690&563\\
+%	63X&gerade&11&>750&600\\
+%	63X&schräg&7&584&300\\}

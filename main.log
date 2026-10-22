@@ -1,0 +1,1464 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  22 OCT 2026 21:29
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/Mischa/Desktop/Latex/main.tex
+(c:/Users/Mischa/Desktop/Latex/main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cls
+Document Class: scrartcl 2026/02/02 v3.49.2 KOMA-Script document class (article)
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.sty
+Package: scrkbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2026/02/02 v3.49.2 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
+Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hook.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hooks)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
+))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.sty
+Package: tocbasic 2026/02/02 v3.49.2 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip49
+\scr@dte@tocline@numbox=\box53
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 141.
+Package scrartcl Info: You've used standard option `12pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=12pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=12pt' there
+(scrartcl)             instead of `12pt', too.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input line 2489.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize12pt.clo
+File: scrsize12pt.clo 2026/02/02 v3.49.2 KOMA-Script font size class option (12pt)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.sty
+Package: typearea 2026/02/02 v3.49.2 KOMA-Script package (type area)
+\ta@bcor=\skip50
+\ta@div=\count275
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+\ta@hblk=\skip51
+\ta@vblk=\skip52
+\ta@temp=\skip53
+\footheight=\skip54
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 27.31467pt
+(typearea)              \oddsidemargin  = -22.47766pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 548.5pt
+(typearea)              \topmargin      = -1.84941pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1810.
+)
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\scr@dte@section@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 5015.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 5015.
+\scr@dte@part@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 5023.
+\scr@dte@subsection@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 5033.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 5033.
+\scr@dte@subsubsection@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 5043.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 5043.
+\scr@dte@paragraph@maxnumwidth=\skip59
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 5054.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 5054.
+\scr@dte@subparagraph@maxnumwidth=\skip60
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 5064.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 5064.
+\abovecaptionskip=\skip61
+\belowcaptionskip=\skip62
+\c@pti@nb@sid@b@x=\box54
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6287.
+\scr@dte@figure@maxnumwidth=\skip63
+\c@figure=\count282
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6299.
+\scr@dte@table@maxnumwidth=\skip64
+\c@table=\count283
+Class scrartcl Info: Redefining `\numberline' on input line 6469.
+\bibindent=\dimen148
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+Package tocbasic Info: Loading of class-dependent code for package caption3
+(tocbasic)             prevented on line 40.
+
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen149
+\captionmargin=\dimen150
+\caption@leftmargin=\dimen151
+\caption@rightmargin=\dimen152
+\caption@width=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
+)
+\c@float@type=\count284
+\float@exts=\toks18
+\float@box=\box55
+\@floatcapt=\box56
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+\FR@everyfloat=\toks19
+\flrow@foot=\insert252
+\FB@wd=\dimen157
+\FBo@wd=\dimen158
+\FBc@wd=\dimen159
+\FBo@ht=\skip65
+\FBc@ht=\skip66
+\FBf@ht=\skip67
+\FBo@max=\skip68
+\FBc@max=\skip69
+\FBf@max=\skip70
+\c@FBl@b=\count285
+\floatbox@depth=\count286
+\c@FRobj=\count287
+\c@FRsobj=\count288
+\Xhsize=\skip71
+\sXhsize=\skip72
+\Zhsize=\skip73
+\sZhsize=\skip74
+\flrow@rowbox=\box57
+\FR@Zunitlength=\dimen160
+\c@FBcnt=\count289
+\FPOScnt=\count290
+\LTleft=\skip75
+\LTright=\skip76
+\LTleft=\skip77
+\LTright=\skip78
+\flrow@types=\toks20
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/cite\overcite.sty
+Package: overcite 2003/05/27  v 4.0
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+LaTeX Info: Redefining \cite on input line 441.
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-10-12 v3.6.4 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count291
+\l__siunitx_number_exponent_fixed_int=\count292
+\l__siunitx_number_min_decimal_int=\count293
+\l__siunitx_number_min_integer_int=\count294
+\l__siunitx_number_round_precision_int=\count295
+\l__siunitx_number_lower_threshold_int=\count296
+\l__siunitx_number_upper_threshold_int=\count297
+\l__siunitx_number_group_first_int=\count298
+\l__siunitx_number_group_size_int=\count299
+\l__siunitx_number_group_min_int=\count300
+\l__siunitx_number_group_minimum_int=\count301
+\l__siunitx_compound_count_int=\count302
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count303
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+Include code introduced on 2026-09-12
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen161
+))
+\l__siunitx_table_tmp_box=\box58
+\l__siunitx_table_tmp_dim=\dimen162
+\l__siunitx_table_column_width_dim=\dimen163
+\l__siunitx_table_integer_box=\box59
+\l__siunitx_table_decimal_box=\box60
+\l__siunitx_table_uncert_box=\box61
+\l__siunitx_table_before_box=\box62
+\l__siunitx_table_after_box=\box63
+\l__siunitx_table_before_dim=\dimen164
+\l__siunitx_table_carry_dim=\dimen165
+\l__siunitx_unit_tmp_int=\count304
+\l__siunitx_unit_position_int=\count305
+\l__siunitx_unit_total_int=\count306
+\l__siunitx_sexagesimal_tmp_dim=\dimen166
+\l__siunitx_sexagesimal_marker_box=\box64
+\l__siunitx_sexagesimal_unit_box=\box65
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen167
+\ar@mcellbox=\box66
+\extrarowheight=\dimen168
+\NC@list=\toks22
+\extratabsurround=\skip79
+\backup@length=\skip80
+\ar@cellbox=\box67
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count307
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2068.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2070.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2072.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2073.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2074.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2076.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2101.
+\U@D=\dimen169
+\l@unhyphenated=\language79
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count308
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4196.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/invalid\babel-ngerman.tex)
+Package babel Info: Importing font and identification data for ngerman
+(babel)             from babel-de.ini. Reported on input line 4320.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ldf
+Language: ngerman 
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\babel-german.def
+Package babel Info: Making " an active character on input line 500.
+))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/grffile\grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legacy)
+Package grffile Info: This package is an empty stub for compatibility on input line 40.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen170
+\Gin@req@width=\dimen171
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks23
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box68
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks26
+))
+\pgf@x=\dimen174
+\pgf@y=\dimen175
+\pgf@xa=\dimen176
+\pgf@ya=\dimen177
+\pgf@xb=\dimen178
+\pgf@yb=\dimen179
+\pgf@xc=\dimen180
+\pgf@yc=\dimen181
+\pgf@xd=\dimen182
+\pgf@yd=\dimen183
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count309
+\c@pgf@countb=\count310
+\c@pgf@countc=\count311
+\c@pgf@countd=\count312
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
+\pgf@sys@id@count=\count313
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count314
+\pgfsyssoftpath@bigbuffer@items=\count315
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count316
+\pgfmath@box=\box69
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count317
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen256
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen257
+\pgf@shorten@start@additional=\dimen258
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box70
+\pgf@hbox=\box71
+\pgf@layerbox@main=\box72
+\pgf@picture@serial@count=\count318
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen259
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen260
+\pgf@pt@y=\dimen261
+\pgf@pt@temp=\dimen262
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen263
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen264
+\pgf@sys@shading@range@num=\count319
+\pgf@shadingcount=\count320
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box73
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box74
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen265
+\pgf@nodesepend=\dimen266
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count321
+\pgfplotmarksize=\dimen269
+)
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikz@lastmovetox=\dimen274
+\tikz@lastmovetoy=\dimen275
+\tikzleveldistance=\dimen276
+\tikzsiblingdistance=\dimen277
+\tikz@figbox=\box75
+\tikz@figbox@bg=\box76
+\tikz@tempbox=\box77
+\tikz@tempbox@bg=\box78
+\tikztreelevel=\count322
+\tikznumberofchildren=\count323
+\tikznumberofcurrentchild=\count324
+\tikz@fig@count=\count325
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count326
+\pgfmatrixcurrentcolumn=\count327
+\pgf@matrix@numberofcolumns=\count328
+)
+\tikz@expandcount=\count329
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen278
+\c@pgfplots@coordindex=\count330
+\c@pgfplots@scanlineindex=\count331
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count332
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count333
+\t@pgfplotstable@a=\toks41
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count334
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen279
+\pgfdecoratedremainingdistance=\dimen280
+\pgfdecoratedinputsegmentcompleteddistance=\dimen281
+\pgfdecoratedinputsegmentremainingdistance=\dimen282
+\pgf@decorate@distancetomove=\dimen283
+\pgf@decorate@repeatstate=\count335
+\pgfdecorationsegmentamplitude=\dimen284
+\pgfdecorationsegmentlength=\dimen285
+)
+\tikz@lib@dec@box=\box79
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count336
+\pgfplots@xmin@reg=\dimen286
+\pgfplots@xmax@reg=\dimen287
+\pgfplots@ymin@reg=\dimen288
+\pgfplots@ymax@reg=\dimen289
+\pgfplots@zmin@reg=\dimen290
+\pgfplots@zmax@reg=\dimen291
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip81
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen292
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count337
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count338
+\leftroot@=\count339
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count340
+\DOTSCASE@=\count341
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box80
+\strutbox@=\box81
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen293
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count342
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count343
+\dotsspace@=\muskip17
+\c@parentequation=\count344
+\dspbrk@lvl=\count345
+\tag@help=\toks42
+\row@=\count346
+\column@=\count347
+\maxfields@=\count348
+\andhelp@=\toks43
+\eqnshift@=\dimen294
+\alignsep@=\dimen295
+\tagshift@=\dimen296
+\tagwidth@=\dimen297
+\totwidth@=\dimen298
+\lineht@=\dimen299
+\@envbody=\toks44
+\multlinegap=\skip82
+\multlinetaggap=\skip83
+\mathdisplay@stack=\toks45
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip84
+\LTright=\skip85
+\LTpre=\skip86
+\LTpost=\skip87
+\LTchunksize=\count349
+\LTcapwidth=\dimen300
+\LT@head=\box82
+\LT@firsthead=\box83
+\LT@foot=\box84
+\LT@lastfoot=\box85
+\LT@gbox=\box86
+\LT@cols=\count350
+\LT@rows=\count351
+\c@LT@tables=\count352
+\c@LT@chunks=\count353
+\LT@p@ftn=\toks46
+)
+Class scrartcl Info: longtable captions redefined on input line 25.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen301
+\TX@old@table=\dimen302
+\TX@old@col=\dimen303
+\TX@target=\dimen304
+\TX@delta=\dimen305
+\TX@cols=\count354
+\TX@ftn=\toks47
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count355
+\Gm@cntv=\count356
+\c@Gm@tempcnt=\count357
+\Gm@bindingoffset=\dimen306
+\Gm@wd@mp=\dimen307
+\Gm@odd@mp=\dimen308
+\Gm@even@mp=\dimen309
+\Gm@layoutwidth=\dimen310
+\Gm@layoutheight=\dimen311
+\Gm@layouthoffset=\dimen312
+\Gm@layoutvoffset=\dimen313
+\Gm@dimlist=\toks48
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/ae\ae.sty
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pdfcprot\pdfcprot.sty
+Package: pdfcprot 2002/02/27 v1.5 character protruding using pdflatex (cs)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@CPROT@family=\count358
+\c@CPROT@family@temp=\count359
+\c@CPROT@series=\count360
+\c@CPROT@series@temp=\count361
+\c@CPROT@shape=\count362
+\c@CPROT@shape@temp=\count363
+\c@CPROT@size=\count364
+\c@CPROT@size@temp=\count365
+\c@CPROT@temp@chars=\count366
+
+
+C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pdfcprot\pdfcprot.sty:703: LaTeX Error: Command \ifpdftex already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.703 }
+       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package pdfcprot Info: \ifpdfoutput already defined.
+(pdfcprot)             That may happen when using KOMA-Script together
+(pdfcprot)             with ``pdfcprot.sty''. I have changed the definition
+(pdfcprot)             from Markus' KOMA-Script, so if you experience errors
+(pdfcprot)             try \let\ifpdfoutput\relax before loading ``pdfcprot.sty''. on input line 747.
+Package pdfcprot Info: You want to setup char protruding, but it does
+(pdfcprot)             look as if you're NOT using pdftex. So I can't
+(pdfcprot)             setup it, as ``pdfcprot.sty'' only supports
+(pdfcprot)             pdftex. on input line 805.
+Package pdfcprot Info: You want to setup char protruding, but it does
+(pdfcprot)             look as if you're NOT using pdftex. So I can't
+(pdfcprot)             setup it, as ``pdfcprot.sty'' only supports
+(pdfcprot)             pdftex. on input line 805.
+Package pdfcprot Info: You want to setup char protruding, but it does
+(pdfcprot)             look as if you're NOT using pdftex. So I can't
+(pdfcprot)             setup it, as ``pdfcprot.sty'' only supports
+(pdfcprot)             pdftex. on input line 805.
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks49
+\inpenc@posthook=\toks50
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2026/02/02 v3.49.2 KOMA-Script package (end user interface for scrlayer)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.sty
+Package: scrlayer 2026/02/02 v3.49.2 KOMA-Script package (defining layers and page styles)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2179.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/mhchem\mhchem.sty
+Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2025-12-24 L3 programming layer (loader) 
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count367
+)) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count368
+\calc@Bcount=\count369
+\calc@Adimen=\dimen314
+\calc@Bdimen=\dimen315
+\calc@Askip=\skip88
+\calc@Bskip=\skip89
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count370
+\calc@Cskip=\skip90
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/chemgreek\chemgreek.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+\l__chemgreek_tmpa_int=\count371
+\g__chemgreek_tmpa_int=\count372
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count373
+\__mhchem_arrow_extPgfLength_skip=\skip91
+\mhchem@minispace@tmp=\skip92
+\mhchem@minibackspace@tmp=\skip93
+\mhchem@bondwidth=\skip94
+\mhchem@bondheight=\skip95
+\mhchem@smallbondwidth@tmpA=\skip96
+\mhchem@smallbondwidth@tmpB=\skip97
+\mhchem@smallbondwidth=\skip98
+\mhchem@bondtmp@minussidebearingleft=\skip99
+\mhchem@bondtmp@minussidebearingright=\skip100
+\l__mhchem_option_version_int=\count374
+\mhchem@option@minusmathsidebearingleft=\dimen316
+\mhchem@option@minusmathsidebearingright=\dimen317
+\mhchem@option@minustextsidebearingleft=\dimen318
+\mhchem@option@minustextsidebearingright=\dimen319
+
+
+Package mhchem Warning: You did not specify a 'version' option for the mhchem
+(mhchem)                package. Please write \usepackage[version=4]{mhchem}
+(mhchem)                in your preamble (or any lower number for
+(mhchem)                compatibility mode), because you might get slightly
+(mhchem)                different output with the same input in future versions.
+
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/chemfig\chemfig.sty (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/chemfig\chemfig.tex (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/simplekv\simplekv.tex
+Package: simplekv 2025/06/15 v0.32 Simple keyval package (CT)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen320
+\pgfarrowlength=\dimen321
+\pgfarrowwidth=\dimen322
+\pgfarrowlinewidth=\dimen323
+)
+\CF_cnt_atomgroup=\count375
+\CF_cnt_group=\count376
+\CF_cnt_atom=\count377
+\CF_cnt_cycle=\count378
+\CF_cnt_cyclebonds=\count379
+\CF_cnt_compound=\count380
+\CF_cnt_save=\count381
+\CF_cnt_hreac=\count382
+\CF_dim_tmp=\dimen324
+\CF_dim_turnangle=\dimen325
+\CF_dim_arrowsize=\dimen326
+\CF_zero=\dimen327
+\CF_box=\box87
+\CF_box_name=\box88
+\CF_box_zerodim=\box89
+\CF_box_charge=\box90
+\CF_box_harrowup=\box91
+\CF_box_harrow_down=\box92
+\CF_toks_subst=\toks51
+\CF_write=\write4
+)
+Package: chemfig 2026/09/19 v1.82 Draw molecule with an easy syntax (CT)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+\c@caption@flags=\count383
+\c@continuedfloat=\count384
+Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: longtable package is loaded.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+Package caption Info: Option `tablename' requires the `newfloat' package on input line 35.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/newfloat\newfloat.sty
+Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/prettyref\prettyref.sty
+Package: prettyref 1998/07/09 v3.0
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count385
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen328
+\Hy@linkcounter=\count386
+\Hy@pagecounter=\count387
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count388
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4066.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count389
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen329
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count390
+\Field@Width=\dimen330
+\Fld@charsize=\dimen331
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring ON on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count391
+\c@Item=\count392
+\c@Hfootnote=\count393
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count394
+\c@bookmark@seq@number=\count395
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip101
+)
+
+Class scrartcl Warning: Usage of package `titlesec' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use KOMA-Script features
+(scrartcl)              like \setkomafont, \RedeclareSectionCommand, \sectionlinesformat
+(scrartcl)              and several others to re-configure section
+(scrartcl)              headings.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `titlesec' on input line 69.
+
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box93
+\beforetitleunit=\skip102
+\aftertitleunit=\skip103
+\ttl@plus=\dimen332
+\ttl@minus=\dimen333
+\ttl@toksa=\toks52
+\titlewidth=\dimen334
+\titlewidthlast=\dimen335
+\titlewidthfirst=\dimen336
+
+
+Package titlesec Warning: Non standard sectioning command \section
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subsection
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subsubsection
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \paragraph
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subparagraph
+(titlesec)                detected. Using default spacing and no format.
+
+)
+Package scrkbase Info: You've told me to redefine the font selection of the
+(scrkbase)             element `sectioning' that is an alias of element
+(scrkbase)             `disposition' on input line 77.
+\c@chemequation=\count396
+\c@chemicalequation=\count397
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 216.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2026-05-21 v1.32 PDF bookmarks (HO)
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
+\BKM@id=\count398
+))
+LaTeX Font Info:    Trying to load font information for T1+aer on input line 216.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/ae\t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 216.
+LaTeX Font Info:    ... okay on input line 216.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Fixing longtable code of `floatrow' package.
+Package caption Info: End \AtBeginDocument code.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\fr-longtable.sty
+Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
+\flrow@LT@lasthead=\box94
+\flrow@LT@prelastfoot=\box95
+\c@FBLTpage=\count399
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
+File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 216.
+Package babel Info: 'ngerman' activates 'german' shorthands.
+(babel)             Reported on input line 216.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count400
+\scratchdimen=\dimen337
+\scratchbox=\box96
+\nofMPsegments=\count401
+\nofMParguments=\count402
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count403
+\MPscratchDim=\dimen338
+\MPnumerator=\count404
+\makeMPintoPDFobject=\count405
+\everyMPtoPDFconversion=\toks54
+) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
+ on input line 216.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 717.00946pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=717.00946pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-41.0131pt
+* \headheight=18.125pt
+* \headsep=11.38092pt
+* \topskip=12.0pt
+* \footskip=22.76228pt
+* \marginparwidth=74.68849pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package pdfcprot Info: I didn't find aerbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pdfcprot\pplmnT1.cpa)
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Trying to load font information for TS1+aer on input line 216.
+LaTeX Font Info:    No file TS1aer.fd. on input line 216.
+
+
+LaTeX Font Warning: Font shape `TS1/aer/b/n' undefined
+(Font)              using `TS1/cmr/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aerbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+(C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/pdfcprot\pplmnTS1.cpa)
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aerbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aerbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aerbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aerbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aerbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aerbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Trying to load font information for T1+aess on input line 216.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/ae\t1aess.fd
+File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
+)
+LaTeX Font Info:    Font shape `T1/aess/b/n' in size <12> not available
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/b/n' in size <14.4> not available
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 216.
+Package pdfcprot Info: I didn't find aessbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Trying to load font information for TS1+aess on input line 216.
+LaTeX Font Info:    No file TS1aess.fd. on input line 216.
+
+
+LaTeX Font Warning: Font shape `TS1/aess/b/n' undefined
+(Font)              using `TS1/cmr/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aessbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/b/n' in size <10.95> not available
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 216.
+Package pdfcprot Info: I didn't find aessbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/b/n' in size <10> not available
+(Font)              Font shape `T1/aess/bx/n' tried instead on input line 216.
+Package pdfcprot Info: I didn't find aessbnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessbnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+
+LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aermnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+
+LaTeX Font Warning: Font shape `TS1/aer/m/it' undefined
+(Font)              using `TS1/aer/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aermitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aermitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+
+LaTeX Font Warning: Font shape `TS1/aess/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aessmnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmnTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <14.4> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+Package pdfcprot Info: I didn't find aessmitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+
+LaTeX Font Warning: Font shape `TS1/aess/m/it' undefined
+(Font)              using `TS1/aess/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aessmitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+Package pdfcprot Info: I didn't find aessmitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10.95> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+Package pdfcprot Info: I didn't find aessmitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmitT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmitTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+
+LaTeX Font Warning: Font shape `TS1/aess/m/sl' undefined
+(Font)              using `TS1/aess/m/n' instead on input line 216.
+
+Package pdfcprot Info: I didn't find aessmslTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslT1.cpa.
+(pdfcprot)              As a fallback I will try pplmnT1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnT1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+Package pdfcprot Info: I didn't find aessmslTS1.cpa.
+(pdfcprot)              As a fallback I will try pplmnTS1.cpa. on input line 216.
+Package pdfcprot Info: File pplmnTS1.cpa{} used for the adjustment
+(pdfcprot)             of the char protruding. It seems that it isn't the one
+(pdfcprot)             you intended to use. on input line 216.
+
+Package chemgreek Info: Activating mapping `default' on line 216.
+
+Package newfloat Info: `float' package detected.
+Package hyperref Info: Link coloring ON on input line 216.
+[1
+
+{C:/Users/Mischa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 269.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 269.
+ (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Reference `eq: mom' on page 1 undefined on input line 274.
+
+
+LaTeX Warning: Reference `eq: mom' on page 1 undefined on input line 275.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.278 ...= |\vec{k}_S| = k = \frac{2\pi}{\lambda}}
+                                                   [1]
+
+Package caption Warning: Unused \captionsetup[table] on input line 36.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[figure] on input line 37.
+See the caption package documentation for explanation.
+
+[2] (main.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred when \iftrue on line 216 was incomplete)
+(\end occurred when \ifx on line 805 was incomplete)
+(\end occurred when \iftrue on line 805 was incomplete)
+(\end occurred when \ifx on line 805 was incomplete)
+(\end occurred when \ifx on line 805 was incomplete)
+(\end occurred when \ifx on line 29 was incomplete) 
+Here is how much of TeX's memory you used:
+ 46231 strings out of 467871
+ 1114098 string characters out of 5417891
+ 1773713 words of memory out of 5000000
+ 74400 multiletter control sequences out of 15000+600000
+ 688926 words of font info for 118 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 108i,20n,108p,11259b,1141s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (3 pages, 141509 bytes).
+PDF statistics:
+ 132 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 13381 words of extra memory for PDF output out of 14400 (max. 10000000)
+
