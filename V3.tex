@@ -264,8 +264,8 @@
 	$\nu_i > 0$, $\nu_j > 0$
 	\par}
 	Nach dem Prinzip von Le Chatelier ist dieses Gleichgewicht abhängig von äußeren Zwängen; dazu gehören die Temperatur, die Konzentrationen der Reaktanten und der Umgebungsdruck.
-	Dabei weicht das Gleichgewicht jenem Zwang aus, dem es ausgesezt ist.\zitat{riedel}\\\\
-	Es wird außerdem zwischen einem homogenen und heterogenen Gleichgewicht unterschieden. In einem homogenen Gleichgewicht befinden sich alle relevanten Stoff in derselben Phase,
+	Dabei weicht das Gleichgewicht jenem Zwang aus, dem es ausgesetzt ist.\zitat{riedel}\\\\
+	Es wird außerdem zwischen einem homogenen und heterogenen Gleichgewicht unterschieden. In einem homogenen Gleichgewicht befinden sich alle relevanten Stoffe in derselben Phase,
 	während in einem heterogenen Gleichgewicht mindestens zwei verschiedene Phasen vorliegen.\zitat{riedel}\\
 
 	Mit dem Massenwirkungsgesetz (MWG) besitzen Gleichgewichtsreaktionen \prettyref{ceq: Reaktion1} eine Reaktionskonstante $K$, die folgende mathematische Beziehung aufweisen:
@@ -289,22 +289,43 @@
 	\formel{KL2}{K_L = (x\cdot L)^{x} \cdot (y\cdot L)^{y}}
 	\formel{KL3}{L = \sqrt[x+y]{\frac{K_L}{x^x \cdot y^y}}}
 
-	Angewendet auf Kaliumperchlorat bei einer Löslichkeitskonstante $K^{298\mathrm{K}}_L = 1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}$ lässt sich die Löslichkeit $L^{298\mathrm{K}}_{\ce{KClO4}}$ berechnen.\zitat{KLWert}
+	Angewendet auf Kaliumperchlorat bei einer Löslichkeitskonstante $K^{298\mathrm{K}}_L = 1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}$ lässt sich die Löslichkeit $L^{298\mathrm{K}}_{\ce{KClO4}}$ in \ce{\frac{mol}{L}} bzw. \ce{\frac{g}{L}} bei 25°C berechnen.\zitat{KLWert}
 	\cformel[KCL]{KClO4_{(s)} <=> K^{+}_{(aq)} + ClO4^{-}_{(aq)}}
+	\formel{dis}{K_L = [\ce{K^{+}}] \cdot [\ce{ClO4^{-}}]}
 	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt[1+1]{\frac{K^{298\mathrm{K}}_L}{1^1 \cdot 1^1}}}
 	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt{K^{298\mathrm{K}}_L}}
 	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt{1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}} = 0,102\ \mathrm{\frac{mol}{L}} = 0,0102\ \mathrm{\frac{mol}{100\ mL}}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} \cdot M_{\ce{KClO4}} = 0,0102\ \mathrm{\frac{mol}{100\ mL}} \cdot 138,55 \ \mathrm{\frac{g}{mol}} = 1,41 \ \mathrm{\frac{g}{100 \ mL}}}
 
 
 
 
 \subsubsection{Experimenteller Teil}
 
-\subsubsection{Ergebnisse und Diskussion}
+	Es wurden drei Reagenzgläser mit jeweils 4 mL gesättigter Kaliumperchloratlösung gefüllt, wobei jede Lösung klar war.\\
+	Bei der Zugabe einer 1 mL gesättigten Natriumchloridlösung bildeten sich zunächst leichte Schlieren, bis sich das Natriumchlorid vollständig löste und die Lösung wieder klar wurde.\\
+	Bei der Zugabe einer 1 mL gesättgten Kaliumchloridlösung in ein anderes Reagenzglas bildeten sich ebenfalls Schlieren und es fiel ein farbloser Feststoff aus.
+	Die Phase über dem ausgefallenen Feststoff wurde nach einigen Sekunden klar.\\
+	Zuletzt wurden in ein drittes Reagenzglas ca. 5 Tropfen einer 70\%igen Perchlorsäurelösung pipettiert und die Emulsion wurde zunächst trüb, bis erneut ein farbloser Feststoff ausfiel
+	und die Phase über dem Feststoff klar wurde.
+
+	\subsubsection{Ergebnisse und Diskussion}
+	Durch das Beifügen von Natriumchlorid in die Kaliumperchloratlösung bildeten sich zunächst leichte Schlieren, da sich das Gleichgewicht der Lösung erst einstellen musste.
+	Es ist jedoch kein Festsoff ausgefallen, da Natriumchlorid bzw. die Natrium- (\ce{Na^{+}}) und Chloridionen (\ce{Cl^{-}}) nicht am Gleichgewicht \prettyref{ceq: KCL} beteiligt sind.\\
+	Kaliumchlorid und Perchlorsäure dissoziieren allerdings in folgende Ionen:
+	\cformel[KCl]{KCl_{(s)} <=> K^{+}_{(aq)} + Cl^{-}_{(aq)}}
+	\cformel[HClO4]{HClO4_{(aq)} + H2O_(l) <=> H3O^{+}_{(aq)} + ClO4^{-}_{(aq)}}
+	Da in der Lösung von Kaliumperchlorat sowohl Kalium- (\ce{K^{+}}) als auch Perchlorationen (\ce{ClO4^{-}}) beteiligt sind und es sich demnach um einen gleichionigen Zusatz handelt, wurde in beiden separaten Fällen das Löslichkeitsprodukt in Gl. \prettyref{eq: dis} überschritten
+	und das Gleichgewicht wurde auf die 'Eduktseite' verschoben.
+	Um das Gleichgewicht wiederherzustellen, wurde Kaliumperchlorat als farbloser Feststoff ausgefallen. 
 
 \subsubsection{Zusammenfassung}
 
-\newpage
+	Das Prinzip von Le Chatelier und das MWG konnten verwendet werden, um das chemische Gleichgewicht bei einer Lösung eines Salzes zu beschreiben.
+	Sofern bei einem gleichionigen Zusatz die Konzentrationen der gelösten Ionen verändert wurden, kam es zu einer Verschiebung des Gleichgewichts,
+	wodurch in dem Fall ein Überschuss an Kalium- bzw. Perchlorationen vorlag, weshalb das Löslichkeitsprodukt überschritten wurde.
+	Es entstand ein heterogenes Gleichewicht, in welchem Kaliumperchlorat als Feststoff ausgefallen ist.
+
 \subsubsection{Sicherheit und Entsorgung}
 		
 Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{test} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer} aufgeführt.\zitat{test}
@@ -347,13 +368,13 @@ Entsorgung: \\
 \begin{thebibliography}{4}		%manuelles Quellenverzeichnis
 
 	\bibitem{riedel}
-						{A. Autor}, 
-			\textit	{Titel}, 
-						{Auflage}, 
-						{Verlag}, 
-						{Ort}, 
-			\textbf	{Jahr}, 
-			S.			{Seite-Seite}.
+						{E. Riedel, H. Meyer}, 
+			\textit	{Allgemeine und Anorganische Chemie}, 
+						{12. Auflage}, 
+						{De Gruyter}, 
+						{Berlin}, 
+			\textbf	{2018}, 
+			S.			{170-175}.
 
 	\bibitem{KLWert}
 						{Hans Lohninger}, 
