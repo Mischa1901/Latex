@@ -249,7 +249,52 @@
 
 \subsubsection{Einleitung und Aufgabenstellung}
 
+	Das Verhalten einer gesättigten Kaliumperchloratlösung (\ce{KClO4}) sollte nach Zugabe einer gesättigten Natriumchlorid- (\ce{NaCl}),
+	Kaliumchlorid- (\ce{KCl}) und 70\%iger Perchlorsäurelösung (\ce{HClO4}) untersucht und beschrieben werden. Die Begriffe eines homogenen und heterogenen Gleichgewichts waren zu definieren.
+	Die Löslichkeit von Kaliumperchlorat (\ce{KClO4}) war zu berechnen und für 100 mL Wasser anzugeben.
+
 \subsubsection{Theoretischer Hintergrund}
+
+	Chemische Gleichgewichte sind Zustände innerhalb chemischer Reaktionen in welchen keine Nettostoffmenge umgesetzt wird. Dies bedeutet nicht, dass keine Reaktion stattfindet,
+	jedoch dass sowohl die Hin- als auch Rückreaktion die gleiche Reaktionsgeschwindigkeit vorweisen, sofern keine äußere Einwirkung vorliegt.\\
+	Grundlegend können chemische Reaktionen mit dem Edukt \ce{A_i} und dem Produkt \ce{B_j} mit dem jeweiligen stöchiometrischen Faktor $\nu$ beschrieben werden.
+
+	\cformel[Reaktion1]{\sum_{i} $\nu_i$ A_i <=> \sum_{j} $\nu_j$ B_j}
+	{\centering
+	$\nu_i > 0$, $\nu_j > 0$
+	\par}
+	Nach dem Prinzip von Le Chatelier ist dieses Gleichgewicht abhängig von äußeren Zwängen; dazu gehören die Temperatur, die Konzentrationen der Reaktanten und der Umgebungsdruck.
+	Dabei weicht das Gleichgewicht jenem Zwang aus, dem es ausgesezt ist.\zitat{LC}\\\\
+	Es wird außerdem zwischen einem homogenen und heterogenen Gleichgewicht unterschieden. In einem homogenen Gleichgewicht befinden sich alle relevanten Stoff in derselben Phase,
+	während in einem heterogenen Gleichgewicht mindestens zwei Verschiedene vorliegen.\zitat{Phasen}\\
+
+	Mit dem Massenwirkungsgesetz (MWG) besitzen Gleichgewichtsreaktionen \prettyref{ceq: Reaktion1} eine Reaktionskonstante $K$, die folgende mathematische Beziehung aufweisen:
+
+	\formel{MWG}{K = \frac{\prod_{j} a(\mathrm{B}_j)^{\nu_j}}{\prod_{i} a(\mathrm{A}_i)^{\nu_i}}}
+
+	\newpage
+
+	Dabei ist \ce{$a$(B_j)} die Aktivität des Produktes \ce{B_j} und \ce{$a$(A_i)} entsprechend die Aktivität des Eduktes \ce{A_i}.\\
+	
+	Bei der Dissoziation eines Salzes \ce{A_{x}B_y} in einer wässrigen Lösung gilt demnach folgendes Gleichgewicht:
+	\cformel[Salzc]{{A_{x}B_y}_{(s)} <=> xA^{+}_{(aq)} + yB^{-}_{(aq)}}
+	
+	Folglich lässt sich $K$ wie folgt ausdrücken:
+	\formel{Salzf}{K = \frac{a(\mathrm{A}^{+})^{x} \cdot a(\mathrm{B}^{-})^{y}}{a(\mathrm{A}_{x}\mathrm{B}_y)}}
+
+	Da die Aktivität eines Feststoffes per Definition 1 beträgt und in dem Fall die Aktivität der Ionen näherungsweise gleich den Konzentrationen gesetzt wird, wird das Löslichkeitsprodukt $K_L$ eingeführt.
+	\formel{KL}{K_L = [\mathrm{A}^{+}]^{x} \cdot [\mathrm{B}^{-}]^{y}}
+	Für das Lösen eines Salzmoleküls entstehen $x+y$ Ionen \prettyref{ceq: Salzc}. Mit der Einführung der Löslichkeit $L$ lässt sich also ausdrücken:
+	\formel{KL2}{K_L = (x\cdot L)^{x} \cdot (y\cdot L)^{y}}
+	\formel{KL3}{L = \sqrt[x+y]{\frac{K_L}{x^x \cdot y^y}}}
+	Angewendet auf Kaliumperchlorat bei einer Löslichkeitskonstante $K^{298\mathrm{K}}_L = 1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}$ lässt sich die Löslichkeit $L^{298\mathrm{K}}_{\ce{KClO4}}$ berechnen.\zitat{KLWert}
+	\cformel[KCL]{KClO4_{(s)} <=> K^{+}_{(aq)} + ClO4^{-}_{(aq)}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt[1+1]{\frac{K^{298\mathrm{K}}_L}{1^1 \cdot 1^1}}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt{K^{298\mathrm{K}}_L}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt{1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}} = 0,102\ \mathrm{\frac{mol}{L}} = 0,0102\ \mathrm{\frac{mol}{100\ mL}}}
+
+
+
 
 \subsubsection{Experimenteller Teil}
 
@@ -260,7 +305,7 @@
 \newpage
 \subsubsection{Sicherheit und Entsorgung}
 		
-Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gestis} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer} aufgeführt.\zitat{Gestis}
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{test} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer} aufgeführt.\zitat{test}
 	
 \langetabelle
 	{Chemikalien}
@@ -276,7 +321,7 @@ Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien
     & (1) \\
 
   % Zweiter Stoff
-  \ce{HClO4} (70\%) 
+  \ce{HClO4} (konz.) 
     & \begin{tabular}[t]{l} GHS03 \\ GHS05 \end{tabular}
     & 271, 314 
     & 210, 220, 221, 260, 264, \newline 280, 283, 301+330+331, \newline 303+361+353, 304+340, \newline 305+351+338, 306+360, \newline 310, 321, 370+378, \newline 371+380+375, 405, 501 
@@ -292,8 +337,7 @@ Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien
 	
 Entsorgung: \\
 \begin{itemize}
-    \item[(1)] 
-    \item[(2)] 
+    \item[(1)] Alle verwendeten Lösungen wurden mit Natriumthiosulfat (\ce{Na2S2O3}) reduziert und im Behälter für nicht-nitrathaltige Säuren entsorgt.
 \end{itemize}	
 
 \newpage
@@ -303,16 +347,16 @@ Entsorgung: \\
 	\bibitem{test} %Diese Quelle muss Jahrspezifisch angepasst werden
 						{H. Heller}, 
 			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
-						{Version 1.16}, 
+						{Version 1.22}, 
 						{Universität Hamburg}, 
 						{Hamburg}, 
-			\textbf	{2021}, 
-			S.			{106-107}.
+			\textbf	{2026}, 
+			S.			{34}.
 
-    \bibitem{Gestis}
-						{DGUV}, 
-						„{GESTIS Stoffdatenbank}“, zu finden unter 
-			\url		{https://gestis.dguv.de}, 
+	\bibitem{KLWert}
+						{Hans Lohninger}, 
+						„{Tabelle von Löslichkeitsprodukten - Teil 2}“, zu finden unter 
+			\url		{http://anorganik.chemie.vias.org/loeslichkeitsprodukt_tabelle_teil2.html}, 
 			\textbf	{24.10.2026}.
 			
 \end{thebibliography}
@@ -338,7 +382,7 @@ Entsorgung: \\
 \newpage
 \subsubsection{Sicherheit und Entsorgung}
 		
-Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien2} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gestis2} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer2} aufgeführt.\zitat{Gestis2}
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien2} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{hauke2} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer2} aufgeführt.\zitat{hauke2}
 	
 \langetabelle
 	{Chemikalien2}
@@ -452,21 +496,15 @@ Entsorgung: \\
 
 \begin{thebibliography}{4}		%manuelles Quellenverzeichnis
 
-	\bibitem{entsorgung1} %Diese Quelle muss Jahrspezifisch angepasst werden
+	\bibitem{hauke2} %Diese Quelle muss Jahrspezifisch angepasst werden
 						{H. Heller}, 
 			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
-						{Version 1.16}, 
+						{Version 1.22}, 
 						{Universität Hamburg}, 
 						{Hamburg}, 
-			\textbf	{2021}, 
-			S.			{106-107}.
+			\textbf	{2026}, 
+			S.			{36-38}.
 
-    \bibitem{Gestis2}
-						{DGUV}, 
-						„{GESTIS Stoffdatenbank}“, zu finden unter 
-			\url		{https://gestis.dguv.de}, 
-			\textbf	{24.10.2026}.
-			
 \end{thebibliography}
 
 %--------------------------------------------------------------------------------------------------------------------------------------
@@ -490,7 +528,7 @@ Entsorgung: \\
 \newpage
 \subsubsection{Sicherheit und Entsorgung}
 		
-Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien3} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gestis3} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer3} aufgeführt.\zitat{Gestis3}
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien3} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{hauke3} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer3} aufgeführt.\zitat{hauke3}
 	
 \langetabelle
 	{Chemikalien3}
@@ -543,21 +581,15 @@ Entsorgung: \\
 
 \begin{thebibliography}{4}		%manuelles Quellenverzeichnis
 
-	\bibitem{entsorgung1} %Diese Quelle muss Jahrspezifisch angepasst werden
+	\bibitem{hauke3} %Diese Quelle muss Jahrspezifisch angepasst werden
 						{H. Heller}, 
 			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
-						{Version 1.16}, 
+						{Version 1.22}, 
 						{Universität Hamburg}, 
 						{Hamburg}, 
-			\textbf	{2021}, 
-			S.			{106-107}.
+			\textbf	{2026}, 
+			S.			{39}.
 
-    \bibitem{Gestis3}
-						{DGUV}, 
-						„{GESTIS Stoffdatenbank}“, zu finden unter 
-			\url		{https://gestis.dguv.de}, 
-			\textbf	{24.10.2026}.
-			
 \end{thebibliography}
 
 \end{document}
