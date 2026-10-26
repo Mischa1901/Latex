@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  24 OCT 2026 23:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  26 OCT 2026 02:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1513,220 +1513,553 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--362
 
  []
 
-[4] [5] [6]
-c:/Users/Mischa/Desktop/Latex/V3.tex:512: ignored error: Infinite glue shrinkage found in box being split [7]
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 412--421
 
  []
 
-[8] [9]
-Overfull \hbox (25.15361pt too wide) in paragraph at lines 553--554
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 	\cformel[AgX]{Ag^{+} + X^{-} <=> AgX}
+                                            
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 	\cformel[AgX]{Ag^{+} + X^{-} <=> AgX}
+                                            
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 	\cformel[AgX]{Ag^{+} + X^{-} <=> AgX}
+                                            
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 	\cformel[AgX]{Ag^{+} + X^{-} <=> AgX}
+                                            
+Underfull \hbox (badness 10000) in paragraph at lines 424--432
+
+ []
+
+[6]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.434 	\cformel[a1]{M + L <=> ML}
+                                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.434 	\cformel[a1]{M + L <=> ML}
+                                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.434 	\cformel[a1]{M + L <=> ML}
+                                 
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.434 	\cformel[a1]{M + L <=> ML}
+                                 
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.435 	\cformel[a2]{ML + L <=> ML2}
+                                   
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.435 	\cformel[a2]{ML + L <=> ML2}
+                                   
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.435 	\cformel[a2]{ML + L <=> ML2}
+                                   
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.435 	\cformel[a2]{ML + L <=> ML2}
+                                   
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.436 	\cformel[a3]{ML_{$x$} + L <=> ML_{$x+1$}}
+                                                
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.436 	\cformel[a3]{ML_{$x$} + L <=> ML_{$x+1$}}
+                                                
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.436 	\cformel[a3]{ML_{$x$} + L <=> ML_{$x+1$}}
+                                                
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.436 	\cformel[a3]{ML_{$x$} + L <=> ML_{$x+1$}}
+                                                
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.438 ...{A11}{K_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.438 ...{A11}{K_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.438 ...{A11}{K_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.438 ...{A11}{K_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.445 ...}{\beta_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.445 ...}{\beta_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+                                                  ]
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+
+ []
+
+
+Overfull \hbox (37.86525pt too wide) in paragraph at lines 455--456
+[]\T1/aer/m/n/12 (-20) Folglich ist die Kon-zen-tra-ti-on von Am-mo-ni-ak pro-por-tio-nal zur Kon-zen-tra-ti-on von Diamminsilber(I)-
+ []
+
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{equation.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.472 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.472 
+      ]
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--494
+
+ []
+
+[9
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.494 ...(aq)} + NO3^{-}_{(aq)} + AgI_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.494 ...(aq)} + NO3^{-}_{(aq)} + AgI_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.494 ...(aq)} + NO3^{-}_{(aq)} + AgI_{(s)}\ce{v}}
+                                                  ]
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+
+ []
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 496.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 496.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 496.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 497.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--498
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.501 ...(aq)} + NO3^{-}_{(aq)} + ClO3^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.501 ...(aq)} + NO3^{-}_{(aq)} + ClO3^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.501 ...(aq)} + NO3^{-}_{(aq)} + ClO3^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.501 ...(aq)} + NO3^{-}_{(aq)} + ClO3^{-}_{(aq)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 ...aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 ...aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 ...aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504 ...aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.507 ...AgOH_{(aq)} <=>[-H2O] + Ag2O_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.507 ...AgOH_{(aq)} <=>[-H2O] + Ag2O_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.507 ...AgOH_{(aq)} <=>[-H2O] + Ag2O_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.507 ...AgOH_{(aq)} <=>[-H2O] + Ag2O_{(s)}\ce{v}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 ...<=> [Ag(NH3)2]^{+}_{(aq)} + X^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 ...<=> [Ag(NH3)2]^{+}_{(aq)} + X^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 ...<=> [Ag(NH3)2]^{+}_{(aq)} + X^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.512 ...<=> [Ag(NH3)2]^{+}_{(aq)} + X^{-}_{(aq)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
+
+ []
+
+[10
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.524 	}
+        ] [11]
+c:/Users/Mischa/Desktop/Latex/V3.tex:635: ignored error: Infinite glue shrinkage found in box being split [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
+
+ []
+
+[14]
+Overfull \hbox (25.15361pt too wide) in paragraph at lines 706--707
 \T1/aer/m/n/12 (-20) Es war die Re-ak-ti-on von Kup-fer-sul-fat ($[][][]$) und Kup-ferhy-droxid-car-bo-nat ($[][][] [] [][][][][][][]$)
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.567 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
+l.720 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.567 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
+l.720 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.567 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
+l.720 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.567 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
+l.720 ...=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
                                                   
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 720--721
 
  []
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 569.
+Package prettyref Warning: Reference format ceq undefined on input line 722.
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 569.
+Package prettyref Warning: Reference format ceq undefined on input line 722.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--570
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
 
  []
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.572 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
+l.725 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.572 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
+l.725 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.572 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
+l.725 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.572 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
+l.725 ...+ 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.574 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
+l.727 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.574 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
+l.727 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.574 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
+l.727 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.574 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
+l.727 ...)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
                                                   
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+ [15]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.576 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
+l.729 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.576 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
+l.729 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.576 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
+l.729 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.576 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
+l.729 ...+ 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
+l.731 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
+l.731 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
+l.731 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.578 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
+l.731 ... + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.580 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
+l.733 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.580 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
+l.733 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.580 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
+l.733 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
                                                   
-pdfTeX warning (ext4): destination with the same identifier (name{equation.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.580 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
+l.733 ...+ 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
                                                   
-Underfull \hbox (badness 10000) in paragraph at lines 580--581
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--588
+Underfull \hbox (badness 10000) in paragraph at lines 737--741
 
  []
 
-[11]
+[16]
 
-Package prettyref Warning: Reference format ceq undefined on input line 596.
-
-
-Package prettyref Warning: Reference format ceq undefined on input line 597.
+Package prettyref Warning: Reference format ceq undefined on input line 749.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--599
-
- []
+Package prettyref Warning: Reference format ceq undefined on input line 750.
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 600.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 749--752
 
  []
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 603.
+Package prettyref Warning: Reference format ceq undefined on input line 753.
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 604.
+Package prettyref Warning: Reference format ceq undefined on input line 755.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--605
+Overfull \hbox (7.28308pt too wide) in paragraph at lines 753--756
+[]\T1/aer/m/n/12 (-20) Die tief-blaue Far-be der Am-mo-niak-lö-sung lässt sich auf die Bil-dung von Tetraamminkupfer(II)-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 753--756
 
  []
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 607.
+Package prettyref Warning: Reference format ceq undefined on input line 758.
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 608.
+Package prettyref Warning: Reference format ceq undefined on input line 759.
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 609.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 606--610
+Underfull \hbox (badness 10000) in paragraph at lines 757--760
 
  []
 
 
-Package prettyref Warning: Reference format ceq undefined on input line 611.
+Package prettyref Warning: Reference format ceq undefined on input line 762.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package prettyref Warning: Reference format ceq undefined on input line 763.
 
- [12]
-c:/Users/Mischa/Desktop/Latex/V3.tex:657: ignored error: Infinite glue shrinkage found in box being split [13]
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+
+Package prettyref Warning: Reference format ceq undefined on input line 764.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 761--765
+
+ []
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 766.
+
+
+Underfull \vbox (badness 4686) has occurred while \output is active []
+
+ [17]
+c:/Users/Mischa/Desktop/Latex/V3.tex:812: ignored error: Infinite glue shrinkage found in box being split [18]
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
  []
 
@@ -1734,7 +2067,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 667--668
 Package caption Warning: Unused \captionsetup[figure] on input line 46.
 See the caption package documentation for explanation.
 
-[14] (V3.aux)
+[19] (V3.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1748,17 +2081,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 49942 strings out of 467871
- 1178656 string characters out of 5417891
- 1844178 words of memory out of 5000000
- 77608 multiletter control sequences out of 15000+600000
- 697739 words of font info for 422 fonts, out of 8000000 for 9000
+ 50057 strings out of 467871
+ 1179706 string characters out of 5417891
+ 1846177 words of memory out of 5000000
+ 77650 multiletter control sequences out of 15000+600000
+ 702138 words of font info for 453 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,11235b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Mischa\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on V3.pdf (15 pages, 219464 bytes).
+ <C:\Users\Mischa\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on V3.pdf (20 pages, 258069 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 106189 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 108237 words of extra memory for PDF output out of 128383 (max. 10000000)
 
