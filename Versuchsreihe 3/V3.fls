@@ -1,6 +1,6 @@
-PWD c:\Users\Mischa\Desktop\Latex
+PWD c:\Users\Mischa\Desktop\Latex\Versuchsreihe 3
 INPUT C:\Users\Mischa\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Mischa\Desktop\Latex\V3.tex
+INPUT c:\Users\Mischa\Desktop\Latex\Versuchsreihe 3\V3.tex
 OUTPUT V3.log
 INPUT C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrartcl.cls
 INPUT C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrartcl.cls

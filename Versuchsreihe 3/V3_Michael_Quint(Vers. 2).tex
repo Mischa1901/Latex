@@ -1,0 +1,1065 @@
+%Dokumentenklasse
+\documentclass[
+	a4paper,										%Format
+	12pt,											%Schriftgröße
+	twoside,										%Zweiseitig
+	headsepline,								%horizontale Linie oben
+	footsepline,									%horizontale Linie unten
+	captions=tableheading,					%Überschrift über Tabelle (nicht unter)
+]{scrartcl}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\thesection.\arabic{subsection}.\arabic{subsubsection}. \hspace{2pt}}
+\renewcommand{\theparagraph}{\thesection.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.}
+
+%Pakete:
+\usepackage[exponent-product = \cdot, output-decimal-marker = {,}]{siunitx}
+\usepackage{textalpha}
+\usepackage{floatrow}
+\floatsetup[table]{style=plaintop}
+\floatsetup[longtable]{LTcapwidth=table}
+%\usepackage{overcite}
+\usepackage{siunitx}
+\usepackage[ngerman]{babel} 			%Neue deutsche Rechtschreibung
+\usepackage{grffile}
+\usepackage{graphicx} 					%Bilder einbinden
+\usepackage{xcolor}						%Farben für Schrift und Plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}					%Plots und Tabellen aus Datensätzen.
+\usepackage{amsmath}						%Mathe
+\usepackage{amssymb}					%Mathesymbole
+\usepackage{longtable}					%Seitenübergreifende Tabellen zulassen
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{geometry}					%Seitenränder
+\usepackage{ae}								%skalierbare Schriften (im PDF-File)
+\usepackage[activate]{microtype}		%optischer Randausgleich
+\usepackage{setspace}					%Zeilenabstand: \onehalfspacing
+\usepackage[utf8]{inputenc}				%Zeichenkodierung für Umlaute
+\usepackage{scrlayer-scrpage}					%für Dokumentformatierung mit Pagestyle
+\usepackage[version=4]{mhchem}						%Chemische Formeln (mit \ce )
+\usepackage{chemfig}
+\usepackage{siunitx}
+\usepackage{caption}										%Überschriften formatieren
+\captionsetup{labelfont={bf,it},tablename=Tab.,figurename=Abb.}				%Überschriften formatieren
+\captionsetup[table]{singlelinecheck=false,justification=raggedright}
+\captionsetup[figure]{justification=raggedright}				
+
+%Abbildungs und Tabellennummerierung anpassen
+\renewcommand*\figureformat {\figurename~\arabic{section}.\arabic{subsection}.\thefigure.}	%Punkt nach Abb. #
+\renewcommand*\tableformat {\tablename~\arabic{section}.\arabic{subsection}.\thetable:}		%Doppelpunkt nach Tab. #
+\renewcommand*\captionformat {~}								%Nur Abstand, kein Zeichen nach Tab. #: bzw Abb. #. 
+
+%Literatur als Subsubsection definieren und von Literaturverzeichnis in Literatur umbenennen
+\makeatletter
+\renewcommand*\bib@heading{\subsubsection{\bibname}			
+\@mkboth{\subsubsectionmarkformat \bibname}{\subsubsectionmarkformat \bibname}}
+\makeatother
+\addto\captionsngerman{\renewcommand*\bibname{Literatur}} 
+
+\usepackage{prettyref}						%Nummerierung der Tabellen und Abbildungen im Text an Tab. x.x.# anpassen
+%%% Für Abbildungen %%%
+\newrefformat{fig}{Abb.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+%%% Für Tabellen %%%
+\newrefformat{tab}{Tab.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+
+%Links im Dokument:
+\usepackage[									%als letztes Paktet einbinden!
+	linkcolor=black,							%Farbe der Links
+	citecolor=black,							%Farbe der Link-Ziele
+	urlcolor=black,								%Farbe von URLs
+	colorlinks=true,							%Links nicht als Kasten, sondern direkt als Text anzeigen
+]{hyperref}										%Links im PDF-File, unterstützung von URLs mit /url{}
+
+%Dokumentformatierungen
+\setkomafont{sectioning}{\bfseries} 	%Serifenschrift in Überschriften
+\setkomafont{subsection}{\LARGE}
+\setkomafont{subsubsection}{\large}
+\pagenumbering{arabic}					%arabische Seitenzahlen
+\geometry{left=3cm, right=2cm, top=2.5cm, bottom=2cm} 	%Seitenränder
+\parindent0pt 									%Absätze einrücken um 0Pt
+\parskip 10pt									%Abstand nach Absatz
+\onehalfspacing								%Zeilenabstand
+\pagestyle{scrheadings}					%Kopf- und Fussleistenformatierung
+\headsep0.4cm								%Abstand Kopfleiste-Text
+\footskip0.8cm									%Abstand Fussleiste-Text
+\urlstyle{same}								%URLs normal formatieren, nicht als Typewriter
+
+%Befehle definieren
+
+%%%%% create chemequation environment
+
+\newcounter{chemequation}
+\renewcommand*\thechemequation{(\Roman{chemequation})}
+\newenvironment{chemequation}{%
+	\stepcounter{chemequation}%
+	\begin{equation}}%
+{\tag*{\thechemequation}%
+	\end{equation}}
+
+%%%%% create chemtag to iterate and ref chemequations in an align environment
+
+\newcommand*\chemtag{%
+	\stepcounter{chemequation}%
+	\tag*{\thechemequation}}
+
+%%%%% to create a chemicalequation float
+
+\usepackage{float}
+\newfloat{chemicalequation}{htbp}{cex}%[chapter]
+\floatname{chemicalequation}{}
+
+\newcommand{\zitat}[1]{\textsuperscript{\cite{#1}}}
+
+\newcommand{\bild}[4]{					%Bilder mit Beschriftung einfügen
+	\begin{figure}[#4]						%#4: Platzierung (htbp)
+		\centering								%Bilder mittig einfügen
+		\captionbox								%Beschriftungsumgebung
+			{#2\label{fig: #1}}				%#2: Beschriftung
+			{\includegraphics[#3]{#1}}	%#1: Dateiname, #3: Bildeigenschaften
+	\end{figure}} 
+
+\newcommand{\formel}[2]{				%Formel einfügen und Referenz erzeugen
+	\begin{equation}
+		\label{eq: #1}							%#1: Formelname
+		#2											%Formelinhalt
+	\end{equation}}
+
+\newcommand{\cformel}[2][]{				%Chemische Formel einügen und Referenz erzeugen
+	\begin{chemequation}
+		\label{ceq: #1}					%#1: Formelname (optional)
+		\ce{#2}							%#2: Formelinhalt
+	\end{chemequation}\\}
+
+\newcommand{\ox}[2]{
+	\overset{\text{#2}}{\ce{#1}}}
+	
+\newcommand{\tabelle}[6]{				%Tabelle mit Beschriftung einfügen
+\begin{table}[#3]							%#3: Platzierung (htbp)
+\centering										%Tabelle mittig einfügen
+\captionbox										%Beschriftungsumgebung
+{#2												%#2: Tabellenbeschriftung
+\label{tab: #1}}								%#1: Tabellenname
+{\begin{tabular}{#4}						%#4: Anzahl und Ausrichtung Spalten (l c r)
+\hline 											%horizontale Linie
+#5													%#5: Obere Zeile
+\hline
+#6													%#6: Datenzeilen
+\hline 
+\end{tabular}}
+\end{table}}
+
+\usepackage{array,ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}} %Verhindert ungewollte Lücken in Tabellen
+
+\newcommand{\langetabelle}[6]{  %Seitenübergreifende Tabelle, Kopfzeile wird 
+	\begin{centering}           %auf jeder neuen Seite ebenfalls angezeigt
+		{\begin{longtable}[#3]{#4}
+				\caption{#2\label{tab: #1}}\\				
+				\hline
+				#5
+				\hline
+				\endfirsthead
+                \caption{#2\label{tab: #1}}\\
+				\hline
+				#5
+				\hline
+				\endhead
+				#6												
+				\hline 
+		\end{longtable}}
+\end{centering}}
+
+%Plots erstellen&&&&&&&&
+
+%#1: Referenz
+%#2: Name
+%#3: x label
+%#4: y label
+%#5: x-werte,y-werte (Spaltenweise)
+%#6: Quelle (.txt Datei)
+%#7: "Nummerierung" (manuell) <.<
+
+\newcommand{\plot}[6]{
+	\begin{figure}[H]	
+		\centering
+		\begin{tikzpicture}
+	
+		\begin{axis}[
+		title style={at={(0.5,0)},
+		anchor=north,
+		yshift=-40},
+		xlabel={#3},
+		ylabel={#4},
+		legend pos=south east,
+		legend entries={},
+		]
+		\addplot[color=black,mark=*,only marks] table [#5] {#6};
+		\label{plot: plot1}
+		\end{axis}
+		\end{tikzpicture}
+		\caption{#2}
+		\label{fig: #1}
+	\end{figure}
+}
+
+\newcommand{\molL}[1]{\ensuremath{\mathrm{\SI{#1}{\frac{mol}{L}}}}} % \molL{1} => \SI{1}{\frac{mol}{L}}
+\newcommand{\mL}[1]{\ensuremath{\mathrm{\SI{#1}{mL}}}} % \mL{1} => \SI{1}{mL}
+
+\newcommand{\Rn}[1]{\romannumeral#1\relax}                   %\Rn{1} = i
+\newcommand{\RN}[1]{\uppercase\expandafter{\romannumeral#1}} %\RN{1} = I
+
+%Dokument:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%Titelseite
+	\begin{titlepage}
+		\begin{center}
+			\hrule													%waagerechte Linie
+			\vspace*{5cm}
+			\Huge {\textbf {Versuchsreihe 3}}\\						%Titel Versuchsreihe
+			\vspace*{0.5cm}
+			%		\large {\bf {Untertitel}}\\						%Untertitel
+			\vspace*{1cm}
+			\normalsize
+			Protokoll	\\									
+			Praktikum für Nanowissenschaftler:innen\\
+			im Studiengang Nanowissenschaften\\
+			\vspace*{0.5cm}
+			\Large {\textbf{Michael Quint}}		\\						%Name
+			\vspace*{0.5cm}
+					\normalsize{Platz 9a}								%Platznummer
+			\vfill
+		\end{center}
+		\begin{tabbing}
+			\hspace{3cm}\=\kill
+			Assistent: \> Dr. Hauke Heller \\						% Name Assistent
+			Version: \> 2 \\									%Version
+			Datum: \> 28.10.2026 \\								%Datum
+		\end{tabbing}
+		\hrule														%Waagerechte Linie
+\end{titlepage}
+
+\setcounter{page}{1}
+\setcounter{section}{3}								%Versuchstag #.x.x bzw Versuchsreihe
+\setcounter{subsection}{0}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Verschieben eines heterogenen Gleichgewichts}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+	Das Verhalten einer gesättigten Kaliumperchloratlösung (\ce{KClO4}) sollte nach Zugabe einer gesättigten Natriumchlorid- (\ce{NaCl}),
+	Kaliumchlorid- (\ce{KCl}) und 70 \%iger Perchlorsäurelösung (\ce{HClO4}) untersucht und beschrieben werden. Die Begriffe eines homogenen und heterogenen Gleichgewichts waren zu definieren.
+	Die Löslichkeit von Kaliumperchlorat war zu berechnen und für 100 mL Wasser anzugeben.
+
+\subsubsection{Theoretischer Hintergrund}
+
+	Chemische Gleichgewichte sind Zustände innerhalb chemischer Reaktionen, in welchen keine Nettostoffmenge umgesetzt wird. Dies bedeutet nicht, dass keine Reaktion stattfindet,
+	jedoch dass sowohl die Hin- als auch Rückreaktion die gleiche Reaktionsgeschwindigkeit vorweisen, sofern keine äußere Einwirkung vorliegt.\\
+	Grundlegend können chemische Reaktionen mit dem Edukt \ce{A_i} und dem Produkt \ce{B_j} mit dem jeweiligen stöchiometrischen Faktor $\nu$ beschrieben werden.
+
+	\cformel[Reaktion1]{\sum_{i} $\nu_i$ A_i <=> \sum_{j} $\nu_j$ B_j}
+	{\centering
+	$\nu_i > 0$, $\nu_j > 0$
+	\par}
+	Nach dem Prinzip von Le Chatelier ist dieses Gleichgewicht abhängig von äußeren Zwängen; dazu gehören die Temperatur, die Konzentrationen der Reaktanden und der Umgebungsdruck.
+	Dabei weicht das Gleichgewicht jenem Zwang aus, dem es ausgesetzt ist.\zitat{riedel}\\\\
+	Es wird außerdem zwischen einem homogenen und heterogenen Gleichgewicht unterschieden. In einem homogenen Gleichgewicht befinden sich alle relevanten Stoffe in derselben Phase,
+	während in einem heterogenen Gleichgewicht mindestens zwei verschiedene Phasen vorliegen.\zitat{riedel}\\
+
+	Mit dem Massenwirkungsgesetz (MWG) besitzen Gleichgewichtsreaktionen \prettyref{ceq: Reaktion1} eine Reaktionskonstante $K$, die folgende mathematische Beziehung aufweisen:
+
+	\formel{MWG}{K = \frac{\prod_{j} a(\mathrm{B}_j)^{\nu_j}}{\prod_{i} a(\mathrm{A}_i)^{\nu_i}}}
+
+	\newpage
+
+	Dabei ist \ce{$a$(B_j)} die Aktivität des Produktes \ce{B_j} und \ce{$a$(A_i)} entsprechend die Aktivität des Eduktes \ce{A_i}.\\
+	
+	Bei der Dissoziation eines Salzes \ce{A_{x}B_y} in einer wässrigen Lösung gilt demnach folgendes Gleichgewicht:
+	\cformel[Salzc]{${\mathrm{A}_{x}\mathrm{B}_{y}}_{(\mathrm{s})}$ <=> $x\mathrm{A}^{\mathrm{+}}_{\mathrm{(aq)}} + y\mathrm{B}^{\mathrm{-}}_{\mathrm{(aq)}}$}
+	
+	Folglich lässt sich $K$ dementsprechend ausdrücken:
+	\formel{Salzf}{K = \frac{a(\mathrm{A}^{+})^{x} \cdot a(\mathrm{B}^{-})^{y}}{a(\mathrm{A}_{x}\mathrm{B}_y)}}
+
+	Da die Aktivität eines Feststoffes per Definition 1 beträgt und in dem Fall die Aktivität der Ionen näherungsweise gleich den Konzentrationen gesetzt wird, wird das Löslichkeitsprodukt $K_L$ eingeführt.
+	\formel{KL}{K_L = [\mathrm{A}^{+}]^{x} \cdot [\mathrm{B}^{-}]^{y}}
+
+	Für das Lösen eines Salzmoleküls entstehen $x+y$ Ionen \prettyref{ceq: Salzc}. Mit der Einführung der Löslichkeit $L$ lässt sich also ausdrücken:
+	\formel{KL2}{K_L = (x\cdot L)^{x} \cdot (y\cdot L)^{y}}
+	\formel{KL3}{L = \sqrt[x+y]{\frac{K_L}{x^x \cdot y^y}}}
+
+	Angewendet auf Kaliumperchlorat bei einer Löslichkeitskonstante $K^{298\mathrm{K}}_L = 1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}$ lässt sich die Löslichkeit $L^{298\mathrm{K}}_{\ce{KClO4}}$ in \ce{\frac{mol}{L}} bzw. \ce{\frac{g}{L}} bei 25°C berechnen.\zitat{KLWert}
+	\cformel[KCL]{KClO4_{(s)} <=> K^{+}_{(aq)} + ClO4^{-}_{(aq)}}
+	\formel{dis}{K_L = [\ce{K^{+}}] \cdot [\ce{ClO4^{-}}]}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt[1+1]{\frac{K^{298\mathrm{K}}_L}{1^1 \cdot 1^1}}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt{K^{298\mathrm{K}}_L}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} = \sqrt{1,05 \cdot 10^{-2} \mathrm{\frac{mol^{2}}{L^{2}}}} = 0,102\ \mathrm{\frac{mol}{L}} = 0,0102\ \mathrm{\frac{mol}{100\ mL}}}
+	\formel{KL3}{L^{298\mathrm{K}}_{\ce{KClO4}} \cdot M_{\ce{KClO4}} = 0,0102\ \mathrm{\frac{mol}{100\ mL}} \cdot 138,55 \ \mathrm{\frac{g}{mol}} = 1,41 \ \mathrm{\frac{g}{100 \ mL}}}
+
+
+
+
+\subsubsection{Experimenteller Teil}
+
+	Es wurden drei Reagenzgläser mit jeweils 4 mL gesättigter Kaliumperchloratlösung gefüllt, wobei jede Lösung durchsichtig und klar war.\\
+	Bei der Zugabe einer 1 mL gesättigten Natriumchloridlösung bildeten sich zunächst leichte Schlieren, bis sich das Natriumchlorid vollständig löste und die Lösung wieder klar wurde.\\
+	Bei der Zugabe einer 1 mL gesättigten Kaliumchloridlösung in ein anderes Reagenzglas bildeten sich ebenfalls Schlieren und es fiel ein farbloser Feststoff aus.
+	Die Phase über dem ausgefallenen Feststoff wurde nach ca. 15 bis 20 Sekunden klar.\\
+	Zuletzt wurden in ein drittes Reagenzglas ca. 5 Tropfen einer 70 \%igen Perchlorsäurelösung pipettiert und die Flüssigkeit wurde zunächst trüb, bis erneut ein farbloser Feststoff ausfiel
+	und die Phase über dem Feststoff erneut klar wurde.
+
+	\subsubsection{Ergebnisse und Diskussion}
+	Durch das Hinzufügen von Natriumchlorid in die Kaliumperchloratlösung bildeten sich zunächst leichte Schlieren, da sich das Gleichgewicht der Lösung erst einstellen musste.
+	Es ist jedoch kein Feststoff ausgefallen, da Natriumchlorid bzw. die Natrium- (\ce{Na^{+}}) und Chloridionen (\ce{Cl^{-}}) nicht am Gleichgewicht \prettyref{ceq: KCL} beteiligt sind.\\
+	Kaliumchlorid und Perchlorsäure dissoziieren allerdings in folgende Ionen:
+	\cformel[KCl]{KCl_{(s)} <=> K^{+}_{(aq)} + Cl^{-}_{(aq)}}
+	\cformel[HClO4]{HClO4_{(aq)} + H2O_{(l)} <=> H3O^{+}_{(aq)} + ClO4^{-}_{(aq)}}
+	Da in der Lösung von Kaliumperchlorat sowohl Kalium- (\ce{K^{+}}) als auch Perchlorationen (\ce{ClO4^{-}}) beteiligt sind und es sich demnach um einen gleichionigen Zusatz handelt, wurde in beiden separaten Fällen das Löslichkeitsprodukt in Gl. \prettyref{eq: dis} überschritten
+	und das Gleichgewicht wurde auf die 'Eduktseite' verschoben.
+	Um das Gleichgewicht wiederherzustellen, fiel Kaliumperchlorat als farbloser Feststoff aus. 
+
+\subsubsection{Zusammenfassung}
+
+	Das Prinzip von Le Chatelier und das MWG konnten verwendet werden, um das chemische Gleichgewicht bei einer Lösung eines Salzes zu beschreiben.
+	Sofern bei einem gleichionigen Zusatz die Konzentrationen der gelösten Ionen verändert wurden, kam es zu einer Verschiebung des Gleichgewichts,
+	wodurch in dem Fall ein Überschuss an Kalium- bzw. Perchlorationen vorlag, weshalb das Löslichkeitsprodukt überschritten wurde.
+	Es entstand ein heterogenes Gleichgewicht, in welchem Kaliumperchlorat als Feststoff ausgefallen ist.
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{test} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer} aufgeführt.\zitat{test}
+	
+\langetabelle
+	{Chemikalien}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+  \ce{KClO4} 
+    & \begin{tabular}[t]{l} GHS03 \\ GHS07 \end{tabular}
+    & 271, 302 
+    & 210, 220, 221, 264, \newline 280, 283, 301+312, \newline 306+360, 330, 370+378, \newline 371+380+375, 501 
+    & (1) \\
+
+  % Zweiter Stoff
+  \ce{HClO4} (konz.) 
+    & \begin{tabular}[t]{l} GHS03 \\ GHS05 \end{tabular}
+    & 271, 314 
+    & 210, 220, 221, 260, 264, \newline 280, 283, 301+330+331, \newline 303+361+353, 304+340, \newline 305+351+338, 306+360, \newline 310, 321, 370+378, \newline 371+380+375, 405, 501 
+    & (1) \\}
+
+\langetabelle
+	{KMR_leer}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die verwendete Lösung wurde mit Natriumthiosulfat (\ce{Na2S2O3}) reduziert und im Behälter für nicht-nitrathaltige Säuren entsorgt.
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{riedel}
+						{E. Riedel, H. Meyer}, 
+			\textit	{Allgemeine und Anorganische Chemie}, 
+						{12. Auflage}, 
+						{De Gruyter}, 
+						{Berlin}, 
+			\textbf	{2018}, 
+			S.			{170-175}.
+
+	\bibitem{KLWert}
+						{Hans Lohninger}, 
+						„{Tabelle von Löslichkeitsprodukten - Teil 2}“, zu finden unter 
+			\url		{http://anorganik.chemie.vias.org/loeslichkeitsprodukt_tabelle_teil2.html}, 
+			\textbf	{24.10.2026}.
+
+	\bibitem{test}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{28.10.2026}.
+
+			
+\end{thebibliography}
+
+%---------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\setcounter{subsection}{1}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Fällung und Komplexierung von Silberionen}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+	Das Verhalten von Silbernitratlösungen (\ce{AgNO3}) mit wässrigen Lösungen verschiedener Halogenide sowie von bestimmten chlorhaltigen Verbindungen war zu beobachten und zu erklären.
+	Darauffolgend sollte die Löslichkeit von Silberhalogeniden (\ce{AgX}) in Ammoniaklösungen (\ce{NH3}) und weiteren Hilfsreagenzien untersucht werden.
+
+\subsubsection{Theoretischer Hintergrund}
+
+	Das Ausfallen von Salzen bei der Reaktion von Silbernitrat mit wässrigen Halogenidlösungen lässt sich durch die Säuren- und Basendefinition nach Lewis und dem HSAB-Prinzip erklären.\\
+	Lewissäuren und -Basen sind im Grunde genommen Verallgemeinerungen der Säuren- und Basendefinitionen nach Br\o nsted. Nach Lewis ist eine Säure ein 'Elektronenpaarakzeptor',
+	während eine Base ein 'Elektronenpaardonator' ist.\\
+	Das HSAB-Prinzip (\textbf{h}ard and \textbf{s}oft \textbf{a}cids and \textbf{b}ases) unterteilt diese in harte und weiche Säuren und Basen. Nach dem HSAB-Prinzip sind harte Säuren/Basen jene,
+	welche sich schwer durch äußere Wirkungen polarisieren lassen und eine hohe Ladungsdichte ausweisen. Weiche Säuren/Basen sind dagegen jene, welche eine relativ geringe Ladungsdichte aufweisen
+	und sich durch andere Ionen leichter polarisieren lassen.\\
+	Dies hat zur Folge, dass harte Säure-Base-Salze einen eher ionischen Charakter vorweisen, während Bindungen mit weichen Reaktanden kovalente Eigenschaften besitzen.
+	Dies bedeutet auch, dass nach dem HSAB-Prinzip Salze als Produkte mit ausschließlich harten Säuren und harten Basen oder mit ausschließlich weichen Säuren und weichen Basen stabiler sind
+	als Salze, welche beispielsweise das Produkt aus einer harten Base und einer weichen Säure bestehen.\zitat{riedel3}\\
+
+	Das Silberion (\ce{Ag^{+}}), welches ein Nebengruppenelement in der fünften Periode ist, wäre somit aufgrund seiner niedrigen Ladungsdichte eine weiche Lewis-Säure,
+	welche dementsprechend stabilere Salze mit weichen Lewis-Basen - beispielsweise mit Halogeniden (\ce{X^{-}}) ab der dritten Periode - bildet. 
+	\cformel[AgX]{Ag^{+} + X^{-} <=> AgX}
+	Komplexe beinhalten ein Koordinationszentrum, welches aus mindestens einem Zentralteilchen besteht - in diesem Fall \ce{Ag^{+}}. Um dieses Zentralteilchen befinden sich eine bestimmte Anzahl an Liganden.
+	Die Anzahl an Liganden ist gleich der Koordinationszahl. Je nach Koordinationszahl besitzt ein Komplex eine unterschiedliche geometrische Anordnung.\\
+	Nach der Ligandenfeldtheorie werden die ursprünglich entarteten d-Orbitale des Zentralteilchens energetisch aufgespalten,
+	da es bei bestimmten Koordinationen zu einer elektrostatischen Abstoßung zwischen den d-Orbitalen und den freien Elektronenpaaren der Liganden kommt.
+	Dabei werden die d-Orbitale, welche auf den Ligandenbindungsachsen liegen, energetisch angehoben und die restlichen energetisch abgesenkt.
+	Diese Energiedifferenz ist die Kristallfeldaufspaltungsenergie $\Delta E$. Wenn Photonen die gleiche Energie $E = h\nu = \frac{hc}{\lambda}$ wie die Kristallfeldaufspaltungsenergie besitzen,
+	können diese absorbiert werden und das menschliche Auge nimmt die transmittierten bzw. reflektierten Photonen als Komplementärfarbe wahr.\zitat{riedel34}\\
+
+	Die Bildung von Komplexen aus Metallen (M) und Liganden (L) lässt sich schrittweise wie folgt beschreiben:
+	\cformel[a1]{M + L <=> ML}
+	\cformel[a2]{ML + L <=> ML2}
+	\cformel[a3]{ML_{$x$} + L <=> ML_{$x+1$}}
+	Die dazugehörigen MWG lauten:
+	\formel{A11}{K_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+	\formel{A22}{K_2 = \mathrm{\frac{[ML_2]}{[ML][L]}}}
+	\formel{A33}{K_{n} = \frac{[\mathrm{ML}_{n}]}{[\mathrm{ML}_{n-1}][\mathrm{L}]}}
+	Die Stabilität von Komplexen wird quantitativ über die Bruttokomplexbildungskonstante $\beta$ beschrieben:
+	\cformel[b1]{M + L <=> ML}
+	\cformel[b2]{M + 2L <=> ML2}
+	\cformel[b3]{M + $n$L <=> ML_{$n$}}
+	\formel{B11}{\beta_1 = \mathrm{\frac{[ML]}{[M][L]}}}
+	\formel{B22}{\beta_2 = \mathrm{\frac{[ML_2]}{[M][L]^{2}}}}
+	\formel{B33}{\beta_{n} = \frac{[\mathrm{ML}_{n}]}{[\mathrm{M}][\mathrm{L}]^{n}}}
+	\formel{beta}{\beta_n = \prod_{i=1}^{n}K_i}
+
+	Um schwer lösliche Silberhalogenide in Lösung zu bringen, kann Ammoniak addiert werden, wodurch sich Diamminsilber(I)-Komplexe bilden.
+	\cformel[AgXX]{AgX_{(s)} + 2NH3_{(aq)} <=> [Ag(NH3)2]^{+}_{(aq)} + X^{-}_{(aq)}}
+	\formel{bettakoenig}{\beta = \mathrm{\frac{[\ce{[Ag(NH3)2]^{+}}]}{[Ag^{+}][\ce{NH3}]^{2}}}}
+	\formel{Loesung}{K_{\mathrm{aq}} = \mathrm{\frac{[\ce{Ag+}][\ce{X-}]}{[\ce{AgX}]}} \iff [\ce{Ag+}] = \frac{K_{\mathrm{aq}}[\ce{AgX}]}{[\ce{X-}]}}
+
+	Folglich ist die Konzentration von Ammoniak proportional zur Konzentration von Diamminsilber(I)-Komplexen:
+	\formel{Loesung2}{\frac{[\ce{[Ag(NH3)2]^{+}}]}{[\ce{AgX}]} = \frac{K_{\mathrm{aq}} \cdot \beta \cdot [\ce{NH3}]^{2}}{[\ce{X-}]}}
+
+	Basische Lösungen sind für diesen Versuch allerdings gleich mehrfach problematisch.\\
+	Einerseits können Diamminsilber(I)-Komplexe spontan zu Ammonium (\ce{NH4+}) und Silberamid bzw. 'Knallsilber' (\ce{AgNH2}) reagieren, welches äußerst explosiv\zitat{bumm} ist.
+	Ansäuern wirkt dem entgegen.
+	\cformel[knallsilber]{[Ag(NH3)2]^{+}_{(aq)} <=> AgNH2_{(aq)} + NH4^{+}_{(aq)}}
+	Andererseits bilden sich schwerlösliche Silber(I)-oxide:
+	\cformel[nervig]{2Ag^{+}_{(aq)} + 2OH^{-}_{(aq)} <=> 2AgOH_{(aq)} <=> Ag2O_{(s)}\ce{v} + H2O_{(l)}}
+
+
+
+\subsubsection{Experimenteller Teil}
+
+	Fünf Reagenzgläser (RG) wurden mit ca. fünf Tropfen Salpetersäure (\ce{HNO3}, \ce{1 \frac{mol}{L}}) und ca. drei Tropfen einer Silbernitratlösung (\ce{0,1 \frac{mol}{L}}) gefüllt und wurden mit folgenden Lösungen ergänzt:
+	\begin{center}
+		\begin{tabular}{l l}
+			(RG 1): & 2\,mL \ce{HCl} ($0{,}1\,\text{mol/L}$) \\
+			(RG 2): & 2\,mL \ce{NH4Cl} ($0{,}1\,\text{mol/L}$) \\
+			(RG 3): & 2\,mL \ce{BaCl2} ($0{,}1\,\text{mol/L}$) \\
+			(RG 4): & 2\,mL \ce{KBr} ($0{,}1\,\text{mol/L}$) \\
+			(RG 5): & 2\,mL \ce{KI} ($0{,}1\,\text{mol/L}$)
+		\end{tabular}
+	\end{center}
+	Die Suspensionen in den Reagenzgläsern 1, 2 und 3 wurden milchig-trüb und bei den ersten beiden bildete sich ein kleiner Niederschlag, jedoch mit einem leicht gräulichen Farbton im dritten Reagenzglas.\\
+	In den Reagenzgläsern 4 und 5 bildeten sich ebenfalls Niederschläge, wobei die Flüssigkeit des RG 4 ebenfalls milchig-trüb war, diese allerdings einen leichten Gelbstich hatte. In RG 5 war dieser Gelbstich leicht dezenter.
+
+	Zwei weitere Reagenzgläser wurden separat mit 2 mL Chloralhydratlösung (\ce{C2H3Cl3O2}, \ce{0,1 \frac{mol}{L}}) und 2 mL Kaliumchloratlösung (\ce{KClO3}, \ce{0,1 \frac{mol}{L}}) befüllt und mit ca. 5 Tropfen Silbernitratlösung (\ce{1 \frac{mol}{L}}) versetzt.
+	Eine Reaktion konnte nicht beobachtet werden; die Lösungen blieben klar und farblos.
+
+	Es wurden erneut zwei Reagenzgläser mit ca. 2 mL Silbernitratlösung (\ce{1 \frac{mol}{L}}) gefüllt. Das erste Reagenzglas wurde mit ca. 13 Tropfen Salpetersäure (\ce{1 \frac{mol}{L}}) angesäuert.
+	Nach dem Zuführen von NaCl-Lösung (\ce{1 \frac{mol}{L}}) wurde die Lösung farblos-trüb und es fiel ein farbloser Niederschlag aus.\\
+	Dem zweiten Reagenzglas wurden ca. 13 Tropfen einer Natronlaugelösung (\ce{NaOH}, \ce{1 \frac{mol}{L}}) und es bildete sich eine aggregiert-braune Suspension.
+	Nach der Zugabe von 6 Tropfen einer NaCl-Lösung (\ce{1 \frac{mol}{L}}) setzte sich ein farbloser Feststoff an der Oberfläche ab. Beim Schütteln bildeten sich zwei Phasen:
+	Eine obere hellbraune Phase und eine untere dunkelbraune Phase mit aggregierten Teilchen.
+
+	Drei weitere RG wurden jeweils mit 2 bis 5 Körnern folgender Salze gefüllt: \ce{AgCl, AgBr, AgI}\\
+	In jedes Reagenzglas wurde jeweils 3 mL einer 1 \%igen Ammoniaklösung (\ce{NH3}) addiert. Die AgBr- und AgI-Salze lösten sich kaum, während Teile des AgCl in Lösung gingen.
+	Die flüssigen Phasen wurden dekantiert und es wurde in jedes Reagenzglas 1 mL 25 \%ige Ammoniaklösung addiert. Das AgCl löste sich fast vollständig,
+	während das AgBr nur schwach in Lösung ging. Das AgI blieb vollständig ungelöst.
+
+\subsubsection{Ergebnisse und Diskussion}
+
+	Die Reaktionen in den Reagenzgläsern 1 bis 5 lassen sich wie folgt darstellen:
+	\cformel[r1]{AgNO3_{(aq)} + HCl_{(aq)} + H2O_{(l)} <=> H3O^{+}_{(aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+	\cformel[r2]{AgNO3_{(aq)} + NH4Cl_{(aq)} <=> NH4^{+}_{(aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+	\cformel[r3]{2AgNO3_{(aq)} + BaCl2_{(aq)} <=> Ba^{2+}_{(aq)} + 2NO3^{-}_{(aq)} + 2AgCl_{(s)}\ce{v}}
+	\cformel[r4]{AgNO3_{(aq)} + KBr_{(aq)}  <=> K^{+}_{(aq)} + NO3^{-}_{(aq)} + AgBr_{(s)}\ce{v}}
+	\cformel[r5]{AgNO3_{(aq)} + KI_{(aq)} <=> K^{+}_{(aq)} + NO3^{-}_{(aq)} + AgI_{(s)}\ce{v}}
+
+	Bei den Reaktionen \prettyref{ceq: r1}-\prettyref{ceq: r3} bildeten sich die farblosen Silberchloride. In der Reaktion \prettyref{ceq: r4} bildete sich das leicht gelbliche Silberbromid
+	und in der Reaktion \prettyref{ceq: r5} das leicht dezent gelbliche Silberiodid.\\
+
+	Weder Chloralhydrat noch Kaliumchlorat dissoziieren in eine weiche Base, sodass das Silberion (\ce{Ag+}) mit denen ein stabiles Salz bzw. einen stabilen Komplex bilden kann,
+	weshalb die Lösungen klar blieben.
+	\cformel[r7]{AgNO3_{(aq)} + KClO3_{(aq)} <=> K^{+}_{(aq)} + Ag^{+}_{(aq)} + NO3^{-}_{(aq)} + ClO3^{-}_{(aq)}}
+
+	Bei der Zugabe von NaCl bildeten sich erneut Silberchloride:
+	\cformel[r6]{AgNO3_{(aq)} + NaCl_{(aq)} <=> Na^{+}_{(aq)} + NO3^{-}_{(aq)} + AgCl_{(s)}\ce{v}}
+
+	Durch die Zugabe von Natronlauge bildete sich das braune schwerlösliche Silber(I)-oxid:
+	\cformel[lol]{2AgNO3_{(aq)} + 2NaOH_{(aq)} <=>[-2Na^{+} - 2NO3^{-}] 2AgOH_{(aq)} <=>[-H2O] Ag2O_{(s)}\ce{v}}
+	Durch die Zugabe von Natriumchlorid (\ce{NaCl}) hätte sich das Gleichgewicht theoretisch verschieben müssen,
+	da eine Konkurrenzreaktion stattgefunden hätte, es wurde wahrscheinlich aber zu wenig dazugeben, weshalb sich nur die unterschiedlichen Phasen bildeten.
+
+	Bei der Zugabe der Ammoniaklösungen konnten sich Diamminsilber(I)-Komplexe bilden:
+	\cformel[aalalala]{AgX_{(s)} + 2NH3_{(aq)} <=> [Ag(NH3)2]^{+}_{(aq)} + X^{-}_{(aq)}}
+
+
+	\langetabelle
+	{KMR_leer4}
+	{Löslichkeitsprodukte von Silberhalogeniden.\zitat{Ls}}
+	{H}
+	{p{6cm} p{5cm}}
+	{Salz & $K_{L}$ / $\left(\frac{\mathrm{mol}}{\mathrm{L}}\right)^2$\\}
+	{ AgCl & $10^{-9,96}$ \\
+	 AgBr & $10^{-12,4}$ \\
+	  AgI & $10^{-16}$ \\
+	}
+
+	Die Löslichkeit der Silberhalogenide nimmt mit steigender Periode der Halogene ab, weshalb kaum gelöste Silberionen vorlagen, welche sich mit Ammoniak zu Diamminsilber(I)-Komplexen bilden konnten.
+	Eine höhere Ammoniakkonzentration verschob allerdings das Gleichgewicht auf die Seite der Komplexe, weshalb mehr Silberhalogenide gelöst wurden.
+
+
+\subsubsection{Zusammenfassung}
+	In diesem Versuch wurden Silberionen mit verschiedenen Halogenid- und Anionenlösungen versetzt, um schwerlösliche Silberhalogenide als Niederschlag zu bilden. Das HSAB-Prinzip sagte voraus,
+	welche Salze und Komplexe am stabilsten sind bzw. welche sich bilden würden.
+	Unter Zugabe von Ammoniak konnten Diamminsilber(I)-Komplexe bei einer Konkurrenzreaktion erzeugt werden, wobei die Konzentration der Komplexe proportional zum Quadrat der Konzentration
+	des Ammoniaks war.
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien2} mit Gefahrensymbolen,
+H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{hauke2} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer2} aufgeführt.\zitat{hauke2}
+Entstandene Lösungen mit Diamminsilber(I)-Komplexen wurden mit Salpetersäure angesäuert und im Behälter für nitrathaltige Säuren entsorgt.
+	
+\langetabelle
+	{Chemikalien2}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+  \ce{AgNO3} 
+    & \begin{tabular}[t]{l} GHS03 \\ GHS05 \\ GHS09 \end{tabular}
+    & 272, 314, \newline 410 
+    & 210, 220, 221, 260, \newline 264, 273, 280, \newline 301+330+331, \newline 303+361+353, \newline 305+351+338, 310, \newline 321, 370+378, 391 \newline 405, 501, 234, 390 
+    & (1) \\
+
+  % Zweiter Stoff
+  \ce{HCl} (0,1 mol/L) 
+    & \begin{tabular}[t]{l} GHS05 \end{tabular}
+    & 290
+    & 234, 390
+    & (2) \\
+    
+  \ce{NH4Cl} 
+    & \begin{tabular}[t]{l} GHS07 \end{tabular}
+    & 302, 319 
+    & 264, 280, 301+312, \newline 305+351+338, 330, \newline 337+313, 501 
+    & (2) \\
+
+  \ce{BaCl2} 
+    & \begin{tabular}[t]{l} GHS06 \end{tabular}
+    & 301, 332 
+    & 261, 264, 301+310, \newline 304+340, 321, 330, \newline 405, 501 
+    & (2) \\
+
+  \ce{KBr} 
+    & \begin{tabular}[t]{l} GHS07 \end{tabular}
+    & 315, 319, \newline 335 
+    & 261, 264, 280, 302+352, \newline 304+340, 305+351+338, \newline 312, 321, 332+313, \newline 337+313, 362, 403+233, \newline 405, 501 
+    & (3) \\
+    
+  \ce{KI} 
+    & \begin{tabular}[t]{l} GHS08 \end{tabular}
+    & 372 
+    & 314 
+    & (3) \\
+
+  \ce{HNO3} (1 mol/L) 
+    & \begin{tabular}[t]{l} GHS05 \end{tabular}
+    & 314 
+    & 260, 264, 280, \newline 301+330+331, \newline 303+361+353, 304+340, \newline 305+351+338, 310, 321, \newline 405, 501 
+    & (1) \\
+
+  \ce{C2H3Cl3O2} 
+    & \begin{tabular}[t]{l} GHS06 \end{tabular}
+    & 301, 315, \newline 319 
+    & 264, 280, 301+310, \newline 302+352, 305+351+338, \newline 321, 330, 332+313, \newline 337+313, 362, 405, 501 
+    & (3) \\
+
+  \ce{KClO3} 
+    & \begin{tabular}[t]{l} GHS03 \\ GHS07 \\ GHS09 \end{tabular}
+    & 271, 302, \newline 332, 411 
+    & 210, 220, 221, 261, 264, \newline 280, 283, 301+312, \newline 304+340, 306+360, 330, \newline 370+378, 371+380+375, \newline 391, 501 
+    & (5) \\
+
+  \ce{NaOH}
+    & \begin{tabular}[t]{l} GHS05 \end{tabular}
+    & 290, 314 
+    & 260, 264, 280, \newline 301+330+331, \newline 303+361+353, 304+340, \newline 305+351+338, 310, 321, \newline 405, 501 
+    & (4) \\
+
+  \ce{AgCl} 
+    & \begin{tabular}[t]{l} GHS05 \\ GHS09 \end{tabular}
+    & 290, 400, \newline 410 
+    & 234, 273, 390, 406, 501 
+    & (3) \\
+
+  \ce{AgBr} 
+    & \begin{tabular}[t]{l} GHS09 \end{tabular}
+    & 400, 410 
+    & 273, 391, 501 
+    & (3) \\
+
+  \ce{AgI} 
+    & \begin{tabular}[t]{l} GHS09 \end{tabular}
+    & 400, 410 
+    & 273, 391, 501 
+    & (3) \\
+
+  \ce{NH3} (25\,\%) 
+    & \begin{tabular}[t]{l} GHS05 \\ GHS07 \\ GHS09 \end{tabular}
+    & 290, 314, \newline 335, 400 
+    & 260, 264, 273, 280, \newline 301+330+331, \newline 303+361+353, 304+340, \newline 305+351+338, 310, 321, \newline 391, 405, 501 
+    & (6) \\
+
+    }
+
+\newpage
+
+\langetabelle
+	{KMR_leer2}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die Lösung wurde im Behälter für nitrathaltige Säuren entsorgt.
+    \item[(2)] Die Lösung wurde im Behälter für nicht-nitrathaltige Säuren entsorgt.
+    \item[(3)] Kleine Restmengen des Feststoffes wurden aus der Lösung dekantiert, mit Wischpapier entfernt und im Behälter für kontaminierte Betriebsmittel entsorgt.
+    \item[(4)] Die Lösung wurde im Behälter für andere Basen entsorgt.
+    \item[(5)] Die Lösung wurde mit Natriumthiosulfat reduziert, mit Salpetersäure angesäuert und im Behälter für nitrathaltige Säuren entsorgt.
+    \item[(6)] Die Lösung wurde mit Salpetersäure angesäuert und im Behälter für nitrathaltige Säuren entfernt.
+\end{itemize}	
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{riedel3}
+						{A. F. Holleman, N. Wiberg}, 
+			\textit	{Lehrbuch der Anorganischen Chemie}, 
+						{102. Auflage}, 
+						{De Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{253-256}.
+
+	\bibitem{riedel34}
+						{E. Riedel, H. Meyer}, 
+			\textit	{Allgemeine und Anorganische Chemie}, 
+						{12. Auflage}, 
+						{De Gruyter}, 
+						{Berlin}, 
+			\textbf	{2018}, 
+			S.			{367-369}.
+
+	\bibitem{bumm}
+						{Georg Brauer}, 
+			\textit	{Handbuch der Präparativen Anorganischen Chemie}, 
+						{3. Auflage}, 
+						{Ferdinand Enke Verlag}, 
+						{Stuttgart}, 
+			\textbf	{1978}, 
+			S.			{1001-1002}.
+
+	\bibitem{Ls}
+						{E. Schweda}, 
+			\textit	{"Jander/Blasius | Anorganische Chemie I"}, 
+						{18. Auflage}, 
+						{Hirzel Verlag}, 
+						{Stuttgart}, 
+			\textbf	{2016}, 
+			S.			{88}.
+	
+	\bibitem{hauke2}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{28.10.2026}.
+
+
+\end{thebibliography}
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\setcounter{subsection}{2}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Komplexe des Kupfers}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+	Es war die Reaktion von Kupfersulfat (\ce{CuSO4}) und Kupferhydroxidcarbonat (\ce{CuCO3.Cu(OH)2}) in verschiedenen Lösungen zu beobachten und zu erklären.
+
+\subsubsection{Theoretischer Hintergrund}
+
+	Die Farbtöne von Kupferkomplexlösungen lassen sich auf quantenmechanische Prozesse im Übergangsmetall zurückführen.
+	Kupfer (\ce{Cu}) eignet sich als Übergangsmetall mit teilweise unbesetzten d-Orbitalen als Zentralteilchen eines Kupferkomplexes.
+	Nähern sich die Liganden an das Zentralatom an, erzeugen ihre freien Elektronenpaare ein elektrisches Feld, welches mit den ursprünglich entarteten d-Orbitalen wechselwirkt.
+	Durch diese Abstoßungs- und Anziehungskräfte wird die Entartung der d-Orbitale aufgehoben und sie spalten sich in unterschiedliche Energieniveaus auf.
+
+	Durch die Absorption von Photonen in einem bestimmten Frequenzspektrum können in energetisch tief liegenden d-Orbitalen Elektronen in ein energetisch höher liegendes d-Orbital angeregt werden.
+	Durch die Kristallfeldaufspaltungsenergie $\Delta E$ werden Photonen mit genau dieser Energie $E = h\nu = \frac{hc}{\lambda}$ absorbiert.
+	Das menschliche Auge nimmt die reflektierten und transmittierten Photonen als die jeweilige Komplementärfarbe wahr, was die charakteristischen Farben der Kupferkomplexe erklärt.\zitat{r2}
+
+	Kupfersulfat dissoziiert wie folgt:
+	\cformel[Cu]{CuSO4_{(s)} \ce{<=>[H2O]}Cu^{2+}_{(aq)} + SO4^{2-}_{(aq)}}
+
+	Dieses Kupferion (\ce{Cu^{2+}}) ist in der Lage Komplexe und Salze zu bilden. \prettyref{ceq: Cu1}-\prettyref{ceq: Cu5}\\
+
+	Tetraamminkupfer(II)-Komplex (tiefblau):
+	\cformel[Cu1]{Cu^{2+}_{(aq)} + 4NH3_{(aq)} <=> [Cu(NH3)4]^{2+}_{(aq)}}
+	Tetraaquadichloridokupfer(II)-Komplex (grün):
+	\cformel[Cu2]{Cu^{2+}_{(aq)} + 2Cl^{-}_{(aq)} + 4H2O_{(l)} <=> [CuCl2(H2O)4]_{(aq)}}
+	Tetrachloridocuprat(II)-Komplex (gelb):
+	\cformel[Cu3]{Cu^{2+}_{(aq)} + 4Cl^{-}_{(aq)} <=> [CuCl4]^{2-}_{(aq)}}
+	Hexaaquakupfer(II)-Komplex (hellblau):
+	\cformel[Cu4]{Cu^{2+}_{(aq)} + 6H2O_{(l)} <=> [Cu(H2O)6]^{2+}_{(aq)}}
+	Kupfer(II)-Hydroxid (blauer Niederschlag):
+	\cformel[Cu5]{Cu^{2+}_{(aq)} + 2OH^{-}_{(aq)} <=> Cu(OH)2_{(s)}\ce{v}}
+
+\subsubsection{Experimenteller Teil}
+
+	In drei Reagenzgläser wurden jeweils 4 mL einer der folgenden Lösungen zugeführt: 25 \%ige Ammoniaklösung (\ce{NH3}), rauchende Salzsäure (\ce{HCl}) und demineralisiertes Wasser (\ce{H2O}).\\\\
+	Bei der Zugabe einer Spatelspitze des bläulichen Kupfersulfates in das demin. Wasser färbte sich die Lösung im Reagenzglas hellblau bis türkis.\\
+	Bei der Zugabe einer Spatelspitze Kupfersulfat in die Ammoniaklösung nahm der Inhalt des Reagenzglases eine tiefblaue Farbe an.\\
+	Führte man eine Spatelspitze Kupfersulfat in das Reagenzglas mit der rauchenden Salzsäure ein, verfärbte sich dessen Lösung dunkelgelb.
+
+	Zwei weitere Reagenzgläser wurden mit 2 mL demin. Wasser befüllt und mit einer Spatelspitze des grünen Kupferhydroxidcarbonates ergänzt. Zunächst ging das Kupferhydroxidcarbonat nicht in Lösung,
+	sondern setzte sich am Reagenzglasboden ab, während die flüssige Phase klar blieb.\\
+	Einem Reagenzglas wurden ca. 8 Tropfen rauchende Salzsäure zugeführt, woraufhin sich die Lösung unter Gasentwicklung grün-bläulich verfärbte und ein geringer Niederschlag immer noch zu erkennen war.\\
+	Dem anderen Reagenzglas wurden ebenfalls ca. 8 Tropfen einer 25 \%igen Ammoniaklösung hinzugefügt und es bildete sich eine Suspension,
+	bei welcher eine flüssige blaue Phase vorlag, während sich ein grünlicher Bodensatz akkumulierte.
+
+\subsubsection{Ergebnisse und Diskussion}
+	Die hellbläuliche bis türkise Farbe des demin. Wasser lässt sich durch die Bildung von Hexaaquakupfer(II)-Komplexen erklären \prettyref{ceq: Cu4}.
+	Theoretisch wäre ein bläulicher Niederschlag zu erkennen gewesen, welcher bei Überschreitung des Löslichkeitsproduktes aus festen Kupfer(II)-Hydroxiden \prettyref{ceq: Cu5} bestehen würde.
+	Dies war allerdings nicht direkt zu beobachten, da wahrscheinlich die Konzentration der Hydroxid-Ionen (\ce{OH^{-}}) nicht ausreichte, um das Löslichkeitsprodukt zu überschreiten.\\
+
+	Die tiefblaue Farbe der Ammoniaklösung lässt sich auf die Bildung von Tetraamminkupfer(II)-Komplexen zurückführen \prettyref{ceq: Cu1}.
+	Obwohl im Gegensatz ein deutlich größerer Wasserüberschuss vorlag und nach dem MWG (siehe V 3.1.) eine höhere 'Wasserkonzentration' die Bildung von Hexaaquakomplexen bevorzugt,
+	war die Bildung von Tetraamminkomplexen energetisch deutlich günstiger bzw. die Gleichgewichtskonstante von \prettyref{ceq: Cu1} deutlich größer.\\
+
+	Salzsäure dissoziiert in Wasser in Hydronium- (\ce{H3O^{+}}) und Chloridionen (\ce{Cl^{-}}). Durch die große Konzentration der Salzsäure lag ein Überschuss an Chloridionen vor,
+	weshalb sich Tetrachloridocuprat(II)-Komplexe \prettyref{ceq: Cu3} bilden konnten, welche vier Chloridliganden koordinieren -
+	im Gegensatz zu Tetraaquadichloridokupfer(II)-Komplexen \prettyref{ceq: Cu2}, welche nur zwei Chloridliganden pro Komplex binden können.\\
+
+	Im Reagenzglas mit Kupferhydroxidcarbonat lag allerdings kein Überschuss an Chloridionen vor, da nur ca. 8 Tropfen in die Suspension pipettiert wurden,
+	weshalb sich kaum gelbe Tetrachloridocuprat(II)-Komplexe \prettyref{ceq: Cu3} bilden konnten. Die Salzsäure griff die Hydroxid- 
+	und Carbonatbestandteile des Kupfers an, wodurch es zu einer Gasentwicklung (\ce{CO2\ce{^}}) kam. Durch den Wasserüberschuss entstanden hauptsächlich blaue Hexaaquakupfer(II)-Komplexe \prettyref{ceq: Cu4}
+	und wenige grüne Tetraaquadichloridokupfer(II)-Komplexe \prettyref{ceq: Cu2}, was die bläulich-grüne Farbwirkung begründet.\\
+
+	Bei der Zugabe von ca. 8 Tropfen 25 \%iger Ammoniaklösung bildeten sich - wie beim Kupfersulfat - tiefblaue Tetraamminkupfer(II)-Komplexe \prettyref{ceq: Cu1}.
+	Es lief eine direkte Konkurrenzreaktion zwischen der Komplexierung und dem Löslichkeitsprodukt des Feststoffs ab.
+	Da allerdings das Kupferhydroxidcarbonat deutlich im Überschuss lag, blieb der größte Teil als grüner Niederschlag am Boden zurück.
+
+\subsubsection{Zusammenfassung}
+
+	Es wurden die Komplexbildungsreaktionen von Kupfer(II)-Verbindungen untersucht.
+	Dabei zeigte sich, dass der Austausch von Liganden (wie Wasser, Ammoniak oder Chlorid) zu unterschiedlichen Färbungen führt:
+	In wässriger Lösung entstand der hellblaue Aqua-, mit Ammoniak der tiefblaue Ammin- und in konzentrierter Salzsäure der gelbe Chlorokomplex.
+	Die Umsetzung von Kupferhydroxidcarbonat mit Salzsäure führte neben einer \ce{CO2}-Gasentwicklung zu einer bläulich-grünen Mischfarbe,
+	während überschüssiger Feststoff mit Ammoniak partiell unter Blaufärbung in Lösung ging.
+	Die Beobachtungen ließen sich durch die Ligandenfeldtheorie erklären.
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien3} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{hauke3} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer3} aufgeführt.\zitat{hauke3}
+	
+\langetabelle
+	{Chemikalien3}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+  \ce{HCl} (konz.) 
+    & \begin{tabular}[t]{l} GHS05 \\ GHS07 \end{tabular}
+    & 290, 314, \newline 335
+    & 260, 264, 280, \newline 301+330+331, \newline 303+361+353, \newline 304+340, \newline 305+351+338, \newline 310, 321, 403+233, \newline 405, 501
+    & (1) \\
+
+  \ce{NH3} (25\,\%) 
+    & \begin{tabular}[t]{l} GHS05 \\ GHS07 \\ GHS09 \end{tabular}
+    & 290, 314, \newline 335, 400 
+    & 260, 264, 273, 280, \newline 301+330+331, \newline 303+361+353, 304+340, \newline 305+351+338, 310, 321, \newline 391, 405, 501 
+    & (1) \\
+
+  \ce{CuSO4}
+    & \begin{tabular}[t]{l} GHS07 \\ GHS09 \end{tabular}
+    & 302, 315, \newline 319, 335
+    & 264, 273, 280, 301+312, \newline 302+352, 305+351+338, \newline 321, 330, 332+313, \newline 337+313, 362, 391, 501
+    & (2) \\
+    
+  \ce{CuCO3.Cu(OH)2}
+    & \begin{tabular}[t]{l} GHS07 \end{tabular}
+    & 302, 315, \newline 319, 335
+    & 261, 264, 280, 301+312, \newline 302+352, 304+340, \newline 305+351+338, 321, 330, \newline 332+313, 337+313, 362, \newline 403+233, 405, 501
+    & (2) \\
+
+    }
+
+\langetabelle
+	{KMR_leer3}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die verwendete Lösung wurde mit Salzsäure angesäuert und im Behälter für nicht-nitrathaltige Säuren entsorgt.
+    \item[(2)] Der verbliebene Feststoff wurde aus der Lösung entfernt und im Behälter für kontaminierte Betriebsmittel entsorgt. 
+\end{itemize}	
+
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{r2}
+						{E. Riedel, H. Meyer}, 
+			\textit	{Allgemeine und Anorganische Chemie}, 
+						{12. Auflage}, 
+						{De Gruyter}, 
+						{Berlin}, 
+			\textbf	{2018}, 
+			S.			{367-369}.
+
+	\bibitem{hauke3}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{28.10.2026}.
+
+
+\end{thebibliography}
+
+\end{document}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Neuer Versuch:
+\subsection{Versuchsname}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+\subsubsection{Theoretischer Hintergrund}
+\subsubsection{Experimenteller Teil}
+\subsubsection{Ergebnisse und Diskussion}
+\subsubsection{Zusammenfassung}
+\subsubsection{Sicherheit und Entsorgung}	
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gefahren1} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{\\}
+    
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+Entsorgung: \\
+\begin{itemize}
+    \item[(1) Die verwendete Lösung wurde mit Salzsäure angesäuert und im Behälter für nicht-nitrathaltige Säuren entsorgt.] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+	\bibitem{Gefahren1}
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.18},
+                        {Universität Hamburg},
+						{Hamburg}, 
+			\textbf	{2023}, 
+			S.{34}.
+			
+			
+\end{thebibliography} 
+\newpage
+
+Nützliche Beispiele:
+
+%Tabelle für Reagenzgläserinhalte
+\tabelle
+	{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.}	%Inhalt der Reagenzgläser ... bis...
+		{htb}	
+		{l l l}					
+		{Reagenzglas & Inhalt & Beschreibung}				
+		{1 & 2~mL NaOH & klare, farblose Lsg.\\
+		2 & & 
+		}										
+
+
+%Formel Löslichkeit KClO4 -> chemische Formel
+\begin{align}
+    \chemtag
+    \ce{KClO4(aq) <=> K+(aq) + ClO4-(aq)}
+\end{align}
+
+%hier allgemeine Formel 
+\formel
+		{formel2}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{L_{\mathrm{A}_{a} B_{b}} = \sqrt[m+n]{\frac{K_{\mathrm{L}}}{a^{a} \cdot b^{b}}}  }
+
+
+Bilder:
+	\bild
+		{bildname}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Bildbeschreibung.		%Text, der unter dem Bild erscheint
+		\zitat{Quelle}}			%Name der Quelle im Literaturverzeichnis
+		{Bildeigenschaften}		%angle, draft, scale, height, width
+		{Platzierung}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+	
+		
+	Bildeigenschaften:
+		angle - Bestimmt den Drehwinkel um einen Referenzpunkt für die Grafik. Positive Werte drehen die Grafik gegen den Uhrzeigersinn, negative mit ihm. 
+		draft - Ist draft gesetzt, wird nur ein Platzhalter der Grafik angezeigt. Beschleunigt den Übersetzungsvorgang des Dokuments erheblich. 
+		scale - Skaliert die Grafik anhand eines Skalierungsfaktors. 
+		height - Skaliert die Grafik auf die angegebene Höhe. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 
+		width - Skaliert die Grafik auf die angegebene Breite. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 	
+	
+
+Formeln:
+	\formel
+		{formelname}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{Formel}						%
+
+
+Tabellen:
+	\tabelle
+		{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.\zitat{Quelle}}						%Text, der über der Tabelle erscheint, Quelle der Daten
+		{Platzierung}													%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.		
+		{Spaltenanzahl_und_Ausrichtung}						%{ l c r }: 3 Spalten, links mittig und rechts; { c c c c }: 4 Spalten, alle mittig
+		{Titelzeile}														%Obere Zeile(n), danach folgt ein waagerechter Strich, Spalten durch & trennen, Neue Zeile durch \\
+		{Datenzeilen}													%Zeilen unter dem waagerechten Strich, Spalten durch & trennen, Neue Zeile durch \\
+		
+	Zellen verbinden:	
+		\multicolumn{Anzahl_der_verbunden_Spalten}{Ausrichtung (l/c/r}{Inhalt}
+	
+Reaktionen:
+Formeln: 
+\begin{center}
+\ce{NH+4}, \ce{Fe3(CO)12}, \ce{Al^{3+}},\ce{Cr2O^{2-}7}
+\end{center}
+
+Isotope:
+\begin{center}
+\ce{^{37}_{17}Cl}, \ce{^{32}_{16}S^{2-}}
+\end{center}
+
+Bindungen: 
+\begin{center}
+\ce{H-O-N=S}, \ce{Cl-C#N}
+\end{center}
+
+Reaktionsgleichungen: 
+\begin{center}
+\ce{2H2 + O2 -> 2H2O}
+\ce{MgCl2 ->[\text{Elektrolyse}] Mg\,(l) + Cl_{2}\,(g)}
+\end{center}
+
+Redoxreaktion:
+\begin{center}
+$\overset{0}{\ce{S}} + \overset{0}{\ce{O2}} \ce{->} \overset{+\text{IV}}{\ce{S}}+\overset{-\text{II}}{\ce{O2}}$
+\end{center}
+
+
+Literaturverweise:
+		\bibitem{zeitschrift}
+						{A. Autor}, 
+			\textit	{Zeitschrift} 
+			\textbf	{Jahr}, 
+			\textit	{Band} 
+						{Seite-Seite}.
+		
+		\bibitem{buch_ohne_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{buch_mit_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Auflage}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{dissertation}
+						{A. Autor}, 
+						{Dissertation}, 
+						{Universität}, 
+			\textbf	{Jahr}.
+			
+		\bibitem{internetseite}
+						{A. Autor}, 
+						„{Titel}“, zu finden unter 
+			\url		{www.xyz.de}, 
+			\textbf	{Jahr}.
+
+% Kommentare Sophie:
+
+% <- Für Kommentare oder Code der gerade nicht gebraucht wird, wird beim kompilieren nicht beachtet
+%Um Bilder einzufügen: \bild{'Dateiname' (Datei muss im gleichem Ordner mit der TeX Datei liegen)}{'Bildunterschrift'}{width= ...cm (Größe des Bildes)}{H (Ort des Bildes, H=Hier)}
+
+%Für Summenformeln im Text: \ce{z.B.: H2SO4 (Zahlen werden automtisch tief gestellt)}
+
+% Um Formeln im Text zu referieren: \prettyref{fig (für Bilder und Graphen)/ eq (für mathematische Formeln)/ ceq (für chemische Formeln): 'Referenz'}
+
+%Für chemische Formeln: \cformel['Referenz']{2\ox{Fe}{+\RN{3}}Cl3 + \ox{Fe}{+\RN{2}}Cl2 + 8NH4+ + 8 OH- \ce{<=>[{N2H4}]} \ox{Fe}{+\RN{2}}O\cdot \ox{Fe}{+\RN{3}}2O3 \ce{v} + 4 H2O + 8NH4+ + 4 Cl-}
+
+%Für mathematische Formeln: \formel{'Referenz'}{2\cdot d\cdot \ce{sin}(\theta)= n \lambda}
+
+%Tabellen: Online Converter um Exel Tabellen in LaTeX Format zu bringen: https://www.tablesgenerator.com
+%\tabelle{'Referenz'}{'Tabellenüberschrift'}{H}{'Breite der Spalte bzw. Textausrichtung' (Spaltenbreite passt sich Textlänge an: l=links, r=rechts, c=zentriert. Spaltenbreite fest und Blocksatz: p{...cm}), Jede Spalte muss einzeln definiert werden, z.B l l l = 3 Spalten}{'Spaltenüberschrift' muss der Anzahl an Spalten entsprechen. Spaltenüberschriften müssen durch ein & getrennt werden. Außerdem wichtig am Ende: \\}{'Tabelleneinträge', müssen ebenfalls durch ein & getrennt werden und am Ende der Zeile ein \\ haben
+%	- & - & - & \\
+%	- & - & - & \\}
+%Beispiel für eine Tabelle (zum Ausführen '%' entfernen):
+%\tabelle{Auflösungsvermögen}{Experimentell ermitteltes und theoretisches Auflösungsvermögen für Objektiv 20X und 63X bei schräger und gerader Beleuchtung.}{H}{l l p{2cm} p{3cm}  p{3cm}}{Objektiv&Beleuchtung& Spalt mit einem Peak&experimentelles Auflösungsvermögen~/~nm&theoretisches Auflösungsvermögen~/~nm\\}
+%	{20X&gerade&16&>750&1125\\
+%	20X&schräg&9&690&563\\
+%	63X&gerade&11&>750&600\\
+%	63X&schräg&7&584&300\\}

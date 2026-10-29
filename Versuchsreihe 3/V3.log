@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  26 OCT 2026 03:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  28 OCT 2026 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Mischa/Desktop/Latex/V3.tex
-(c:/Users/Mischa/Desktop/Latex/V3.tex
+**"c:/Users/Mischa/Desktop/Latex/Versuchsreihe 3/V3.tex"
+(c:/Users/Mischa/Desktop/Latex/Versuchsreihe 3/V3.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cls
@@ -1839,7 +1839,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.21}) 
                                                   \__shipout_drop_firstpage_...
 l.524 	}
         ] [11]
-c:/Users/Mischa/Desktop/Latex/V3.tex:635: ignored error: Infinite glue shrinkage found in box being split [12] [13]
+c:/Users/Mischa/Desktop/Latex/Versuchsreihe 3/V3.tex:635: ignored error: Infinite glue shrinkage found in box being split [12] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 647--648
 
  []
@@ -2058,7 +2058,7 @@ Package prettyref Warning: Reference format ceq undefined on input line 766.
 Underfull \vbox (badness 4686) has occurred while \output is active []
 
  [17]
-c:/Users/Mischa/Desktop/Latex/V3.tex:812: ignored error: Infinite glue shrinkage found in box being split [18]
+c:/Users/Mischa/Desktop/Latex/Versuchsreihe 3/V3.tex:812: ignored error: Infinite glue shrinkage found in box being split [18]
 Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
  []
@@ -2082,12 +2082,12 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  50057 strings out of 467871
- 1179706 string characters out of 5417891
- 1845177 words of memory out of 5000000
+ 1179824 string characters out of 5417891
+ 1845178 words of memory out of 5000000
  77650 multiletter control sequences out of 15000+600000
  702138 words of font info for 453 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,108p,11235b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,20n,108p,11253b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Mischa\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb>
 Output written on V3.pdf (20 pages, 258076 bytes).
 PDF statistics:
