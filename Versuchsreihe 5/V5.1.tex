@@ -264,8 +264,8 @@ Es war der Name der aufgebauten Zelle zu benennen und der theoretische Wert mit 
 	Die Grundlage für das Verständnis von galvanischen Zellen besteht darin, das 'Bestreben' von Stoffen bei Elektronenübertragungsreaktionen (auch Redox-Reaktionen genannt) zu beschreiben.
 	Es werden standardmäßig Halbreaktionen als Reduktionsreaktionen geschrieben.
 	\cformel[r1]{Ox + $z$e^- <=> Red}
-	Dabei ist es wichtig anzumerken, dass in einer Lösung keine freien Elektronen als 'klassische' Reaktanden vorkommen. Diese Form dient als Darstellung für die in der Reaktion übertargenen Elektronen.\\
-	Formal lässt sich dann der Reaktionskoeffizient $Q$ wie folgt definieren:
+	Dabei ist es wichtig anzumerken, dass in einer Lösung keine freien Elektronen als 'klassische' Reaktanden vorkommen. Diese Form dient als Darstellung für die in der Reaktion übertragenen Elektronen.\\
+	Formal lässt sich dann der Reaktionsquotient $Q$ wie folgt definieren:
 	\formel{Q1}{Q = \frac{a(\mathrm{Red})}{a(\mathrm{Ox})}}
 
 	Demnach gilt für die freie Reaktionsenthalpie $\Delta_{\mathrm{R}}G$ folgende Gleichung\zitat{deltaG}:
@@ -284,7 +284,7 @@ Es war der Name der aufgebauten Zelle zu benennen und der theoretische Wert mit 
 	\formel{E2}{\Delta E = \Delta E^{\circ} - \frac{RT}{zF} \cdot \ln Q}
 
 	Die el. Spannung ist per Definition eine Potentialdifferenz. Das bedeutet, dass für den Vergleich immer zwei Potentiale benötigt werden. 
-	Für das Standard-Reduktionspotential $E^{\circ}$ wird deshalb mittels der Standardwasserstoffelektrode (SHE) ein willkürlich gewählter Nullpunkt definiert.
+	Für das Standard-Reduktionspotential $E^{\circ}$ wird deshalb mittels der Standardwasserstoffelektrode (SHE) ein willkürlich gewählter Nullpunkt bei $T$ = 298 K definiert.
 	Für die Reduktion von Wasserstoff gilt demnach\zitat{H2}:
 	\cformelpot{H2}{2H+ + 2e- -> H2}{E^{\circ} = 0\ \mathrm{V}}
 	Für Kupfer (Cu) und Zink (Zn) gelten folgende Reduktionspotentiale\zitat{DEQ}:
@@ -313,7 +313,7 @@ Es war der Name der aufgebauten Zelle zu benennen und der theoretische Wert mit 
 	\formel{Cu1}{E_{\mathrm{Cu}} = E^{\circ}_{\mathrm{Cu}} - \frac{RT}{z_{\mathrm{Cu}}F} \cdot \ln Q_{\mathrm{Cu}}}
 	\formel{Zn1}{E_{\mathrm{Zn}} = E^{\circ}_{\mathrm{Zn}} - \frac{RT}{z_{\mathrm{Zn}}F} \cdot \ln Q_{\mathrm{Zn}}}
 
-	Da für beide Halbzellreakionen zwei Elektronen übertragen werden ($z=2$) und die Zellspannung die Potentialdifferenz beider Halbzellen ist, lässt sich die Zellspannung wie folgt ermitteln:
+	Da für beide Halbzellreaktionen zwei Elektronen übertragen werden ($z=2$) und die Zellspannung die Potentialdifferenz beider Halbzellen ist, lässt sich die Zellspannung wie folgt ermitteln:
 	\formel{E3}{\Delta E = E_{\mathrm{Kathode}} - E_{\mathrm{Anode}} = E_{\mathrm{Cu}} - E_{\mathrm{Zn}}}
 	\formel{E4}{\Delta E = E^{\circ}_{\mathrm{Cu}} - \frac{RT}{z_{\mathrm{Cu}}F} \cdot \ln Q_{\mathrm{Cu}} - (E^{\circ}_{\mathrm{Zn}} - \frac{RT}{z_{\mathrm{Zn}}F} \cdot \ln Q_{\mathrm{Zn}})}
 	\formel{E5}{\Delta E = E^{\circ}_{\mathrm{Cu}} - E^{\circ}_{\mathrm{Zn}} - \frac{RT}{2F} \cdot \ln Q_{\mathrm{Cu}} + \frac{RT}{2F} \cdot \ln Q_{\mathrm{Zn}}}
@@ -341,7 +341,7 @@ Es war der Name der aufgebauten Zelle zu benennen und der theoretische Wert mit 
 		}			%Name der Quelle im Literaturverzeichnis
 		{scale=0.29}		%angle, draft, scale, height, width
 		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
-\subsection{Ergebnisse und Diskussion}
+\subsubsection{Ergebnisse und Diskussion}
 \formel{Abweichung}{1 - \frac{E_{\mathrm{real}}}{E_{\mathrm{Nernst}}} = 1-\frac{1,084\ \mathrm{V}}{1,10\ \mathrm{V}}\approx 1,45\ \%}
 Der abgelesene Wert aus dem Voltmeter fiel um 0,016 V geringer aus als der theoretisch ermittelte Wert, was einer Abweichung von ca. 1,45\ \% entspricht.
 Mögliche Gründe sind ein Messfehler des Voltmeters, ungenaue Konzentrationen der Lösungen oder Diffusionseffekte, durch welche Kupfer- (\ce{Cu^{2+}}) bzw. Zinkionen (\ce{Zn^{2+}}) hätten diffundieren können,
@@ -349,7 +349,7 @@ wodurch die effektive Zellspannung verringert werden könnte. Außerdem ist die 
 da bei \ce{Cu^{2+}}- und \ce{Zn^{2+}}-Ionen selbst bei identischen Konzentrationen unterschiedliche Aktivitätskoeffizienten $\gamma_{\pm}$ vorliegen können.
 
 \subsubsection{Zusammenfassung}
-Mit Hilfe der Nernst'schen Gleichung und den Reduktionspotentialen von Kupfer und Zink ließ sich die Zellspannung des Daniell-Elements ungefähr vorhersagen.
+Mit Hilfe der Nernst'schen Gleichung und den Reduktionspotentialen von Kupfer und Zink ließ sich die Zellspannung des Daniell-Elements vorhersagen.
 Die Zellspannung der Zelle konnte gemessen werden und wich um ca. 1,45\ \% vom theoretischen Wert ab, was sich durch diverse kleine äußere Fehler erklären lässt.
 
 \subsubsection{Sicherheit und Entsorgung}

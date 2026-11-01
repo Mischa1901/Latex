@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  1 NOV 2026 01:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  1 NOV 2026 01:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1511,26 +1511,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--389
  []
 
 [6]
-pdfTeX warning (ext4): destination with the same identifier (name{subsection.5.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.456 \subsection{V2}
-                     
-pdfTeX warning (ext4): destination with the same identifier (name{subsubsection.5.2.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.458 ...bsection{Einleitung und Aufgabenstellung}
-                                                  
-pdfTeX warning (ext4): destination with the same identifier (name{subsubsection.5.2.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.461 \subsubsection{Theoretischer Hintergrund}
-                                               
-pdfTeX warning (ext4): destination with the same identifier (name{subsubsection.5.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.464 \subsubsection{Experimenteller Teil}
-                                          
 Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
@@ -1547,17 +1527,17 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 49864 strings out of 467871
- 1178265 string characters out of 5417891
+ 49861 strings out of 467871
+ 1178289 string characters out of 5417891
  1837241 words of memory out of 5000000
  77626 multiletter control sequences out of 15000+600000
- 688362 words of font info for 348 fonts, out of 8000000 for 9000
+ 687839 words of font info for 342 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,108p,11255b,1315s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V5.1.pdf (9 pages, 2738562 bytes).
+Output written on V5.1.pdf (9 pages, 2739345 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  99543 words of extra memory for PDF output out of 106986 (max. 10000000)
 
