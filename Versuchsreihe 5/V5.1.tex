@@ -1,0 +1,769 @@
+%Dokumentenklasse
+\documentclass[
+	a4paper,										%Format
+	12pt,											%Schriftgröße
+	twoside,										%Zweiseitig
+	headsepline,								%horizontale Linie oben
+	footsepline,									%horizontale Linie unten
+	captions=tableheading,					%Überschrift über Tabelle (nicht unter)
+]{scrartcl}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\thesection.\arabic{subsection}.\arabic{subsubsection}. \hspace{2pt}}
+\renewcommand{\theparagraph}{\thesection.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.}
+
+%Pakete:
+\usepackage[exponent-product = \cdot, output-decimal-marker = {,}]{siunitx}
+\usepackage{textalpha}
+\usepackage{floatrow}
+\floatsetup[table]{style=plaintop}
+\floatsetup[longtable]{LTcapwidth=table}
+%\usepackage{overcite}
+\usepackage{siunitx}
+\usepackage[ngerman]{babel} 			%Neue deutsche Rechtschreibung
+\usepackage{grffile}
+\usepackage{graphicx} 					%Bilder einbinden
+\usepackage{xcolor}						%Farben für Schrift und Plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}					%Plots und Tabellen aus Datensätzen.
+\usepackage{amsmath}						%Mathe
+\usepackage{amssymb}					%Mathesymbole
+\usepackage{longtable}					%Seitenübergreifende Tabellen zulassen
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{geometry}					%Seitenränder
+\usepackage{ae}								%skalierbare Schriften (im PDF-File)
+\usepackage[activate]{microtype}		%optischer Randausgleich
+\usepackage{setspace}					%Zeilenabstand: \onehalfspacing
+\usepackage[utf8]{inputenc}				%Zeichenkodierung für Umlaute
+\usepackage{scrlayer-scrpage}					%für Dokumentformatierung mit Pagestyle
+\usepackage[version=4]{mhchem}						%Chemische Formeln (mit \ce )
+\usepackage{chemfig}
+\usepackage{siunitx}
+\usepackage{caption}										%Überschriften formatieren
+\captionsetup{labelfont={bf,it},tablename=Tab.,figurename=Abb.}				%Überschriften formatieren
+\captionsetup[table]{singlelinecheck=false,justification=raggedright}
+\captionsetup[figure]{justification=raggedright}				
+
+%Abbildungs und Tabellennummerierung anpassen
+\renewcommand*\figureformat {\figurename~\arabic{section}.\arabic{subsection}.\thefigure.}	%Punkt nach Abb. #
+\renewcommand*\tableformat {\tablename~\arabic{section}.\arabic{subsection}.\thetable:}		%Doppelpunkt nach Tab. #
+\renewcommand*\captionformat {~}								%Nur Abstand, kein Zeichen nach Tab. #: bzw Abb. #. 
+
+%Literatur als Subsubsection definieren und von Literaturverzeichnis in Literatur umbenennen
+\makeatletter
+\renewcommand*\bib@heading{\subsubsection{\bibname}			
+\@mkboth{\subsubsectionmarkformat \bibname}{\subsubsectionmarkformat \bibname}}
+\makeatother
+\addto\captionsngerman{\renewcommand*\bibname{Literatur}} 
+
+\usepackage{prettyref}						%Nummerierung der Tabellen und Abbildungen im Text an Tab. x.x.# anpassen
+%%% Für Abbildungen %%%
+\newrefformat{fig}{Abb.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+%%% Für Tabellen %%%
+\newrefformat{tab}{Tab.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+
+%Links im Dokument:
+\usepackage[									%als letztes Paktet einbinden!
+	linkcolor=black,							%Farbe der Links
+	citecolor=black,							%Farbe der Link-Ziele
+	urlcolor=black,								%Farbe von URLs
+	colorlinks=true,							%Links nicht als Kasten, sondern direkt als Text anzeigen
+]{hyperref}										%Links im PDF-File, unterstützung von URLs mit /url{}
+
+%Dokumentformatierungen
+\setkomafont{sectioning}{\bfseries} 	%Serifenschrift in Überschriften
+\setkomafont{subsection}{\LARGE}
+\setkomafont{subsubsection}{\large}
+\pagenumbering{arabic}					%arabische Seitenzahlen
+\geometry{left=3cm, right=2cm, top=2.5cm, bottom=2cm} 	%Seitenränder
+\parindent0pt 									%Absätze einrücken um 0Pt
+\parskip 10pt									%Abstand nach Absatz
+\onehalfspacing								%Zeilenabstand
+\pagestyle{scrheadings}					%Kopf- und Fussleistenformatierung
+\headsep0.4cm								%Abstand Kopfleiste-Text
+\footskip0.8cm									%Abstand Fussleiste-Text
+\urlstyle{same}								%URLs normal formatieren, nicht als Typewriter
+
+%Befehle definieren
+
+%%%%% create chemequation environment
+
+\newcounter{chemequation}
+\renewcommand*\thechemequation{(\Roman{chemequation})}
+\newenvironment{chemequation}{%
+	\stepcounter{chemequation}%
+	\begin{equation}}%
+{\tag*{\thechemequation}%
+	\end{equation}}
+
+%%%%% create chemtag to iterate and ref chemequations in an align environment
+
+\newcommand*\chemtag{%
+	\stepcounter{chemequation}%
+	\tag*{\thechemequation}}
+
+%%%%% to create a chemicalequation float
+
+\usepackage{float}
+\newfloat{chemicalequation}{htbp}{cex}%[chapter]
+\floatname{chemicalequation}{}
+
+\newcommand{\zitat}[1]{\textsuperscript{\cite{#1}}}
+
+\newcommand{\bild}[4]{					%Bilder mit Beschriftung einfügen
+	\begin{figure}[#4]						%#4: Platzierung (htbp)
+		\centering								%Bilder mittig einfügen
+		\captionbox								%Beschriftungsumgebung
+			{#2\label{fig: #1}}				%#2: Beschriftung
+			{\includegraphics[#3]{#1}}	%#1: Dateiname, #3: Bildeigenschaften
+	\end{figure}} 
+
+\newcommand{\formel}[2]{				%Formel einfügen und Referenz erzeugen
+	\begin{equation}
+		\label{eq: #1}							%#1: Formelname
+		#2											%Formelinhalt
+	\end{equation}}
+
+\newcommand{\cformel}[2][]{				%Chemische Formel einügen und Referenz erzeugen
+	\begin{chemequation}
+		\label{ceq: #1}					%#1: Formelname (optional)
+		\ce{#2}							%#2: Formelinhalt
+	\end{chemequation}\\}
+
+	% 2. Ein neuer, eigener Befehl NUR für Formeln mit Zusatz auf der rechten Seite:
+\newcommand{\cformelpot}[3]{%
+    \begin{chemequation}
+        \label{ceq: #1}
+        \ce{#2} \hspace{2cm} #3
+    \end{chemequation}%
+}
+
+\newcommand{\ox}[2]{
+	\overset{\text{#2}}{\ce{#1}}}
+	
+\newcommand{\tabelle}[6]{				%Tabelle mit Beschriftung einfügen
+\begin{table}[#3]							%#3: Platzierung (htbp)
+\centering										%Tabelle mittig einfügen
+\captionbox										%Beschriftungsumgebung
+{#2												%#2: Tabellenbeschriftung
+\label{tab: #1}}								%#1: Tabellenname
+{\begin{tabular}{#4}						%#4: Anzahl und Ausrichtung Spalten (l c r)
+\hline 											%horizontale Linie
+#5													%#5: Obere Zeile
+\hline
+#6													%#6: Datenzeilen
+\hline 
+\end{tabular}}
+\end{table}}
+
+\usepackage{array,ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}} %Verhindert ungewollte Lücken in Tabellen
+
+\newcommand{\langetabelle}[6]{  %Seitenübergreifende Tabelle, Kopfzeile wird 
+	\begin{centering}           %auf jeder neuen Seite ebenfalls angezeigt
+		{\begin{longtable}[#3]{#4}
+				\caption{#2\label{tab: #1}}\\				
+				\hline
+				#5
+				\hline
+				\endfirsthead
+                \caption{#2\label{tab: #1}}\\
+				\hline
+				#5
+				\hline
+				\endhead
+				#6												
+				\hline 
+		\end{longtable}}
+\end{centering}}
+
+%Plots erstellen&&&&&&&&
+
+%#1: Referenz
+%#2: Name
+%#3: x label
+%#4: y label
+%#5: x-werte,y-werte (Spaltenweise)
+%#6: Quelle (.txt Datei)
+%#7: "Nummerierung" (manuell) <.<
+
+\newcommand{\plot}[6]{
+	\begin{figure}[H]	
+		\centering
+		\begin{tikzpicture}
+	
+		\begin{axis}[
+		title style={at={(0.5,0)},
+		anchor=north,
+		yshift=-40},
+		xlabel={#3},
+		ylabel={#4},
+		legend pos=south east,
+		legend entries={},
+		]
+		\addplot[color=black,mark=*,only marks] table [#5] {#6};
+		\label{plot: plot1}
+		\end{axis}
+		\end{tikzpicture}
+		\caption{#2}
+		\label{fig: #1}
+	\end{figure}
+}
+
+\newcommand{\molL}[1]{\ensuremath{\mathrm{\SI{#1}{\frac{mol}{L}}}}} % \molL{1} => \SI{1}{\frac{mol}{L}}
+\newcommand{\mL}[1]{\ensuremath{\mathrm{\SI{#1}{mL}}}} % \mL{1} => \SI{1}{mL}
+
+\newcommand{\Rn}[1]{\romannumeral#1\relax}                   %\Rn{1} = i
+\newcommand{\RN}[1]{\uppercase\expandafter{\romannumeral#1}} %\RN{1} = I
+
+%Dokument:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%Titelseite
+	\begin{titlepage}
+		\begin{center}
+			\hrule													%waagerechte Linie
+			\vspace*{5cm}
+			\Huge {\textbf {Versuchsreihe 5}}\\						%Titel Versuchsreihe
+			\vspace*{0.5cm}
+			%		\large {\bf {Untertitel}}\\						%Untertitel
+			\vspace*{1cm}
+			\normalsize
+			Protokoll	\\									
+			Praktikum für Nanowissenschaftler:innen\\
+			im Studiengang Nanowissenschaften\\
+			\vspace*{0.5cm}
+			\Large {\textbf{Elif Öner, Friederike Penk, Maxim Popow, Michael Quint}}		\\						%Name
+			\vspace*{0.5cm}
+					\normalsize{Plätze 7b, 8a, 8b, 9a}								%Platznummer
+			\vfill
+		\end{center}
+		\begin{tabbing}
+			\hspace{3cm}\=\kill
+			Assistent: \> Dr. Hauke Heller \\						% Name Assistent
+			Version: \> 1 \\									%Version
+			Datum: \> 01.11.2026 \\								%Datum
+		\end{tabbing}
+		\hrule														%Waagerechte Linie
+\end{titlepage}
+
+\setcounter{page}{1}
+\setcounter{section}{5}								%Versuchstag #.x.x bzw Versuchsreihe
+\setcounter{subsection}{0}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Galvanisches Element}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+Ein Galvanisches Element war mit einem U-Rohr, verschiedenen Elektrolyten und Elektroden aufzubauen und die Potentialdifferenz zu messen.
+Es war der Name der aufgebauten Zelle zu benennen und der theoretische Wert mit dem Messergebnis zu vergleichen und zu diskutieren.
+
+\subsubsection{Theoretischer Hintergrund}
+
+	Die Grundlage für das Verständnis von galvanischen Zellen besteht darin, das 'Bestreben' von Stoffen bei Elektronenübertragungsreaktionen (auch Redox-Reaktionen genannt) zu beschreiben.
+	Es werden standardmäßig Halbreaktionen als Reduktionsreaktionen geschrieben.
+	\cformel[r1]{Ox + $z$e^- <=> Red}
+	Dabei ist es wichtig anzumerken, dass in einer Lösung keine freien Elektronen als 'klassische' Reaktanden vorkommen. Diese Form dient als Darstellung für die in der Reaktion übertargenen Elektronen.\\
+	Formal lässt sich dann der Reaktionskoeffizient $Q$ wie folgt definieren:
+	\formel{Q1}{Q = \frac{a(\mathrm{Red})}{a(\mathrm{Ox})}}
+
+	Demnach gilt für die freie Reaktionsenthalpie $\Delta_{\mathrm{R}}G$ folgende Gleichung\zitat{deltaG}:
+	\formel{G1}{\Delta_{\mathrm{R}}G = \Delta_{\mathrm{R}}G^{\circ} + RT \cdot \ln Q = \Delta_{\mathrm{R}}G^{\circ} + RT \cdot \ln(\frac{a(\mathrm{Red})}{a(\mathrm{Ox})})}
+	Thermodynamisch ist die gesamte umgesetzte elektrische Arbeit $W_{\mathrm{el}}$ gleich der negativen freien Reaktionsenthalpie $\Delta_{\mathrm{R}}G$;
+
+	dabei gilt, dass die elektrische Arbeit $W_{\mathrm{el}}$ das Produkt aus der Gesamtladung $q$ und der Spannung $\Delta E$ ist, je nach Konvention des Vorzeichens:
+	\formel{Arbeit}{\Delta_{\mathrm{R}}G = -W_{\mathrm{el}} = -q \cdot \Delta E}
+
+	Dabei hängt die Gesamtladung $q$ von der Anzahl der übertragenen Elektronen pro\\ Formelumsatz $z$ und der Faraday-Konstanten $F$ (übertragene Ladung je ein Mol Elektronen) ab.
+	\formel{q}{q = z\cdot F}
+	\formel{Arbeit2}{\Delta_{\mathrm{R}}G = -z \cdot F \cdot \Delta E}
+
+	Eingesetzt in die Gleichung \prettyref{eq: G1} ergibt sich dann die Nernst'sche Gleichung:
+	\formel{E1}{-z \cdot F \cdot \Delta E = -z \cdot F \cdot \Delta E^{\circ} + RT \cdot \ln Q}
+	\formel{E2}{\Delta E = \Delta E^{\circ} - \frac{RT}{zF} \cdot \ln Q}
+
+	Die el. Spannung ist per Definition eine Potentialdifferenz. Das bedeutet, dass für den Vergleich immer zwei Potentiale benötigt werden. 
+	Für das Standard-Reduktionspotential $E^{\circ}$ wird deshalb mittels der Standardwasserstoffelektrode (SHE) ein willkürlich gewählter Nullpunkt definiert.
+	Für die Reduktion von Wasserstoff gilt demnach\zitat{H2}:
+	\cformelpot{H2}{2H+ + 2e- -> H2}{E^{\circ} = 0\ \mathrm{V}}
+	Für Kupfer (Cu) und Zink (Zn) gelten folgende Reduktionspotentiale\zitat{DEQ}:
+	\cformelpot{Cu}{Cu^{2+} + 2e- -> Cu}{E^{\circ} = +0,34\ \mathrm{V}}
+	\cformelpot{Zn}{Zn^{2+} + 2e- -> Zn}{E^{\circ} = -0,76\ \mathrm{V}}
+	Da Kupfer ein positives Reduktionspotential aufweist, liegt es thermodynamisch (relativ zur Wasserstoffreduktion!) eher in reduzierter Form vor.
+	Zink liegt dementsprechend eher in oxidierter Form vor.\\
+	Das galvanische Element nutzt diese Reduktionspotentiale aus, um chemische Energie in elektrische Energie umzuwandeln. Dabei werden zwei sogenannte Halbzellen über einen elektrischen Leiter miteinander verbunden.
+	Eine Halbzelle besteht aus einer festen Elektrode, welche in Kontakt zu einer Elektrolytlösung steht.
+	Feste Metallatome gehen dann oxidiert in Lösung oder Metallionen werden reduziert und setzen sich als Feststoff auf der Elektrode ab.
+	Zwei Halbzellen werden dann über eine poröse Trennwand bzw. ein Diaphragma miteinander verbunden, sodass zum Ladungsausgleich (negative) Ionen von einer Halbzelle in die andere wandern können.
+
+	In einem Daniell-Element kommen Zink- und Kupferelektroden zum Einsatz, während eine Zinksulfat- (\ce{ZnSO4}) und eine Kupfersulfatlösung (\ce{CuSO4}) als Elektrolyt fungieren\zitat{DEEE}.
+	Verbindet man nun beide Halbzellen mit einem elektrischen Leiter, finden die Reaktionen zwar räumlich getrennt voneinander statt,
+	allerdings lässt sich die Gesamtreaktion als eine Redox-Reaktion aus den Gleichungen \prettyref{ceq: Cu} und \prettyref{ceq: Zn} zusammenfassen:
+	\cformel[CuZn]{Cu^{2+} + 2e- + Zn -> Cu + Zn^{2+} + 2e-}
+	\cformel[CuZnR]{Cu^{2+} + Zn -> Cu + Zn^{2+}}
+	\bild
+		{DEBild.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Schematische Darstellung eines Daniell-Elements: \ce{Zn|ZnSO4\ ||\ CuSO4|Cu}\\Dabei ist die Cu-Elektrode die Kathode und die Zn-Elektrode die Anode.%Text, der unter dem Bild erscheint
+		\zitat{Bild}}			%Name der Quelle im Literaturverzeichnis
+		{scale=1}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+	Aus der Nernst'schen Gleichung \prettyref{eq: E2} lassen sich dann zwei Halbzellenpotentiale ermitteln:
+	\formel{Cu1}{E_{\mathrm{Cu}} = E^{\circ}_{\mathrm{Cu}} - \frac{RT}{z_{\mathrm{Cu}}F} \cdot \ln Q_{\mathrm{Cu}}}
+	\formel{Zn1}{E_{\mathrm{Zn}} = E^{\circ}_{\mathrm{Zn}} - \frac{RT}{z_{\mathrm{Zn}}F} \cdot \ln Q_{\mathrm{Zn}}}
+
+	Da für beide Halbzellreakionen zwei Elektronen übertragen werden ($z=2$) und die Zellspannung die Potentialdifferenz beider Halbzellen ist, lässt sich die Zellspannung wie folgt ermitteln:
+	\formel{E3}{\Delta E = E_{\mathrm{Kathode}} - E_{\mathrm{Anode}} = E_{\mathrm{Cu}} - E_{\mathrm{Zn}}}
+	\formel{E4}{\Delta E = E^{\circ}_{\mathrm{Cu}} - \frac{RT}{z_{\mathrm{Cu}}F} \cdot \ln Q_{\mathrm{Cu}} - (E^{\circ}_{\mathrm{Zn}} - \frac{RT}{z_{\mathrm{Zn}}F} \cdot \ln Q_{\mathrm{Zn}})}
+	\formel{E5}{\Delta E = E^{\circ}_{\mathrm{Cu}} - E^{\circ}_{\mathrm{Zn}} - \frac{RT}{2F} \cdot \ln Q_{\mathrm{Cu}} + \frac{RT}{2F} \cdot \ln Q_{\mathrm{Zn}}}
+	\formel{E6}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot (\ln Q_{\mathrm{Cu}} - \ln Q_{\mathrm{Zn}})}
+	\formel{E7}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (\frac{Q_{\mathrm{Cu}}}{Q_{\mathrm{Zn}}})}
+	\formel{E8}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (\frac{a(\mathrm{Cu}) \cdot a(\mathrm{Zn^{2+}})}{a(\mathrm{Zn}) \cdot a(\mathrm{Cu^{2+}})})}%Bisschen unübersichtlich ich weiß :(
+
+	Da die Aktivität von Feststoffen (Cu, Zn) per Definition 1 beträgt und man die Aktivität von Kupfer- und Zinkionen der Einfachheit halber mit deren Konzentrationen approximieren kann,
+	lautet die letztendliche Gleichung:
+	\formel{E9}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (\frac{[\mathrm{Zn^{2+}}]}{[\mathrm{Cu^{2+}}]})}
+
+	Wenn Kupfersulfat und Zinksulfat in der gleichen Konzentration vorliegen, verschwindet der logarithmische Term.
+	\formel{E10}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (1) = \Delta E^{\circ} - \frac{RT}{2F} \cdot 0}
+	\formel{E11}{\Delta E = \Delta E^{\circ} = 0,34\ \mathrm{V} - (-0,76\ \mathrm{V}) = 1,10\ \mathrm{V}}
+
+\subsubsection{Experimenteller Teil}
+
+	Ein U-Rohr mit Fritte wurde auf der einen Seite mit einer blauen Kupfersulfatlösung ($1\ \mathrm{\frac{mol}{L}}$) und auf der anderen Seite mit einer farblosen Zinksulfatlösung ($1\ \mathrm{\frac{mol}{L}}$) befüllt.
+	Die Kupferelektrode wurde auf der Seite der Kupfersulfatlösung fixiert und die Zinkelektrode auf der Seite der Zinksulfatlösung.
+	Ein Spannungsmessgerät wurde angeschlossen und es wurde eine Gleichspannung von 1,084 V gemessen.
+
+	\bild
+		{URohr.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Versuchsaufbau und Messung des Daniell-Elements.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.29}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+\subsection{Ergebnisse und Diskussion}
+\formel{Abweichung}{1 - \frac{E_{\mathrm{real}}}{E_{\mathrm{Nernst}}} = 1-\frac{1,084\ \mathrm{V}}{1,10\ \mathrm{V}}\approx 1,45\ \%}
+Der abgelesene Wert aus dem Voltmeter fiel um 0,016 V geringer aus als der theoretisch ermittelte Wert, was einer Abweichung von ca. 1,45\ \% entspricht.
+Mögliche Gründe sind ein Messfehler des Voltmeters, ungenaue Konzentrationen der Lösungen oder Diffusionseffekte, durch welche Kupfer- (\ce{Cu^{2+}}) bzw. Zinkionen (\ce{Zn^{2+}}) hätten diffundieren können,
+wodurch die effektive Zellspannung verringert werden könnte. Außerdem ist die Verwendung der Konzentrationen in der Nernst-Gleichung eine Approximation,
+da bei \ce{Cu^{2+}}- und \ce{Zn^{2+}}-Ionen selbst bei identischen Konzentrationen unterschiedliche Aktivitätskoeffizienten $\gamma_{\pm}$ vorliegen können.
+
+\subsubsection{Zusammenfassung}
+Mit Hilfe der Nernst'schen Gleichung und den Reduktionspotentialen von Kupfer und Zink ließ sich die Zellspannung des Daniell-Elements ungefähr vorhersagen.
+Die Zellspannung der Zelle konnte gemessen werden und wich um ca. 1,45\ \% vom theoretischen Wert ab, was sich durch diverse kleine äußere Fehler erklären lässt.
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{test} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer} aufgeführt.\zitat{test}
+	
+\langetabelle
+	{Chemikalien}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+
+  \ce{CuSO4}
+    & \begin{tabular}[t]{l} GHS07 \\ GHS09 \end{tabular}
+    & 302, 315 \newline 319, 410 
+    & 264, 270, 273, \newline 301+312, 302+352, \newline 305+351+338
+    & (1) \\
+
+	\ce{ZnSO4.7H2O}
+		& \begin{tabular}[t]{l} GHS05 \\ GHS07 \\ GHS09 \end{tabular}
+		& 302, 318 \newline 410 
+		&  264, 273, 280, \newline 301+312, \newline 305+351+338, 391
+		& (1) \\
+	}
+
+\langetabelle
+	{KMR_leer}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die Lösung wurde im Behälter für nicht-nitrathaltige Säuren entsorgt
+\end{itemize}	
+
+
+\begin{thebibliography}{4} %manuelles Quellenverzeichnis
+
+	\bibitem{deltaG}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{315}.
+
+	\bibitem{H2}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{384}.
+
+	\bibitem{DEQ}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{379}.
+
+	\bibitem{DEEE}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{377}.
+	
+	\bibitem{Bild}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{348}.
+
+	\bibitem{test}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{30.10.2026}.
+
+			
+\end{thebibliography}
+
+%---------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\setcounter{subsection}{1}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{V2}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+
+\subsubsection{Theoretischer Hintergrund}
+
+
+\subsubsection{Experimenteller Teil}
+
+
+\subsubsection{Ergebnisse und Diskussion}
+
+\subsubsection{Zusammenfassung}
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+\langetabelle
+	{Chemikalien2}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+
+    }
+
+\langetabelle
+	{KMR_leer2}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)]
+\end{itemize}	
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	
+	\bibitem{hauke2}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{30.10.2026}.
+
+
+\end{thebibliography}
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\setcounter{subsection}{2}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{V3}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+
+
+\subsubsection{Theoretischer Hintergrund}
+
+
+\subsubsection{Experimenteller Teil}
+
+
+\subsubsection{Ergebnisse und Diskussion}
+
+\subsubsection{Zusammenfassung}
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien3} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{hauke3} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer3} aufgeführt.\zitat{hauke3}
+	
+\langetabelle
+	{Chemikalien3}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+
+    }
+
+\langetabelle
+	{KMR_leer3}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)]
+\end{itemize}	
+
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{hauke3}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{30.10.2026}.
+
+
+\end{thebibliography}
+
+\end{document}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Neuer Versuch:
+\subsection{Versuchsname}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+\subsubsection{Theoretischer Hintergrund}
+\subsubsection{Experimenteller Teil}
+\subsubsection{Ergebnisse und Diskussion}
+\subsubsection{Zusammenfassung}
+\subsubsection{Sicherheit und Entsorgung}	
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gefahren1} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{\\}
+    
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+Entsorgung: \\
+\begin{itemize}
+    \item[(1) Die verwendete Lösung wurde mit Salzsäure angesäuert und im Behälter für nicht-nitrathaltige Säuren entsorgt.] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+	\bibitem{Gefahren1}
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.18},
+                        {Universität Hamburg},
+						{Hamburg}, 
+			\textbf	{2023}, 
+			S.{34}.
+			
+			
+\end{thebibliography} 
+\newpage
+
+Nützliche Beispiele:
+
+%Tabelle für Reagenzgläserinhalte
+\tabelle
+	{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.}	%Inhalt der Reagenzgläser ... bis...
+		{htb}	
+		{l l l}					
+		{Reagenzglas & Inhalt & Beschreibung}				
+		{1 & 2~mL NaOH & klare, farblose Lsg.\\
+		2 & & 
+		}										
+
+
+%Formel Löslichkeit KClO4 -> chemische Formel
+\begin{align}
+    \chemtag
+    \ce{KClO4(aq) <=> K+(aq) + ClO4-(aq)}
+\end{align}
+
+%hier allgemeine Formel 
+\formel
+		{formel2}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{L_{\mathrm{A}_{a} B_{b}} = \sqrt[m+n]{\frac{K_{\mathrm{L}}}{a^{a} \cdot b^{b}}}  }
+
+
+Bilder:
+	\bild
+		{bildname}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Bildbeschreibung.		%Text, der unter dem Bild erscheint
+		\zitat{Quelle}}			%Name der Quelle im Literaturverzeichnis
+		{Bildeigenschaften}		%angle, draft, scale, height, width
+		{Platzierung}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+	
+		
+	Bildeigenschaften:
+		angle - Bestimmt den Drehwinkel um einen Referenzpunkt für die Grafik. Positive Werte drehen die Grafik gegen den Uhrzeigersinn, negative mit ihm. 
+		draft - Ist draft gesetzt, wird nur ein Platzhalter der Grafik angezeigt. Beschleunigt den Übersetzungsvorgang des Dokuments erheblich. 
+		scale - Skaliert die Grafik anhand eines Skalierungsfaktors. 
+		height - Skaliert die Grafik auf die angegebene Höhe. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 
+		width - Skaliert die Grafik auf die angegebene Breite. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 	
+	
+
+Formeln:
+	\formel
+		{formelname}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{Formel}						%
+
+
+Tabellen:
+	\tabelle
+		{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.\zitat{Quelle}}						%Text, der über der Tabelle erscheint, Quelle der Daten
+		{Platzierung}													%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.		
+		{Spaltenanzahl_und_Ausrichtung}						%{ l c r }: 3 Spalten, links mittig und rechts; { c c c c }: 4 Spalten, alle mittig
+		{Titelzeile}														%Obere Zeile(n), danach folgt ein waagerechter Strich, Spalten durch & trennen, Neue Zeile durch \\
+		{Datenzeilen}													%Zeilen unter dem waagerechten Strich, Spalten durch & trennen, Neue Zeile durch \\
+		
+	Zellen verbinden:	
+		\multicolumn{Anzahl_der_verbunden_Spalten}{Ausrichtung (l/c/r}{Inhalt}
+	
+Reaktionen:
+Formeln: 
+\begin{center}
+\ce{NH+4}, \ce{Fe3(CO)12}, \ce{Al^{3+}},\ce{Cr2O^{2-}7}
+\end{center}
+
+Isotope:
+\begin{center}
+\ce{^{37}_{17}Cl}, \ce{^{32}_{16}S^{2-}}
+\end{center}
+
+Bindungen: 
+\begin{center}
+\ce{H-O-N=S}, \ce{Cl-C#N}
+\end{center}
+
+Reaktionsgleichungen: 
+\begin{center}
+\ce{2H2 + O2 -> 2H2O}
+\ce{MgCl2 ->[\text{Elektrolyse}] Mg\,(l) + Cl_{2}\,(g)}
+\end{center}
+
+Redoxreaktion:
+\begin{center}
+$\overset{0}{\ce{S}} + \overset{0}{\ce{O2}} \ce{->} \overset{+\text{IV}}{\ce{S}}+\overset{-\text{II}}{\ce{O2}}$
+\end{center}
+
+
+Literaturverweise:
+		\bibitem{zeitschrift}
+						{A. Autor}, 
+			\textit	{Zeitschrift} 
+			\textbf	{Jahr}, 
+			\textit	{Band} 
+						{Seite-Seite}.
+		
+		\bibitem{buch_ohne_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{buch_mit_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Auflage}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{dissertation}
+						{A. Autor}, 
+						{Dissertation}, 
+						{Universität}, 
+			\textbf	{Jahr}.
+			
+		\bibitem{internetseite}
+						{A. Autor}, 
+						„{Titel}“, zu finden unter 
+			\url		{www.xyz.de}, 
+			\textbf	{Jahr}.
+
+% Kommentare Sophie:
+
+% <- Für Kommentare oder Code der gerade nicht gebraucht wird, wird beim kompilieren nicht beachtet
+%Um Bilder einzufügen: \bild{'Dateiname' (Datei muss im gleichem Ordner mit der TeX Datei liegen)}{'Bildunterschrift'}{width= ...cm (Größe des Bildes)}{H (Ort des Bildes, H=Hier)}
+
+%Für Summenformeln im Text: \ce{z.B.: H2SO4 (Zahlen werden automtisch tief gestellt)}
+
+% Um Formeln im Text zu referieren: \prettyref{fig (für Bilder und Graphen)/ eq (für mathematische Formeln)/ ceq (für chemische Formeln): 'Referenz'}
+
+%Für chemische Formeln: \cformel['Referenz']{2\ox{Fe}{+\RN{3}}Cl3 + \ox{Fe}{+\RN{2}}Cl2 + 8NH4+ + 8 OH- \ce{<=>[{N2H4}]} \ox{Fe}{+\RN{2}}O\cdot \ox{Fe}{+\RN{3}}2O3 \ce{v} + 4 H2O + 8NH4+ + 4 Cl-}
+
+%Für mathematische Formeln: \formel{'Referenz'}{2\cdot d\cdot \ce{sin}(\theta)= n \lambda}
+
+%Tabellen: Online Converter um Exel Tabellen in LaTeX Format zu bringen: https://www.tablesgenerator.com
+%\tabelle{'Referenz'}{'Tabellenüberschrift'}{H}{'Breite der Spalte bzw. Textausrichtung' (Spaltenbreite passt sich Textlänge an: l=links, r=rechts, c=zentriert. Spaltenbreite fest und Blocksatz: p{...cm}), Jede Spalte muss einzeln definiert werden, z.B l l l = 3 Spalten}{'Spaltenüberschrift' muss der Anzahl an Spalten entsprechen. Spaltenüberschriften müssen durch ein & getrennt werden. Außerdem wichtig am Ende: \\}{'Tabelleneinträge', müssen ebenfalls durch ein & getrennt werden und am Ende der Zeile ein \\ haben
+%	- & - & - & \\
+%	- & - & - & \\}
+%Beispiel für eine Tabelle (zum Ausführen '%' entfernen):
+%\tabelle{Auflösungsvermögen}{Experimentell ermitteltes und theoretisches Auflösungsvermögen für Objektiv 20X und 63X bei schräger und gerader Beleuchtung.}{H}{l l p{2cm} p{3cm}  p{3cm}}{Objektiv&Beleuchtung& Spalt mit einem Peak&experimentelles Auflösungsvermögen~/~nm&theoretisches Auflösungsvermögen~/~nm\\}
+%	{20X&gerade&16&>750&1125\\
+%	20X&schräg&9&690&563\\
+%	63X&gerade&11&>750&600\\
+%	63X&schräg&7&584&300\\}
