@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  1 NOV 2026 02:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  5 NOV 2026 00:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Mischa/Desktop/Latex/Versuchsreihe 5/V5.1.tex"
-(c:/Users/Mischa/Desktop/Latex/Versuchsreihe 5/V5.1.tex
+**"c:/Users/Mischa/Desktop/Latex/Versuchsreihe 5/V5.tex"
+(c:/Users/Mischa/Desktop/Latex/Versuchsreihe 5/V5.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cls
@@ -1271,11 +1271,27 @@ File: bkm-pdftex.def 2026-05-21 v1.32 bookmark driver for pdfTeX (HO)
 LaTeX Font Info:    Trying to load font information for T1+aer on input line 221.
  (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/ae\t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-) (V5.1.aux
+) (V5.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 10.
+
+
+LaTeX Warning: Label `tab: Chemikalien2' multiply defined.
+
+
+LaTeX Warning: Label `ceq: m1' multiply defined.
+
+
+LaTeX Warning: Label `ceq: m2' multiply defined.
+
+
+LaTeX Warning: Label `ceq: m3' multiply defined.
+
+
+LaTeX Warning: Label `tab: Chemikalien3' multiply defined.
+
 )
-\openout1 = `V5.1.aux'.
+\openout1 = `V5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 221.
 LaTeX Font Info:    ... okay on input line 221.
@@ -1511,33 +1527,492 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--389
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
+LaTeX Font Info:    Trying to load font information for TS1+aer on input line 463.
 
- []
-
+No file TS1aer.fd.
+LaTeX Info: Symbol \textasciiacute not provided by
+            font family aer in TS1 encoding.
+            Default family used instead on input line 463.
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
+
+Package prettyref Warning: Reference format ceq undefined on input line 487.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
  []
 
-[8] (V5.1.aux)
+<Spannungsverlauf.png, id=126, 996.72375pt x 516.42938pt>
+File: Spannungsverlauf.png Graphic file (type png)
+<use Spannungsverlauf.png>
+Package pdftex.def Info: Spannungsverlauf.png  used on input line 502.
+(pdftex.def)             Requested size: 448.52155pt x 232.39107pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8
+pdfTeX warning (ext4): destination with the same identifier (name{equation.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.517 
+      ]
+Overfull \hbox (10.48462pt too wide) in paragraph at lines 532--532
+[] [] 
+ []
+
+
+Overfull \hbox (20.96922pt too wide) in alignment at lines 532--532
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.48462pt too wide) in paragraph at lines 532--532
+[] [] 
+ []
+
+
+Overfull \hbox (20.96922pt too wide) in alignment at lines 532--532
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+[]|\T1/aer/m/n/12 (+20) GHS07
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 532--532
+[]|\T1/aer/m/n/12 (+20) H290 H315
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+[]|\T1/aer/m/n/12 (+20) P264 P273 P280
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P305+P351+P338
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+[]|\T1/aer/m/n/12 (+20) GHS05
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) GHS07
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 532--532
+[]|\T1/aer/m/n/12 (+20) H290 H314
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P301+P330+P331
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P303+P361+P353
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P304+P340
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P305+P351+P338
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+[]|\T1/aer/m/n/12 (+20) P260 P264 P280
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P301+P330+P331
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P303+P361+P353
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P304+P340
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--532
+\T1/aer/m/n/12 (+20) P305+P351+P338
+ []
+
+
+Overfull \hbox (20.96922pt too wide) in alignment at lines 532--532
+ [] [] [] [] [] 
+ []
+
+c:/Users/Mischa/Desktop/Latex/Versuchsreihe 5/V5.tex:532: ignored error: Infinite glue shrinkage found in box being split [9 <./Spannungsverlauf.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
+
+ []
+
+[10]
+
+Package prettyref Warning: Reference format ceq undefined on input line 601.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 601.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 601.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 603--604
+
+ []
+
+[11
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              ]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.604 \cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+                                              
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.605 ... 2H2O_{(l)} + O2_{(g)} -> 2Fe(OH)2_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.605 ... 2H2O_{(l)} + O2_{(g)} -> 2Fe(OH)2_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.605 ... 2H2O_{(l)} + O2_{(g)} -> 2Fe(OH)2_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.605 ... 2H2O_{(l)} + O2_{(g)} -> 2Fe(OH)2_{(s)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
+
+ []
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 608.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.610 ...O2_{(g)} + 2H2O_{(l)} -> 44Fe(OH)3_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.610 ...O2_{(g)} + 2H2O_{(l)} -> 44Fe(OH)3_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.610 ...O2_{(g)} + 2H2O_{(l)} -> 44Fe(OH)3_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.610 ...O2_{(g)} + 2H2O_{(l)} -> 44Fe(OH)3_{(s)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
+
+ []
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 613.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 613.
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 613.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.615 ...OH)3_{(s)} -> FeO(OH)_{(s)} + H_2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.615 ...OH)3_{(s)} -> FeO(OH)_{(s)} + H_2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.615 ...OH)3_{(s)} -> FeO(OH)_{(s)} + H_2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.615 ...OH)3_{(s)} -> FeO(OH)_{(s)} + H_2O_{(l)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.616 ...O(OH)_{(s)} -> Fe_2O_3_{(s)} + H2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.616 ...O(OH)_{(s)} -> Fe_2O_3_{(s)} + H2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.616 ...O(OH)_{(s)} -> Fe_2O_3_{(s)} + H2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.616 ...O(OH)_{(s)} -> Fe_2O_3_{(s)} + H2O_{(l)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.617 ...{Fe(OH)2_{(s)} -> FeO_{(s)} + H_2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.617 ...{Fe(OH)2_{(s)} -> FeO_{(s)} + H_2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.617 ...{Fe(OH)2_{(s)} -> FeO_{(s)} + H_2O_{(l)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.617 ...{Fe(OH)2_{(s)} -> FeO_{(s)} + H_2O_{(l)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
+
+ []
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 619.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.621 \cformel[m8]{$x$FeO.$y$Fe2O3.$z$H2O}
+                                          
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.621 \cformel[m8]{$x$FeO.$y$Fe2O3.$z$H2O}
+                                          
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.621 \cformel[m8]{$x$FeO.$y$Fe2O3.$z$H2O}
+                                          
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.621 \cformel[m8]{$x$FeO.$y$Fe2O3.$z$H2O}
+                                          
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12] [13]
+<ENagel.png, id=203, 1541.76pt x 2055.68pt>
+File: ENagel.png Graphic file (type png)
+<use ENagel.png>
+Package pdftex.def Info: ENagel.png  used on input line 668.
+(pdftex.def)             Requested size: 200.43584pt x 267.24779pt.
+<gelatine.png, id=204, 1156.32pt x 788.19469pt>
+File: gelatine.png Graphic file (type png)
+<use gelatine.png>
+Package pdftex.def Info: gelatine.png  used on input line 675.
+(pdftex.def)             Requested size: 289.07928pt x 197.04819pt.
+
+Underfull \vbox (badness 2285) has occurred while \output is active []
+
+ [14 <./ENagel.png> <./gelatine.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.683 ...CN)6]^{3-}_{(aq)} -> Fe3[Fe(CN)6]2_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.683 ...CN)6]^{3-}_{(aq)} -> Fe3[Fe(CN)6]2_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.683 ...CN)6]^{3-}_{(aq)} -> Fe3[Fe(CN)6]2_{(s)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.683 ...CN)6]^{3-}_{(aq)} -> Fe3[Fe(CN)6]2_{(s)}}
+                                                  
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
+
+ []
+
+
+Package prettyref Warning: Reference format ceq undefined on input line 686.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.708 \cformel[m10]{Zn -> Zn^{2+} + 2e-}
+                                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.708 \cformel[m10]{Zn -> Zn^{2+} + 2e-}
+                                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.708 \cformel[m10]{Zn -> Zn^{2+} + 2e-}
+                                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.708 \cformel[m10]{Zn -> Zn^{2+} + 2e-}
+                                        
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
+
+ []
+
+
+Overfull \hbox (21.82738pt too wide) in paragraph at lines 755--755
+[] [] 
+ []
+
+
+Overfull \hbox (43.65475pt too wide) in alignment at lines 755--755
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (21.82738pt too wide) in paragraph at lines 755--755
+[] [] 
+ []
+
+
+Overfull \hbox (43.65475pt too wide) in alignment at lines 755--755
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (43.65475pt too wide) in alignment at lines 755--755
+ [] [] [] [] [] 
+ []
+
+c:/Users/Mischa/Desktop/Latex/Versuchsreihe 5/V5.tex:755: ignored error: Infinite glue shrinkage found in box being split [16]
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
+
+ []
+
+[17] (V5.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 49875 strings out of 467871
- 1178400 string characters out of 5417891
- 1837241 words of memory out of 5000000
- 77626 multiletter control sequences out of 15000+600000
- 688885 words of font info for 354 fonts, out of 8000000 for 9000
+ 50096 strings out of 467871
+ 1180556 string characters out of 5417891
+ 1838236 words of memory out of 5000000
+ 77683 multiletter control sequences out of 15000+600000
+ 698915 words of font info for 457 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,108p,11255b,1315s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V5.1.pdf (9 pages, 2739368 bytes).
+ 108i,20n,108p,11253b,1361s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Mischa\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on V5.pdf (18 pages, 4814452 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 99543 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 391 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
+ 110310 words of extra memory for PDF output out of 128383 (max. 10000000)
 

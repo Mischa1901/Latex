@@ -1,0 +1,311 @@
+\documentclass[12pt,a4paper]{article}
+
+% Eigenständiges Protokoll V 5.3 ohne Titelblatt
+% Schrift und Linien orientieren sich an der Originalfassung (Computer Modern, 12 pt).
+\usepackage[utf8]{inputenc}
+% Ohne babel, damit das Dokument auch mit schlanken TeX-Installationen kompiliert.
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs,tabularx,array}
+\usepackage{ragged2e}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[ngerman]{babel}
+\usepackage[left=2.65cm,right=2.65cm,top=2.75cm,bottom=2.8cm]{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.72\baselineskip}
+\setlength{\headheight}{14pt}
+\setlength{\headsep}{20pt}
+\setlength{\footskip}{24pt}
+\emergencystretch=2em
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\renewcommand{\tablename}{Tab.}
+\renewcommand{\figurename}{Abb.}
+\renewcommand{\thetable}{5.3.\arabic{table}}
+\renewcommand{\thefigure}{5.3.\arabic{figure}}
+\captionsetup{font=small,labelfont=bf,labelsep=colon,skip=6pt}
+\captionsetup[table]{position=above,justification=raggedright,singlelinecheck=false}
+\captionsetup[figure]{justification=centering}
+
+\newcommand{\versuchsabschnitt}[2]{\subsection*{5.3.#1.\ #2}}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+\begin{document}
+
+\section*{5.3.\ Korrosion des Eisens}
+
+\versuchsabschnitt{1}{Einleitung und Aufgabenstellung}
+
+Ziel des Versuchs war es, die Korrosion von Eisen an verschiedenen präparierten Eisennägeln zu demonstrieren. Die Resultate sollten beobachtet und erklärt werden.
+
+\versuchsabschnitt{2}{Theoretischer Hintergrund}
+
+Die Korrosion von Eisen ist ein Prozess,
+der auf Redoxreaktionen beruht und durch die Elektrodenpotentiale der beteiligten Stoffe beeinflusst wird. Auf der Eisenoberfläche entstehen Lokalelemente,
+in denen Eisen zu Fe$^{2+}$-Ionen oxidiert wird.
+Durch weitere Reaktionen bilden sich Eisenoxide und Eisenoxidhydroxide, die als Rost bezeichnet werden.$^{[1]}$
+Die entstehenden Rostschichten sind häufig porös und schützen das darunterliegende Metall nicht dauerhaft vor Korrosion. 
+Als Voraussetzung für die hier untersuchte Sauerstoffkorrosion sind Wasser und gelöster Sauerstoff erforderlich.
+Zunächst diffundieren die durch die Oxidation entstandenen Fe$^{2+}$-Ionen in das umgebende Wasser. Bereits geringe Anteile an Wasser,
+etwa durch die Luftfeuchtigkeit, reichen hierfür aus.
+Die bei der Oxidation freigesetzten Elektronen werden innerhalb des Eisens zu kathodischen Bereichen transportiert und dort für Reduktionsreaktionen verbraucht.
+Hierbei ist insbesondere die Sauerstoffreduktion von Bedeutung.$^{[2]}$
+
+\begin{table}[htbp]
+  \centering
+  \caption{Standardpotentiale für mögliche Reduktionshalbzellen.}
+  \label{tab:potentiale}
+  \begingroup
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabularx}{0.88\linewidth}{@{}Y >{\centering\arraybackslash}p{2.2cm}@{}}
+    \toprule
+    Reduktion & $E^\circ/\mathrm{V}$ \\
+    \midrule
+    $\mathrm{Fe^{2+}+2e^-\rightarrow Fe}$ & $-0{,}44$ \\
+    $\mathrm{O_2+2H_2O+4e^-\rightarrow 4OH^-}$ & $+0{,}40$ \\
+    $\mathrm{O_2+4H^++4e^-\rightarrow 2H_2O}$ & $+1{,}23$ \\
+    \bottomrule
+  \end{tabularx}
+  \endgroup
+\end{table}
+
+Die beiden Standardpotentiale der Sauerstoffreduktion beziehen sich auf unterschiedliche pH-Bedingungen.
+
+Der Korrosionsvorgang lässt sich in zwei elektrochemische Teilreaktionen unterteilen.
+Zuerst erfolgt die Oxidation des elementaren Eisens zu Eisen(II)-Kationen.
+Die jeweiligen Teilgleichungen für die Oxidation und Reduktion sowie die Gesamtreaktion,
+die zur Bildung von Eisen(II)-hydroxid führt, sind in Gleichung (I), (II) und (III) dargestellt.$^{[3]}$
+
+\begin{equation}
+  2\mathrm{Fe}_{(s)} \rightarrow 2\mathrm{Fe}^{2+}_{(aq)}+4e^-
+  \tag{I}
+\end{equation}
+\begin{equation}
+  2\mathrm{H_2O}_{(l)}+\mathrm{O_2}_{(g)}+4e^-
+  \rightarrow 4\mathrm{OH}^-_{(aq)}
+  \tag{II}
+\end{equation}
+\begin{equation}
+  2\mathrm{Fe}_{(s)}+2\mathrm{H_2O}_{(l)}+\mathrm{O_2}_{(g)}
+  \rightarrow 2\mathrm{Fe(OH)_2}_{(s)}
+  \tag{III}
+\end{equation}
+
+Eisen(II) kann nach der Primäroxidation in einer zweiten Reaktion weiter zu Eisen(III) oxidiert werden.
+Diese Reaktion, die als Sekundäroxidation bekannt ist, wird in Gleichung (IV) dargestellt.$^{[3]}$
+
+\begin{equation}
+  2\mathrm{Fe(OH)_2}_{(s)}+\tfrac{1}{2}\mathrm{O_2}_{(g)}
+  +\mathrm{H_2O}_{(l)}\rightarrow 2\mathrm{Fe(OH)_3}_{(s)}
+  \tag{IV}
+\end{equation}
+
+Nach einer gewissen Zeit wandeln sich die entstandenen Eisen(II)- und Eisen(III)-hydroxide durch die Abgabe von Wasser in andere Eisenoxide und -hydroxide um.
+Die Prozesse sind in den Gleichungen (V), (VI) und (VII) vereinfacht dargestellt.$^{[3]}$
+
+\begin{equation}
+  \mathrm{Fe(OH)_3}_{(s)}\rightarrow\mathrm{FeO(OH)}_{(s)}+\mathrm{H_2O}_{(l)}
+  \tag{V}
+\end{equation}
+\begin{equation}
+  2\mathrm{FeO(OH)}_{(s)}\rightarrow\mathrm{Fe_2O_3}_{(s)}+\mathrm{H_2O}_{(l)}
+  \tag{VI}
+\end{equation}
+\begin{equation}
+  \mathrm{Fe(OH)_2}_{(s)}\rightarrow\mathrm{FeO}_{(s)}+\mathrm{H_2O}_{(l)}
+  \tag{VII}
+\end{equation}
+
+Das Endprodukt Rost wird folglich näherungsweise durch die allgemeine Formel (VIII) dargestellt.$^{[3]}$
+
+\begin{equation}
+  x\mathrm{FeO}\cdot y\mathrm{Fe_2O_3}\cdot z\mathrm{H_2O}
+  \tag{VIII}
+\end{equation}
+
+Es lassen sich unterschiedliche Wege beschreiten,
+um die Oxidation von Eisen zu verhindern.
+Ein Beispiel hierfür ist die Ausbildung einer Oxidschicht durch Verzunderung.
+Darüber hinaus ist es möglich, das Eisen mit unedleren Metallen wie Zink zu beschichten,
+wodurch Wasser und Sauerstoff weitgehend ausgeschlossen werden.
+Zink fungiert bei leitendem Kontakt außerdem als Opferanode und wird bevorzugt anstelle des Eisens oxidiert.$^{[2]}$
+
+Zum Nachweis der bei der Korrosion entstehenden Fe$^{2+}$-Ionen dient Kaliumhexacyanoferrat(III),
+das mit ihnen einen dunkelblauen Niederschlag (Turnbulls Blau) bildet.$^{[4]}$
+Alizaringelb R zeigt durch einen Farbumschlag von Gelb nach Orange bis Rot einen stark erhöhten pH-Wert an,
+der infolge der kathodischen Sauerstoffreduktion lokal entstehen kann.
+Die Gelatine verlangsamt die Durchmischung der Stoffe, während das zugesetzte Kaliumnitrat die Leitfähigkeit der Lösung erhöht.
+
+\versuchsabschnitt{3}{Experimenteller Teil}
+
+Für die Durchführung des Versuchs wurden fünf Eisennägel auf unterschiedliche Weise präpariert. Die Präparationen sind in der folgenden Tabelle dargestellt:
+
+\begin{table}[H]
+  \centering
+  \caption{Die Präparationen der Eisennägel.}
+  \label{tab:naegel}
+  \begingroup
+  \renewcommand{\arraystretch}{1.35}
+  \begin{tabularx}{\linewidth}{@{}>{\centering\arraybackslash}p{1.65cm}Y@{}}
+    \toprule
+    Nagel & Präparation \\
+    \midrule
+    1 & Wurde rechtwinklig gebogen. \\
+    2 & Wurde auf der Hälfte seiner Länge mithilfe eines Bunsenbrenners verzundert. \\
+    3 & Wurde auf etwa einem Drittel seiner Länge mit Kupferdraht umwickelt. \\
+    4 & Wurde mit einem Stück Zinkblech mithilfe eines Kupferdrahts verbunden. \\
+    5 & Unbehandelt. \\
+    \bottomrule
+  \end{tabularx}
+  \endgroup
+\end{table}
+
+Parallel dazu wurde die Indikatorlösung zum Übergießen der Nägel vorbereitet.
+Dazu wurden in einem 250-mL-Becherglas unter Erhitzen 16~g Gelatine,
+1~g KNO$_3$, 2~mL 0,5\,\%ige Alizaringelb-R-Lösung (Mordant Orange I) in Ethanol und 4~mL 1\,\%ige K$_3$[Fe(CN)$_6$]-Lösung in 100~mL demineralisiertem Wasser vollständig gelöst.
+Anschließend wurden die präparierten Nägel in einer Petrischale angeordnet und mit der warmen Gelatinelösung übergossen. Die Petrischale wurde bis zu zwei Tage im Abzug stehen gelassen.
+Bei der anschließenden Beobachtung zeigten sich in der Gelatine je nach Präparation der Nägel blau-grüne und schwarze Verfärbungen.
+Am und um den Nagel, welcher mit Zinkblech in Kontakt stand, war keine Veränderung zu erkennen. Beim unbehandelten Nagel waren leichte grünliche Spuren an der Gelatine erkennbar.
+Der verzunderte Nagel zeigte am verzunderten Stück eine schwarze Färbung, die Gelatine drum herum blieb unverändert.
+Auch beim mit Kupferdraht umwickelten Nagel bildete sich unter dem Kupfer eine schwarze Schicht und die Gelatine drum herum wurde grün.
+Der gebogene Nagel wurde an der Biegung schwarz und die Gelatine grünlich.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}[c]{0.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=5.25cm,keepaspectratio]{Nagel1.jpg}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=5.25cm,keepaspectratio]{Nagel2.jpg}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.32\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,height=5.25cm,keepaspectratio]{Nagel3.jpg}
+  \end{minipage}
+  \caption{Eisennägel nach zwei Tagen in der Gelatine.}
+  \label{fig:naegel}
+\end{figure}
+
+\versuchsabschnitt{4}{Ergebnisse und Diskussion}
+
+Nach zwei Tagen waren an den unterschiedlich präparierten Eisennägeln verschiedene Verfärbungen der Gelatine sowie dunkle Bereiche auf den Nageloberflächen erkennbar. 
+Die beobachteten blau-grünen Verfärbungen lassen sich grundsätzlich mit der Bildung von Eisen(II)-Ionen bei der anodischen Reaktion des Eisens erklären.
+Diese reagieren mit den in der Gelatine enthaltenen Hexacyanoferrat(III)-Ionen unter Bildung eines dunkelblauen Niederschlags (Turnbulls Blau):
+
+\begin{equation*}
+  3\mathrm{Fe}^{2+}_{(aq)}+2[\mathrm{Fe(CN)_6}]^{3-}_{(aq)}
+  \rightarrow \mathrm{Fe_3[Fe(CN)_6]_2}_{(s)}
+\end{equation*}
+
+Durch eine Überlagerung der blauen Färbung mit der orangefarbenen Gelatine erscheinen die betroffenen Bereiche eher grünlich statt blau.
+An den kathodischen Bereichen findet gleichzeitig die in Gleichung (II) dargestellte Sauerstoffreduktion statt, bei der Hydroxid-Ionen entstehen.
+Ein dadurch erhöhter pH-Wert kann grundsätzlich durch Alizaringelb R angezeigt werden.
+Da der Indikator erst im stark basischen Bereich nach Orange bis Rot umschlägt und die Gelatine bereits eine Orange Farbe aufwies,
+ließen sich keine eindeutigen Bereiche mit einer roten Verfärbung erkennen.
+
+Am unbehandelten Nagel bzw. der anliegenden Gelatine war nur wenig Veränderung zu erkennen. 
+Dies spricht für eine eher geringe Korrosion. Der Nagel hatte vermutlich bereits intakte Oxidschichten,
+welche ihn vor Korrosion schützten. Der gebogene Nagel zeigte eine schwarze Verfärbung an der Biegung und an dieser Stelle verstärkte Grünfärbung der Gelatine.
+Durch die mechanische Verformung können Oberflächen- und Oxidschichten beschädigt werden, wodurch an dieser Stelle eine verstärkte Korrosion begünstigt wird. 
+
+Beim teilweise verzunderten Nagel wurde im erhitzten Bereich ebenfalls eine schwarze Färbung beobachtet.
+Diese ist zumindest teilweise auf die bereits beim Erhitzen entstandenen Eisenoxide zurückzuführen.
+Eine Zunderschicht kann die darunterliegende Oberfläche abschirmen, sofern keine Risse oder Ähnliches vorhanden sind.
+Da keine grüne Verfärbung in der umliegenden Gelatine beobachtet wurde, lässt sich darauf schließen, dass nur wenig Korrosion stattgefunden hat.
+
+Der mit Kupferdraht umwickelte Nagel wies unter dem Kupfer eine schwarze Schicht auf. 
+Da Kupfer edler als Eisen ist, kann der Kontakt beider Metalle in der Elektrolytlösung ein galvanisches Element bilden.
+Eisen wird dabei bevorzugt oxidiert, während an kathodischen Bereichen Sauerstoff reduziert wird.
+Die beobachtete dunkle Verfärbung und die grüne Verfärbung der Gelatine ist mit einer verstärkten lokalen Korrosion zu erklären.
+
+Der mit Zinkblech verbundene Nagel zeigte keine Veränderung. Da Zink unedler als Eisen ist, sollte es als Opferanode bevorzugt oxidiert werden:
+
+\begin{equation*}
+  \mathrm{Zn}_{(s)}\rightarrow\mathrm{Zn}^{2+}_{(aq)}+2e^-
+\end{equation*}
+
+Dadurch wird die Oxidation des Eisens größtenteils unterdrückt.
+
+\versuchsabschnitt{5}{Zusammenfassung}
+
+In diesem Versuch wurde die Korrosion unterschiedlich präparierter Eisennägel mithilfe einer Gelatine-Indikatorlösung untersucht.
+Nach 2 Tagen in der Lösung traten je nach Präparation grünliche Verfärbungen der Gelatine und dunkle Bereiche an den Nageloberflächen auf,
+während am Nagel mit Zinkkontakt keine sichtbare Veränderung festgestellt wurde. Dies ist grundsätzlich mit der Schutzwirkung von Zink als Opferanode zu erklären.
+Besonders die Beobachtungen am gebogenen und am mit Kupferdraht umwickelten Nagel deuten auf eine verstärkte lokale Eisenkorrosion hin.
+Die schwarze Färbung des verzunderten Bereichs kann dagegen bereits durch das vorherige Erhitzen entstanden sein. 
+
+\versuchsabschnitt{6}{Sicherheit und Entsorgung}
+
+Die für den Versuch verwendeten Gefahrstoffe sind in Tab.~\ref{tab:gefahrenstoffe} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt. Verwendete KMR-Stoffe sind in Tab.~\ref{tab:kmr} aufgeführt.$^{[5]}$
+
+\begin{table}[H]
+  \centering
+  \caption{Verwendete Chemikalien}
+  \label{tab:gefahrenstoffe}
+  \begingroup
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.45}
+  \begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{2.6cm} >{\centering\arraybackslash}p{1.35cm} >{\RaggedRight\arraybackslash}p{1.65cm}Y >{\centering\arraybackslash}p{1.05cm}@{}}
+    \toprule
+    Substanz & Symbol & H-/EUH-Sätze & P-Sätze & Entsorgung \\
+    \midrule
+    KNO$_3$ & GHS03 & H272 &
+    P210, P220, P221, P280, P370+P378, P501 & (1) \\
+    \addlinespace[3pt]
+    Alizaringelb R (Mordant Orange I, in Ethanol) & GHS02, GHS07 &
+    H225, H302, H319 &
+    P210, P233, P240, P241, P242, P243, P280, P301+P312, P303+P361+P353, P305+P351+P338, P370+P378, P391, P403+P235, P501 & (1) \\
+    \addlinespace[3pt]
+    K$_3$[Fe(CN)$_6$] & -- & EUH032 & -- & (1) \\
+    \addlinespace[3pt]
+    Zink & GHS09 & H410 & P273, P391, P501 & (1) \\
+    \bottomrule
+  \end{tabularx}
+  \endgroup
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR)}
+  \label{tab:kmr}
+  \begingroup
+  \small
+  \renewcommand{\arraystretch}{1.3}
+  \begin{tabularx}{\linewidth}{@{}Y >{\centering\arraybackslash}p{2.4cm} >{\centering\arraybackslash}p{3cm} >{\centering\arraybackslash}p{2.4cm}@{}}
+    \toprule
+    Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge \\
+    \midrule
+    -- & -- & -- & -- \\
+    \bottomrule
+  \end{tabularx}
+  \endgroup
+\end{table}
+
+Entsorgung: (1) Die Eisennägel wurden mit der Gelatine im Behälter für kontaminierte Betriebsmittel entsorgt.
+
+\clearpage
+
+
+\versuchsabschnitt{7}{Literatur}
+\begin{enumerate}[label={[\arabic*]}, leftmargin=0.8cm, labelsep=0.4cm]
+	\item E .Riedel, C. Janiak, \textit{Anorganische Chemie}, 7. Auflage, Walter De Gruyter, Berlin, \textbf{2007}, S.367.
+	\item C. E. Mortimer, U. Müller, \textit{Chemie}, 9. Auflage, Georg Thieme Verlag KG, Stuttgart, \textbf{2007}, S. 371.
+	\item H. Heller, Seminarfoliensatz 5 zum \textit{\glqq{}Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften\grqq{}}, Universität Hamburg, Hamburg, \textbf{2026}, S.9-10.
+	\item E .Riedel, C. Janiak, \textit{Anorganische Chemie}, 7. Auflage, Walter De Gruyter, Berlin, \textbf{2007}, S.856.
+	\item H. Heller, \textit{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, Version 1.22, Universität Hamburg, Hamburg, \textbf{2026}, S. 52.
+\end{enumerate}
+
+\end{document}

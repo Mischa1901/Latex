@@ -236,14 +236,14 @@
 			\vspace*{0.5cm}
 			\Large {\textbf{Elif Öner, Friederike Penk, Maxim Popow, Michael Quint}}		\\						%Name
 			\vspace*{0.5cm}
-					\normalsize{Plätze 7b, 8a, 8b, 9a}								%Platznummer
+					\normalsize{Plätze 7a, 8a, 8b, 9a}								%Platznummer
 			\vfill
 		\end{center}
 		\begin{tabbing}
 			\hspace{3cm}\=\kill
-			Assistent: \> Dr. Hauke Heller \\						% Name Assistent
+			Assistent: \> Lisa Huber \\						% Name Assistent
 			Version: \> 1 \\									%Version
-			Datum: \> 01.11.2026 \\								%Datum
+			Datum: \> 04.11.2026 \\								%Datum
 		\end{tabbing}
 		\hrule														%Waagerechte Linie
 \end{titlepage}
@@ -453,20 +453,68 @@ Entsorgung: \\
 \setcounter{subsection}{1}							%Versuchsnummer x.#.x startet bei 0 für 1 
 \setcounter{secnumdepth}{4}
 	
-\subsection{V2}
+\subsection{Konzentrationskette}
 
 \subsubsection{Einleitung und Aufgabenstellung}
-
+Es sollte gezeigt werden, dass eine messbare Spannung durch einen Konzentrationsunterschied zweier Lösungen zustande kommen kann.
 
 \subsubsection{Theoretischer Hintergrund}
+Bei einem Galvanischen Element entsteht durch einen Elektronenfluss eine Spannung, wie schon in 5.1 beschrieben. Dafür braucht es entweder zwei unterschiedliche Lösungen oder Zwei Lösungen mit unterschiedlichen Konzentrationen, welche über ein Diaphragma oder Salzbrücke verbunden sind. Über diese können trotz der räumlich getrennten Zellen, die Ionen wandern. Sobald die Ionen der Elektroden und der Lösungen gleich sind, wird es als eine Konzentrationskette bezeichnet. Die Ionen wandern, um die Konzentrationen auszugleichen, von der höher konzentrierten Lösung zur niedrig konzentrierten Lösung, Gleichzeitig wandern ebenfalls die Elektronen über das Strommessgerät.\zitat{Seminar} Dies geschieht so lange, bis sich schließlich ein Gleichgewicht eingestellt hat und beide Lösungen die selbe Konzentration besitzen.  Hat sich dieses Gleichgewicht eingestellt ist keine Spannung mehr messbar, da keine Potentialdifferenz mehr existiert. Die höher konzentrierte Kupfersulfatlösung diente bei diesem Versuch dementsprechend als Kathode.
+Das Zellpotential lässt sich mit Hilfe der Nernst´schen Gleichung berechnen \prettyref{eq: gl1}.
 
+\formel{gl1}{E(X)=E^{\circ}_X + \frac{RT}{zF}\cdot \text{ln}(a_{x^+}) \approx E^{\circ}_X +\frac{RT}{zF}\cdot \text{ln}(c_{X^+})}
+
+Hierbei steht z für die Anzahl der ausgetauschter Elektronen, F für die Faraday Konstante, R für die ideale Gaskonstante, T für die Temperatur, a für die Aktivität und c für die Konzentration. E$_0$ ist das Standardpotential. In diesem Fall darf die Formel angenähert werden und die Aktivität mit der Konzentration ersetzt werden. 
+Die Zellspannung kann aus dem Potential der Reduktions- und Oxidationshalbzelle berechnet werden \prettyref{eq: gl2}.
+
+\formel{gl2}{\Delta E=E_X\text{(Red.)} - E_X\text{(Ox.)}= \frac{RT}{zF}\cdot \text{ln}(\frac{c_{X^+}\text{(Red.)}}{c_{X^+}\text{(Ox.)}})}
 
 \subsubsection{Experimenteller Teil}
+
+Ein Schenkel eines U-Rohres mit Fritte wurde mit einmolariger Kupfersulfatlösung gefüllt. Der andere Schenkel wurde mit Kupfersulfatlösung (0,1 $\mathrm{\frac{mol}{L}}$) gefüllt. Anschließend wurde mithilfe von zwei Kupferelektroden und einem Voltmeter die Spannung gemessen. Diese betrug zuerst 14,6 mV und fiel innerhalb von fünf bis zehn Minuten auf 0,001 mV ab. 
+Ein weiters U-Rohr mit Fritte wurde mit einmolariger Kupfersulfatlösung gefüllt. In den anderen Schenkel wurde eine zur Hälfte mit Ammioniaklösung (25 \%) verdünnte und mit 5-10 Tropfen Schwefelsäure versetzte einmolarige tiefblaue Kupfersulfatlösung überführt. Nun wurde wieder mit zwei Kupferelektroden und einem Voltmeter die Spannung gemessen. Diese betrug 0,412 V. 
+
 
 
 \subsubsection{Ergebnisse und Diskussion}
 
+Durch die unterschiedlichen Konzentrationen der Lösungen enstand eine Potentialdifferenz, welche mit Hilfe der Gleichung \prettyref{eq: gl2} berrechnet werden kann.
+Die gemessenen Werte sind der Abb. 5.2.4. zu entnehmen. Dieser Versuch wurde bei Raumtemperatur durchgeführt weshalb $T$ = 298,15 K geschätzt werden kann.
+Die in diesem Versuch übertragene Anzahl an Elektronen ist zwei ($z$ = 2). Daraus ergibt sich der Wert 29 mV.
+Der in diesem Versuch stark abweichende gemessene Wert könnte durch die ungenaue Temperaturangabe
+oder den Austausch der Aktivitätskoeffizienten durch die Konzentrationen in der Nernst Gleichung und somit die Vernachlässigung des Diffusionspotentials enstanden sein.
+Die Spannung fällt hierbei ab,da die Ionen durch das Diaphragma diffundieren.
+Im zweiten Teil des Versuchs führte die Zugabe von Ammioniaklösung zur Bildung von Tetraaminkupfer(II)-Komplexen \prettyref{ceq: r11}:
+
+\cformel[r11]{Cu^2+ + SO^2-_4 + 4NH_3 <=> [Cu(NH_3)_4]^2+ + SO^2-_4}
+
+Dieser Komplex ist tiefblau gefärbt und erklärt somit die Farbe der Lösung. Die Schwefelsäure erhöhte bei diesem Versuch durch eine Erhöhung der Konzentration der Schwefelanionen die Leitfähigkeit. 
+Durch die entstandenen Komplexe verringert sich die Konzentration der Kupferionen und es entstand wieder eine Potentialdifferenz zwischen den beiden Zellen und somit ebenfalls eine Konzentrationskette. 
+Die Ionenkonzentration kann durch umstellen der Gleichung \prettyref{eq: gl2} und der gemessenen Spannung (0,421 V) berrechnet werden und beträgt ungefähr $5.841 \cdot 10^{-15}\mathrm{\frac{mol}{L}}$ \prettyref{eq: gl3}.
+
+\formel{gl3}{c_{Cu^{2+}}\text{(Ox.)} = \frac{c_{Cu^{2+}}\text{(Red.)}}{e^{\frac{\Delta E \cdot zF}{RT}}}=\frac{1\frac{\text{mol}}{\text{L}}}{e^{\frac{0.421\text{V} \cdot 2 \cdot  96 485,332 \frac{\text{C}}{\text{mol}}}{8.314\frac{\text{J}}{\text{K}\cdot \text{mol}}\cdot 298.15\text{K}}}}\approx5.841\cdot 10^{-15}\frac{\text{mol}}{\text{L}}}
+
+\bild
+		{Spannungsverlauf.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Spannungsverlauf in Abhängigkeit von der Zeit.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.45}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\linewidth]{V5/Spannung in Abhängigkeit von der Zeit.pdf}
+   % \caption{Spannungsverlauf in Abhängigkeit von der Zeit.}
+    %\label{Graph_5.2}
+%\end{figure}
+
 \subsubsection{Zusammenfassung}
+
+
+In diesem Versuch wurde die Funktionsweise einer Konzentrationskette verdeutlicht.
+Es wurde gezeigt, dass durch unterschiedliche Konzentrationen der Kupfersulfatlösungen eine Spannung zustande kommt. Außerdem wurde ein Spannungsabfall durch Diffusion der Ionen festgestellt.
+
 
 \subsubsection{Sicherheit und Entsorgung}
 		
@@ -474,11 +522,14 @@ Entsorgung: \\
 	{Chemikalien2}
 	{Verwendete Chemikalien.}
 	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
-	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
 	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
-	{ % Erster Stoff
-
-    }
+	{ Kupfersulfat & GHS07 GHS07 & H290 H315 H319 H410 & P264 P273 P280 P301+P312 P302+P352 P305+P351+P338 P321 P330 P332+P313 P337+P313
+    P362 P391 P501 & (1) \\
+    Ammoniaklösung (25 \%) & GHS05 GHS07 GHS09 & H290 H314 H335 H400 & P260 P264 P273 P280 P301+P330+P331 P303+P361+P353 P304+P340 P305+P351+P338
+    P310 P321 P391 P405 P501 & (2) \\
+    Schwefelsäure (1 $\mathrm{\frac{mol}{L}}$) & GHS05 & H290 H314 & P260 P264 P280 P301+P330+P331 P303+P361+P353 P304+P340 P305+P351+P338 P310
+    P321 P405 P501  & (1) \\}
 
 \langetabelle
 	{KMR_leer2}
@@ -490,11 +541,19 @@ Entsorgung: \\
 	
 Entsorgung: \\
 \begin{itemize}
-    \item[(1)]
+    \item[(1)] Die Lösung wurde im Behälter für andere Säuren entsorgt.
+    \item[(2)] Ammioniakhaltige Lösungen wurden mit Salzsäure vorsichtig angesäuert und im Behälter für andere Säuren entsorgt.
 \end{itemize}	
 
 \begin{thebibliography}{4}		%manuelles Quellenverzeichnis
 
+	\bibitem{Seminar}
+						{H. Heller}, 
+			\textit	{Elektrochemie im Gleichgewicht Teil 1}, 
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2026}, 
+			S.			{1-14}.
 	
 	\bibitem{hauke2}
 						{DGUV}, 
@@ -511,20 +570,152 @@ Entsorgung: \\
 \setcounter{subsection}{2}							%Versuchsnummer x.#.x startet bei 0 für 1 
 \setcounter{secnumdepth}{4}
 	
-\subsection{V3}
+\subsection{Korrosion des Eisens}
 
 \subsubsection{Einleitung und Aufgabenstellung}
-
+Ziel des Versuchs war es, die Korrosion von Eisen an verschiedenen präparierten Eisennägeln zu demonstrieren. Die Resultate sollten beobachtet und erklärt werden.
 
 \subsubsection{Theoretischer Hintergrund}
 
+Die Korrosion von Eisen ist ein Prozess,
+der auf Redoxreaktionen beruht und durch die Elektrodenpotentiale der beteiligten Stoffe beeinflusst wird. Auf der Eisenoberfläche entstehen Lokalelemente,
+in denen Eisen zu Fe$^{2+}$-Ionen oxidiert wird.
+Durch weitere Reaktionen bilden sich Eisenoxide und Eisenoxidhydroxide, die als Rost bezeichnet werden.\zitat{eins}
+Die entstehenden Rostschichten sind häufig porös und schützen das darunterliegende Metall nicht dauerhaft vor Korrosion. 
+Als Voraussetzung für die hier untersuchte Sauerstoffkorrosion sind Wasser und gelöster Sauerstoff erforderlich.
+Zunächst diffundieren die durch die Oxidation entstandenen Fe$^{2+}$-Ionen in das umgebende Wasser. Bereits geringe Anteile an Wasser,
+etwa durch die Luftfeuchtigkeit, reichen hierfür aus.
+Die bei der Oxidation freigesetzten Elektronen werden innerhalb des Eisens zu kathodischen Bereichen transportiert und dort für Reduktionsreaktionen verbraucht.
+Hierbei ist insbesondere die Sauerstoffreduktion von Bedeutung.\zitat{zwei}
+
+
+\cformelpot{m1}{Fe^{2+} + 2e^{-} -> Fe}{E^{\circ} = -0,44\ \mathrm{V}}
+\cformelpot{m2}{O2 + 2H2O + 4e^- -> 4OH-}{E^{\circ} = +0,40\ \mathrm{V}}
+\cformelpot{m3}{O2 + 4H+ + 4e- -> 2H2O}{E^{\circ} = +1,23\ \mathrm{V}}
+
+Die beiden Standardpotentiale der Sauerstoffreduktion beziehen sich auf unterschiedliche pH-Bedingungen.
+
+Der Korrosionsvorgang lässt sich in zwei elektrochemische Teilreaktionen unterteilen.
+Zuerst erfolgt die Oxidation des elementaren Eisens zu Eisen(II)-Kationen.
+Die jeweiligen Teilgleichungen für die Oxidation und Reduktion sowie die Gesamtreaktion,
+die zur Bildung von Eisen(II)-hydroxid führt, sind in Gleichung \prettyref{ceq: m1}, \prettyref{ceq: m2} und \prettyref{ceq: m3} dargestellt.\zitat{drei}
+
+\cformel[m1]{2Fe -> 2Fe^{2+} + 4e-}
+\cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+\cformel[m3]{2Fe_{(s)} + 2H2O_{(l)} + O2_{(g)} -> 2Fe(OH)2_{(s)}}
+
+Eisen(II) kann nach der Primäroxidation in einer zweiten Reaktion weiter zu Eisen(III) oxidiert werden.
+Diese Reaktion, die als Sekundäroxidation bekannt ist, wird in Gleichung \prettyref{ceq: m4} dargestellt.\zitat{drei}
+
+\cformel[m4]{4Fe(OH)2_{(s)} + O2_{(g)} + 2H2O_{(l)} -> 44Fe(OH)3_{(s)}}
+
+Nach einer gewissen Zeit wandeln sich die entstandenen Eisen(II)- und Eisen(III)-hydroxide durch die Abgabe von Wasser in andere Eisenoxide und -hydroxide um.
+Die Prozesse sind in den Gleichungen \prettyref{ceq: m5}, \prettyref{ceq: m6} und \prettyref{ceq: m7} vereinfacht dargestellt.\zitat{drei}
+
+\cformel[m5]{Fe(OH)3_{(s)} -> FeO(OH)_{(s)} + H_2O_{(l)}}
+\cformel[m6]{2FeO(OH)_{(s)} -> Fe_2O_3_{(s)} + H2O_{(l)}}
+\cformel[m7]{Fe(OH)2_{(s)} -> FeO_{(s)} + H_2O_{(l)}}
+
+Das Endprodukt Rost wird folglich näherungsweise durch die allgemeine Formel \prettyref{ceq: m8} dargestellt.\zitat{drei}
+
+\cformel[m8]{$x$FeO.$y$Fe2O3.$z$H2O}
+
+Es lassen sich unterschiedliche Wege beschreiten,
+um die Oxidation von Eisen zu verhindern.
+Ein Beispiel hierfür ist die Ausbildung einer Oxidschicht durch Verzunderung.
+Darüber hinaus ist es möglich, das Eisen mit unedleren Metallen wie Zink zu beschichten,
+wodurch Wasser und Sauerstoff weitgehend ausgeschlossen werden.
+Zink fungiert bei leitendem Kontakt außerdem als Opferanode und wird bevorzugt anstelle des Eisens oxidiert.\zitat{zwei}
+
+Zum Nachweis der bei der Korrosion entstehenden Fe$^{2+}$-Ionen dient Kaliumhexacyanoferrat(III),
+das mit ihnen einen dunkelblauen Niederschlag (Turnbulls Blau) bildet.\zitat{vier}
+Alizaringelb R zeigt durch einen Farbumschlag von Gelb nach Orange bis Rot einen stark erhöhten pH-Wert an,
+der infolge der kathodischen Sauerstoffreduktion lokal entstehen kann.
+Die Gelatine verlangsamt die Durchmischung der Stoffe, während das zugesetzte Kaliumnitrat die Leitfähigkeit der Lösung erhöht.
 
 \subsubsection{Experimenteller Teil}
 
+Für die Durchführung des Versuchs wurden fünf Eisennägel auf unterschiedliche Weise präpariert. Die Präparationen sind in der folgenden Tabelle dargestellt:
+
+\langetabelle
+	{Tabelle}
+	{Präparationen der Eisennägel.}
+	{H}
+	{p{2cm} p{9cm}}
+	{Nagel & Präparation\\}
+	{ 1 & Wurde rechtwinkelig gebogen. \\
+	2 & Wurde auf der Hälfte seiner Länge mithilfe eines Bunsenbrenners verzundert. \\
+	3 & Wurde auf etwa einem Drittel seiner Länge mit Kupferdraht umwickelt. \\
+	4 & Wurde mit einem Stück Zinkblech mithilfe eines Kupferdrahts verbunden. \\
+	5 & Unbehandelt. \\
+	}
+
+Parallel dazu wurde die Indikatorlösung zum Übergießen der Nägel vorbereitet.
+Dazu wurden in einem 250-mL-Becherglas unter Erhitzen 16~g Gelatine,
+1~g KNO$_3$,\\ 2~mL 0,5 \%ige Alizaringelb-R-Lösung (Mordant Orange I) in Ethanol und 4~mL 1 \%ige K$_3$[Fe(CN)$_6$]-Lösung in 100~mL demineralisiertem Wasser vollständig gelöst.\\
+Anschließend wurden die präparierten Nägel in einer Petrischale angeordnet und mit der warmen Gelatinelösung übergossen. Die Petrischale wurde bis zu zwei Tage im Abzug stehen gelassen.\\
+Bei der anschließenden Beobachtung zeigten sich in der Gelatine je nach Präparation der Nägel blau-grüne und schwarze Verfärbungen.
+Am und um den Nagel, welcher mit Zinkblech in Kontakt stand, war keine Veränderung zu erkennen. Beim unbehandelten Nagel waren leichte grünliche Spuren an der Gelatine erkennbar.
+Der verzunderte Nagel zeigte am verzunderten Stück eine schwarze Färbung, die Gelatine drum herum blieb unverändert.\\
+Auch beim mit Kupferdraht umwickelten Nagel bildete sich unter dem Kupfer eine schwarze Schicht und die Gelatine drum herum wurde grün.
+Der gebogene Nagel wurde an der Biegung schwarz und die Gelatine grünlich.
+
+\bild
+		{ENagel.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Eisennägel nach zwei Tagen in Gelatine.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.13}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+\bild
+		{gelatine.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Rückstände im Gelatinefeststoff.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.25}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
 
 \subsubsection{Ergebnisse und Diskussion}
 
+Nach zwei Tagen waren an den unterschiedlich präparierten Eisennägeln verschiedene Verfärbungen der Gelatine sowie dunkle Bereiche auf den Nageloberflächen erkennbar. 
+Die beobachteten blau-grünen Verfärbungen lassen sich grundsätzlich mit der Bildung von Eisen(II)-Ionen bei der anodischen Reaktion des Eisens erklären.
+Diese reagieren mit den in der Gelatine enthaltenen Hexacyanoferrat(III)-Ionen unter Bildung eines dunkelblauen Niederschlags (Turnbulls Blau):
+
+\cformel[m9]{3Fe^{2+}_{(aq)} + 2[Fe(CN)6]^{3-}_{(aq)} -> Fe3[Fe(CN)6]2_{(s)}}
+
+Durch eine Überlagerung der blauen Färbung mit der orangefarbenen Gelatine erscheinen die betroffenen Bereiche eher grünlich statt blau.
+An den kathodischen Bereichen findet gleichzeitig die in Gleichung \prettyref{ceq: m2} dargestellte Sauerstoffreduktion statt, bei der Hydroxid-Ionen entstehen.
+Ein dadurch erhöhter pH-Wert kann grundsätzlich durch Alizaringelb R angezeigt werden.
+Da der Indikator erst im stark basischen Bereich nach Orange bis Rot umschlägt und die Gelatine bereits eine Orange Farbe aufwies,
+ließen sich keine eindeutigen Bereiche mit einer roten Verfärbung erkennen.
+
+Am unbehandelten Nagel bzw. der anliegenden Gelatine war nur wenig Veränderung zu erkennen. 
+Dies spricht für eine eher geringe Korrosion. Der Nagel hatte vermutlich bereits intakte Oxidschichten,
+welche ihn vor Korrosion schützten. Der gebogene Nagel zeigte eine schwarze Verfärbung an der Biegung und an dieser Stelle verstärkte Grünfärbung der Gelatine.
+Durch die mechanische Verformung können Oberflächen- und Oxidschichten beschädigt werden, wodurch an dieser Stelle eine verstärkte Korrosion begünstigt wird.
+
+Beim teilweise verzunderten Nagel wurde im erhitzten Bereich ebenfalls eine schwarze Färbung beobachtet.
+Diese ist zumindest teilweise auf die bereits beim Erhitzen entstandenen Eisenoxide zurückzuführen.
+Eine Zunderschicht kann die darunterliegende Oberfläche abschirmen, sofern keine Risse oder Ähnliches vorhanden sind.
+Da keine grüne Verfärbung in der umliegenden Gelatine beobachtet wurde, lässt sich darauf schließen, dass nur wenig Korrosion stattgefunden hat.
+
+Der mit Kupferdraht umwickelte Nagel wies unter dem Kupfer eine schwarze Schicht auf. 
+Da Kupfer edler als Eisen ist, kann der Kontakt beider Metalle in der Elektrolytlösung ein galvanisches Element bilden.
+Eisen wird dabei bevorzugt oxidiert, während an kathodischen Bereichen Sauerstoff reduziert wird.
+Die beobachtete dunkle Verfärbung und die grüne Verfärbung der Gelatine ist mit einer verstärkten lokalen Korrosion zu erklären.
+
+Der mit Zinkblech verbundene Nagel zeigte keine Veränderung. Da Zink unedler als Eisen ist, sollte es als Opferanode bevorzugt oxidiert werden:
+
+\cformel[m10]{Zn -> Zn^{2+} + 2e-}
+
+Dadurch wird die Oxidation des Eisens größtenteils unterdrückt.
+
 \subsubsection{Zusammenfassung}
+
+In diesem Versuch wurde die Korrosion unterschiedlich präparierter Eisennägel mithilfe einer Gelatine-Indikatorlösung untersucht.
+Nach 2 Tagen in der Lösung traten je nach Präparation grünliche Verfärbungen der Gelatine und dunkle Bereiche an den Nageloberflächen auf,
+während am Nagel mit Zinkkontakt keine sichtbare Veränderung festgestellt wurde. Dies ist grundsätzlich mit der Schutzwirkung von Zink als Opferanode zu erklären.
+Besonders die Beobachtungen am gebogenen und am mit Kupferdraht umwickelten Nagel deuten auf eine verstärkte lokale Eisenkorrosion hin.
+Die schwarze Färbung des verzunderten Bereichs kann dagegen bereits durch das vorherige Erhitzen entstanden sein.
 
 \subsubsection{Sicherheit und Entsorgung}
 		
@@ -534,9 +725,32 @@ Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien
 	{Chemikalien3}
 	{Verwendete Chemikalien.}
 	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
-	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{l p{1.9cm} p{2.2cm} p{3.5cm} c}
 	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
 	{ % Erster Stoff
+	\ce{KNO3}
+    & \begin{tabular}[t]{l} GHS03 \end{tabular}
+    & 272 
+    & 210, 220, 221, 280 \newline 370+378, 501
+    & (1) \\
+
+	Alizaringelb R \\ (Mordant Orange I, in Ethanol)
+		& \begin{tabular}[t]{l} GHS02 \\ GHS07 \end{tabular}
+		& 225, 302 \newline 319 
+		&  210, 233, 240, 241, \newline 242, 243, 280, \newline 301+312, \newline 303+361+353, \newline P05+351+338, \newline 370+378, 391, \newline 403+235, 501
+		& (1) \\
+
+	\ce{K3[Fe(CN)6]}
+    & \begin{tabular}[t]{l} - \end{tabular}
+    & EUH302
+    & -
+    & (1) \\
+
+	\ce{Zink}
+    & \begin{tabular}[t]{l} GHS09 \end{tabular}
+    & 410
+    & 273, 391, 501
+    & (1) \\
 
     }
 
@@ -550,12 +764,47 @@ Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien
 	
 Entsorgung: \\
 \begin{itemize}
-    \item[(1)]
+    \item[(1)] Die Eisennägel wurden mit der Gelatine im Behälter für kontaminierte Betriebsmittel entsorgt.
 \end{itemize}	
 
 
 \begin{thebibliography}{4}		%manuelles Quellenverzeichnis
 
+	\bibitem{eins}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{7. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{367}.
+
+	\bibitem{zwei}
+						{C. E. Mortimer, U. Müller}, 
+			\textit	{Chemie}, 
+						{9. Auflage}, 
+						{Georg Thieme Verlag KG}, 
+						{Stuttgart}, 
+			\textbf	{2007}, 
+			S.			{371}.
+
+	\bibitem{drei}
+						{H. Heller, Seminarfoliensatz 5 zum}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften},  
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2026}, 
+			S.			{9-10}.
+
+	\bibitem{vier}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{7. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{856}.
+	
 	\bibitem{hauke3}
 						{DGUV}, 
 						„{GESTIS-Stoffdatenbank}“, zu finden unter 
