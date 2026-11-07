@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  1 NOV 2026 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  7 NOV 2026 02:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1397,47 +1397,24 @@ Package hyperref Info: Link coloring ON on input line 221.
  [1
 
 {C:/Users/Mischa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 270.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 266.
  (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 270.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 266.
  (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Mischa\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Font shape `T1/aer/b/it' in size <12> not available
-(Font)              Font shape `T1/aer/bx/it' tried instead on input line 297.
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 297--297
-[] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 297--297
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 297--297
-[] [] 
- []
-
-
-Overfull \hbox (72.2713pt too wide) in alignment at lines 297--297
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (72.2713pt too wide) in alignment at lines 297--297
- [] [] [] [] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--308
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
@@ -1445,81 +1422,174 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--308
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.310 	\item[(2)]
-                  Die Lösung wurde im Behälter für nicht-nitrathaltige S�... [1] [2]
+l.280 
+       [1
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.280 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.280 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.280 
+      ]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 ...{(l)} <=> H3O^{+}_{(aq)} + OH^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 ...{(l)} <=> H3O^{+}_{(aq)} + OH^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 ...{(l)} <=> H3O^{+}_{(aq)} + OH^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283 ...{(l)} <=> H3O^{+}_{(aq)} + OH^{-}_{(aq)}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285 ...{H3O+})\cdot a(\ce{OH-})}{a(\ce{H2O})^2}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285 ...{H3O+})\cdot a(\ce{OH-})}{a(\ce{H2O})^2}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285 ...{H3O+})\cdot a(\ce{OH-})}{a(\ce{H2O})^2}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285 ...{H3O+})\cdot a(\ce{OH-})}{a(\ce{H2O})^2}}
+                                                  
+<pH_stark.png, id=34, 361.788pt x 217.467pt>
+File: pH_stark.png Graphic file (type png)
+<use pH_stark.png>
+Package pdftex.def Info: pH_stark.png  used on input line 305.
+(pdftex.def)             Requested size: 361.7871pt x 217.46645pt.
+LaTeX Font Info:    Font shape `T1/aer/b/it' in size <12> not available
+(Font)              Font shape `T1/aer/bx/it' tried instead on input line 305.
 
-LaTeX Warning: Citation `indikator2' on page 3 undefined on input line 354.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 383--383
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 340--340
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 383--383
+Overfull \hbox (72.2713pt too wide) in alignment at lines 340--340
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 383--383
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 340--340
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 383--383
+Overfull \hbox (72.2713pt too wide) in alignment at lines 340--340
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 383--383
+Overfull \hbox (72.2713pt too wide) in alignment at lines 340--340
  [] [] [] [] [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
-[3] [4]
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 486--486
+[3 <./pH_stark.png>] [4]
+
+LaTeX Warning: Citation `indikator2' on page 5 undefined on input line 424.
+
+
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 453--453
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 486--486
+Overfull \hbox (72.2713pt too wide) in alignment at lines 453--453
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 486--486
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 453--453
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 486--486
+Overfull \hbox (72.2713pt too wide) in alignment at lines 453--453
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--486
+Overfull \hbox (72.2713pt too wide) in alignment at lines 453--453
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+[5] [6]
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 556--556
+[] [] 
+ []
+
+
+Overfull \hbox (72.2713pt too wide) in alignment at lines 556--556
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 556--556
+[] [] 
+ []
+
+
+Overfull \hbox (72.2713pt too wide) in alignment at lines 556--556
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--556
 []|\T1/aer/m/n/12 (+20) 314, 335,
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 486--486
+Overfull \hbox (72.2713pt too wide) in alignment at lines 556--556
  [] [] [] [] [] 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
-
-Package caption Warning: Unused \captionsetup[figure] on input line 46.
-See the caption package documentation for explanation.
-
-[6] (V6.aux)
+[8] (V6.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1530,17 +1600,17 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 49652 strings out of 467871
- 1176182 string characters out of 5417891
- 1840238 words of memory out of 5000000
- 77562 multiletter control sequences out of 15000+600000
- 677172 words of font info for 242 fonts, out of 8000000 for 9000
+ 49786 strings out of 467871
+ 1177528 string characters out of 5417891
+ 1839237 words of memory out of 5000000
+ 77595 multiletter control sequences out of 15000+600000
+ 685630 words of font info for 310 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,108p,11253b,1310s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on V6.pdf (7 pages, 89734 bytes).
+<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on V6.pdf (9 pages, 176584 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 101069 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 107218 words of extra memory for PDF output out of 128383 (max. 10000000)
 

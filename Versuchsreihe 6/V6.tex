@@ -241,9 +241,9 @@
 		\end{center}
 		\begin{tabbing}
 			\hspace{3cm}\=\kill
-			Assistent: \> Dr. Hauke Heller \\						% Name Assistent
+			Assistenten: \> Lisa Huber, Maximilian Ruffer \\						% Name Assistent
 			Version: \> 1 \\									%Version
-			Datum: \> 01.11.2026 \\								%Datum
+			Datum: \> 08.11.2026 \\								%Datum
 		\end{tabbing}
 		\hrule														%Waagerechte Linie
 \end{titlepage}
@@ -257,9 +257,52 @@
 
 \subsubsection{Einleitung und Aufgabenstellung}
 
+Es war die Konzentration einer Salzsäurelösung mittels Titration in zwei Druchgängen zu bestimmen.
+Dabei waren die gemessenen pH-Werte aus dem ersten Durchgang graphisch aufzutragen.
+
 \subsubsection{Theoretischer Hintergrund}
 
+Die erste allgemeingültige Säure-Base-Definition wurde von Arrhenius 1883 entwickelt.
+Nach dieser Definition sind Säuren (\ce{HA}) Stoffe, die unter Bildung von Hydronium-Ionen (\ce{H3O+}) dissoziieren.
+\cformel[s1]{HA + H2O ->[][Dissoziation] H3O+ + A-}
+Basen (\ce{XOH}) sind darauffolgend Stoffe, die unter Bildung von Hydroxid-Ionen (\ce{OH-}) dissoziieren.\zitat{Arr}
+\cformel[c1]{XOH ->[][Dissoziation] X+ + OH-}
+
+Da die Definition von Arrhenius streng genommen nur für wässrige Lösungen gilt, wurde eine allgemeine Erweitung der Säure-Base-Definition 1923 von Br\o nsted entwickelt.
+Nach seiner Theorie sind Säuren Protonendonatoren, also jene Moleküle bzw. Ionen, die in der Lage sind, Protonen (\ce{H+}-Ionen) abzuspalten.
+Eine Protonenübertragungsreaktion nennt man auch Protolyse.
+Basen sind korrespondierend dazu Protonenakzeptoren, also Moleküle bzw. Ionen, welche in der Lage sind, Protonen aufzunehmen.\\
+Zusammengefasst sind also bei Protolysereaktionen zwangsweise immer zwei Säure-Base-Paare beteiligt,
+in welchen jeder Stoff nach einer Protonendonation bzw. -akzeptanz zu einer konjugierten Base bzw. Säure reagiert.\zitat{konj}
+\cformel[sb]{\underset{\text{Säure}}{\ce{HA}} + \underset{\text{Base}}{\ce{B}} <=> \underset{\text{konj. Base}}{\ce{A-}} + \underset{\text{konj. Säure}}{\ce{HB+}}}
+Wasser (\ce{H2O}) hat als sog. Ampholyt außerdem die Eigenschaft, sowohl als Säure als auch als Base zu reagieren.\zitat{konj}
+\cformel[sb2]{\underset{\text{Säure}}{\ce{H2O}} + \underset{\text{Base}}{\ce{H2O}} <=> \underset{\text{konj. Base}}{\ce{OH-}} + \underset{\text{konj. Säure}}{\ce{H3O+}}}
+
+Protolysereaktionen sind wie alle anderen chemischen Reaktionen ebenfalls Gleichgewichtsreaktion.
+Im Falle von Wasser spricht man auch von einer Autoprotolyse.
+\cformel[mwg1]{2H2O_{(l)} <=> H3O^{+}_{(aq)} + OH^{-}_{(aq)}}
+Das Massenwirkungsgesetz (MWG) lässt sich demnach wie folgt schreiben, wobei $a$ die Aktivität eines Stoffes beschreibt:
+\formel{mwg2}{K = \frac{a(\ce{H3O+})\cdot a(\ce{OH-})}{a(\ce{H2O})^2}}
+Da die Aktivität von Wasser nahezu konstant ist, wird das Ionenprodukt des Wassers $K_{\mathrm{W}}$ eingeführt:
+\formel{mwg3}{K \cdot a(\ce{H2O})^2 = K_{\mathrm{W}} = a(\ce{H3O+})\cdot a(\ce{OH-})}
+Bei $T$ = 298 K beträgt $K_{\mathrm{W}}$ = $1,0 \cdot 10^{-14}$. Bei einer negativen dekadischen Logarithmierung ($\log_{10}x \equiv \lg x$) ergibt sich folgende Beziehung:
+\formel{mwg4}{-\lg(K_{\mathrm{W}}) = -\lg(a(\ce{H3O+})\cdot a(\ce{OH-})) = -\lg(a(\ce{H3O+})) -\lg(a(\ce{OH-}))}
+Mit der Einführung der pH- und pOH-Werte gelten demnach folgende Beziehungen\zitat{MWG}:
+\formel{pH}{\mathrm{pH} \equiv -\lg(a(\ce{H3O+}))}
+\formel{pOH}{\mathrm{pOH} \equiv -\lg(a(\ce{OH-}))}
+\formel{fin}{\mathrm{pH} + \mathrm{pOH} = -\lg(1 \cdot 10^{-14}) = 14}
+
+
+
+
 \subsubsection{Experimenteller Teil}
+
+\bild
+		{pH_stark.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Gemessene pH-Werte aufgetragen gegen das Volumen der zugegebenen NaOH-Maßlösung.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=1}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
 
 \subsubsection{Ergebnisse und Diskussion}
 
@@ -313,6 +356,33 @@ Entsorgung: \\
 
 
 \begin{thebibliography}{4} %manuelles Quellenverzeichnis
+
+	\bibitem{Arr}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{345-346}.
+
+	\bibitem{konj}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{346-347}.
+
+	\bibitem{MWG}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{348-352}.
 
 	\bibitem{test}
 						{DGUV}, 
