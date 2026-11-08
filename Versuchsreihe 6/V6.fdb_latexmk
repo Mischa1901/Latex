@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794101113.3522 "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" "V6.pdf" "V6" 1794101118.72736 0
+["pdflatex"] 1794175124.05245 "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" "V6.pdf" "V6" 1794175131.68356 0
   "C:/Users/Mischa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1793827296 111117 1893ee98a909f5c79a3d60dcc05388f0 ""
   "C:/Users/Mischa/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1791835906 13333972 668c889c48597f03a936710eca6c8d46 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
@@ -273,11 +273,14 @@
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "V6.aux" 1794101118 19726 640a7190b69df13d0e96de445473db01 "pdflatex"
-  "V6.tex" 1794101107 47345 6f0d2631518c6c4879f3b065f809e583 ""
-  "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" 1794101107 47345 6f0d2631518c6c4879f3b065f809e583 ""
+  "V6.aux" 1794175131 22699 e1b8770578aaff310a199323433ffab8 "pdflatex"
+  "V6.tex" 1794175123 57402 20ea15e42e79276a1c1aeb37833d4ccf ""
+  "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" 1794175123 57402 20ea15e42e79276a1c1aeb37833d4ccf ""
+  "m1.png" 1794153802 7284916 84cda84bd8162347b4f42ea5499d5d56 ""
+  "m2.png" 1794153785 10407005 4ad1b7a3171cd153f689fbab72fe4951 ""
   "pH_schwach.png" 1794087975 27624 8aa1a87560fc4c9b03321c750fce52b6 ""
   "pH_stark.png" 1794005090 20759 2937da3edbf0232916be80a875464349 ""
+  "puffer.png" 1794153856 49755 87d4f19e8064ffc5b7865be8939b1640 ""
   "tit.png" 1794058831 38202 b0d53c01c15144ab803481c0a149f6d5 ""
   "titcopy.png" 1794058831 38202 b0d53c01c15144ab803481c0a149f6d5 ""
   (generated)
