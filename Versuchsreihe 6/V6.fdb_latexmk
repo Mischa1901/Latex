@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794014361.24284 "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" "V6.pdf" "V6" 1794014365.06055 0
+["pdflatex"] 1794101113.3522 "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" "V6.pdf" "V6" 1794101118.72736 0
   "C:/Users/Mischa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1793827296 111117 1893ee98a909f5c79a3d60dcc05388f0 ""
   "C:/Users/Mischa/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1791835906 13333972 668c889c48597f03a936710eca6c8d46 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
@@ -38,10 +38,14 @@
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmu10.tfm" 1136765053 1276 d1b8c21fa8328272b4e5e6bc10761e6e ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb" 1247596666 31983 5d427b4625a4a5976c1b1c43cab14bba ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1247596667 36554 b67dc2cfa451409e100b3fcf5f506509 ""
+  "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1247596667 36118 fad905eba93cff5bce1e185fe980a177 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/vf/public/ae/aeb10.vf" 1057861800 3204 33087d8d1b5ca03fcc323578bd8c2ab9 ""
@@ -269,10 +273,13 @@
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Mischa/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "V6.aux" 1794014364 15878 98ea631e672dcbfdc9ddba32dd2f825c "pdflatex"
-  "V6.tex" 1794014360 29336 b93511e46184ea5b96cfbd8ab74e1f59 ""
-  "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" 1794014360 29336 b93511e46184ea5b96cfbd8ab74e1f59 ""
+  "V6.aux" 1794101118 19726 640a7190b69df13d0e96de445473db01 "pdflatex"
+  "V6.tex" 1794101107 47345 6f0d2631518c6c4879f3b065f809e583 ""
+  "c:/Users/Mischa/Desktop/Latex/Versuchsreihe 6/V6.tex" 1794101107 47345 6f0d2631518c6c4879f3b065f809e583 ""
+  "pH_schwach.png" 1794087975 27624 8aa1a87560fc4c9b03321c750fce52b6 ""
   "pH_stark.png" 1794005090 20759 2937da3edbf0232916be80a875464349 ""
+  "tit.png" 1794058831 38202 b0d53c01c15144ab803481c0a149f6d5 ""
+  "titcopy.png" 1794058831 38202 b0d53c01c15144ab803481c0a149f6d5 ""
   (generated)
   "V6.aux"
   "V6.log"

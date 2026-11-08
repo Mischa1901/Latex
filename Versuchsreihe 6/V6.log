@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  7 NOV 2026 02:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  8 NOV 2026 02:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1274,6 +1274,16 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ) (V6.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 10.
+
+
+LaTeX Warning: Label `eq: mwg8' multiply defined.
+
+
+LaTeX Warning: Label `tym' multiply defined.
+
+
+LaTeX Warning: Label `titr' multiply defined.
+
 )
 \openout1 = `V6.aux'.
 
@@ -1479,138 +1489,186 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) h
                    \relax 
 l.285 ...{H3O+})\cdot a(\ce{OH-})}{a(\ce{H2O})^2}}
                                                   
-<pH_stark.png, id=34, 361.788pt x 217.467pt>
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2
+pdfTeX warning (ext4): destination with the same identifier (name{equation.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.302 ...{\mathrm{S}} \equiv -\lg(K_{\mathrm{S}})}
+                                                  ]
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+<tit.png, id=50, 433.62pt x 377.15906pt>
+File: tit.png Graphic file (type png)
+<use tit.png>
+Package pdftex.def Info: tit.png  used on input line 322.
+(pdftex.def)             Requested size: 238.49173pt x 207.43813pt.
+LaTeX Font Info:    Font shape `T1/aer/b/it' in size <12> not available
+(Font)              Font shape `T1/aer/bx/it' tried instead on input line 322.
+[3 <./tit.png>] [4]
+<pH_stark.png, id=75, 361.788pt x 217.467pt>
 File: pH_stark.png Graphic file (type png)
 <use pH_stark.png>
-Package pdftex.def Info: pH_stark.png  used on input line 305.
+Package pdftex.def Info: pH_stark.png  used on input line 366.
 (pdftex.def)             Requested size: 361.7871pt x 217.46645pt.
-LaTeX Font Info:    Font shape `T1/aer/b/it' in size <12> not available
-(Font)              Font shape `T1/aer/bx/it' tried instead on input line 305.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 340--340
+ [5 <./pH_stark.png>]
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 421--421
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 340--340
+Overfull \hbox (72.2713pt too wide) in alignment at lines 421--421
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 340--340
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 421--421
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 340--340
+Overfull \hbox (72.2713pt too wide) in alignment at lines 421--421
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 340--340
+Overfull \hbox (72.2713pt too wide) in alignment at lines 421--421
  [] [] [] [] [] 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
-[3 <./pH_stark.png>] [4]
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
-LaTeX Warning: Citation `indikator2' on page 5 undefined on input line 424.
+ []
 
+[8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 453--453
+ [9]
+<titcopy.png, id=155, 433.62pt x 377.15906pt>
+File: titcopy.png Graphic file (type png)
+<use titcopy.png>
+Package pdftex.def Info: titcopy.png  used on input line 568.
+(pdftex.def)             Requested size: 238.49173pt x 207.43813pt.
+ [10 <./titcopy.png>]
+<pH_schwach.png, id=170, 362.007pt x 233.235pt>
+File: pH_schwach.png Graphic file (type png)
+<use pH_schwach.png>
+Package pdftex.def Info: pH_schwach.png  used on input line 604.
+(pdftex.def)             Requested size: 325.80328pt x 209.90955pt.
+ [11 <./pH_schwach.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 662--662
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 453--453
+Overfull \hbox (72.2713pt too wide) in alignment at lines 662--662
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 453--453
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 662--662
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 453--453
+Overfull \hbox (72.2713pt too wide) in alignment at lines 662--662
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 453--453
+Overfull \hbox (72.2713pt too wide) in alignment at lines 662--662
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 463--464
+Underfull \hbox (badness 10000) in paragraph at lines 672--673
 
  []
 
-[5] [6]
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 556--556
+[13]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.tym}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.700 	\bibitem{tym}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{cite.titr}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.709 	\bibitem{titr}
+                      [14]
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 801--801
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 556--556
+Overfull \hbox (72.2713pt too wide) in alignment at lines 801--801
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (36.13565pt too wide) in paragraph at lines 556--556
+Overfull \hbox (36.13565pt too wide) in paragraph at lines 801--801
 [] [] 
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 556--556
+Overfull \hbox (72.2713pt too wide) in alignment at lines 801--801
  [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--556
+Underfull \hbox (badness 10000) in paragraph at lines 801--801
 []|\T1/aer/m/n/12 (+20) 314, 335,
  []
 
 
-Overfull \hbox (72.2713pt too wide) in alignment at lines 556--556
+Overfull \hbox (72.2713pt too wide) in alignment at lines 801--801
  [] [] [] [] [] 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 811--812
 
  []
 
-[8] (V6.aux)
+[16] (V6.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 49786 strings out of 467871
- 1177528 string characters out of 5417891
+ 50002 strings out of 467871
+ 1179625 string characters out of 5417891
  1839237 words of memory out of 5000000
- 77595 multiletter control sequences out of 15000+600000
- 685630 words of font info for 310 fonts, out of 8000000 for 9000
+ 77657 multiletter control sequences out of 15000+600000
+ 691423 words of font info for 403 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,19n,108p,11253b,1310s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V6.pdf (9 pages, 176584 bytes).
+ 108i,20n,108p,11253b,1315s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on V6.pdf (17 pages, 346729 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 107218 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 96993 words of extra memory for PDF output out of 106986 (max. 10000000)
 

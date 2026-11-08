@@ -278,7 +278,7 @@ in welchen jeder Stoff nach einer Protonendonation bzw. -akzeptanz zu einer konj
 Wasser (\ce{H2O}) hat als sog. Ampholyt außerdem die Eigenschaft, sowohl als Säure als auch als Base zu reagieren.\zitat{konj}
 \cformel[sb2]{\underset{\text{Säure}}{\ce{H2O}} + \underset{\text{Base}}{\ce{H2O}} <=> \underset{\text{konj. Base}}{\ce{OH-}} + \underset{\text{konj. Säure}}{\ce{H3O+}}}
 
-Protolysereaktionen sind wie alle anderen chemischen Reaktionen ebenfalls Gleichgewichtsreaktion.
+Protolysereaktionen sind wie die meisten anderen chemischen Reaktionen ebenfalls Gleichgewichtsreaktionen.
 Im Falle von Wasser spricht man auch von einer Autoprotolyse.
 \cformel[mwg1]{2H2O_{(l)} <=> H3O^{+}_{(aq)} + OH^{-}_{(aq)}}
 Das Massenwirkungsgesetz (MWG) lässt sich demnach wie folgt schreiben, wobei $a$ die Aktivität eines Stoffes beschreibt:
@@ -291,11 +291,72 @@ Mit der Einführung der pH- und pOH-Werte gelten demnach folgende Beziehungen\zi
 \formel{pH}{\mathrm{pH} \equiv -\lg(a(\ce{H3O+}))}
 \formel{pOH}{\mathrm{pOH} \equiv -\lg(a(\ce{OH-}))}
 \formel{fin}{\mathrm{pH} + \mathrm{pOH} = -\lg(1 \cdot 10^{-14}) = 14}
+In reinem Wasser gilt pH = pOH = 7. Saure Lösungen weisen demnach einen pH-Wert von unter 7 auf, alkalische Lösungen folglich einen pH-Wert über 7.
 
+Um die 'Stärke' einer Säure (\ce{HA}) zu bestimmen, wird über das MWG die Säurekonstante $K_{\mathrm{S}}$ eingeführt.
+\cformel[mwgs]{HA_{(aq)} + H2O_{(l)} <=> H3O^{+}_{(aq)} + A^{-}_{(aq)}}
+\formel{ks1}{K = \frac{a(\ce{H3O+})\cdot a(\ce{A-})}{a(\ce{H2O}) \cdot a(\ce{HA})}}
+\formel{ks2}{K \cdot a(\ce{H2O}) = K_{\mathrm{S}} = \frac{a(\ce{H3O+})\cdot a(\ce{A-})}{a(\ce{HA})}}
+
+Analog zum pH-Wert, kann auch ein p$K_{\mathrm{S}}$-Wert definiert werden:
+\formel{pKS}{\mathrm{p}K_{\mathrm{S}} \equiv -\lg(K_{\mathrm{S}})}
+Da bei starken Säuren die Säurekonstante typischerweise sehr groß ist, da sie nahezu vollständig in Wasser dissoziieren,
+ist die logarithmische Schreibweise praktikabler. Das bedeutet auch, dass je kleiner der p$K_{\mathrm{S}}$-Wert einer Säure ist,
+desto stärker diese Säure in Wasser dissoziiert.
+Salzsäure (\ce{HCl}) besitzt bei $T$ = 298 K beispielsweise einen p$K_{\mathrm{S}}$-Wert von $-7$ und gilt damit als starke Säure.\zitat{MWG}\\
+Demnach kann angenommen werden, dass die Aktivität der Hydronium-Ionen (\ce{H3O+}) ungefähr der Aktivität der nicht-dissoziierten Säure entspricht.
+\formel{etwa}{a(\ce{H3O+}) \approx a_{0}(\ce{HCl})}
+\formel{hs}{-\lg(a(\ce{H3O+})) \equiv \mathrm{pH} \approx -\lg(a_{0}(\ce{HCl}))}\\
+
+Um den pH-Verlauf zu visualisieren, kann neben dem Messen mit Indikatorpapier die Lösung mit einer Indikatorlösung versetzt werden.
+Indikatorenlösungen sind im Prinzip selbst Säuren, deren konjugierte Basen eine andere Farbe aufweisen. Ein Beispiel dafür ist Tymolphthalein,
+welches in sauren und neutralen Lösungen farblos ist und in basichen Lösungen eine bläuliche Farbe besitzt. Der Farbumschlag setzt dabei zwischen pH $9,3$ und pH $10,6$ ein.\zitat{tym}
+Bei einer Titration ist es demnach sinnvoll, einen Indikator zu wählen, dessen Umschlagspunkt in etwa um den sog. Äquivalenzpunkt (ÄP) liegt.
+Der Äquivalenzpunkt ist definiert als der Punkt, an welchem die Stoffemenge $n$ der vorgelegten Säure der Stoffmenge der zugegebenen Base entspricht, bzw. an welchem die gesamte Säure umgesetzt wurde.
+
+\bild
+		{tit.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Titrationskurve von Essig- und Salzäsure.%Text, der unter dem Bild erscheint
+		\zitat{titr}}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.55}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+Bei HCl liegt der Äquivalenzpunkt außerdem fast exakt am Neutralpunkt (def. pH = 7),
+da aber der pH-Wert durch Zugabe einer Natronlauge (\ce{NaOH}) rasant im basischen Bereich liegt, ist die Verwendung von Tymolphthalein ausreichend, um den ÄP zu bestimmen.
+
+Am ÄP gilt also für Salzsäure und Natronlauge:
+\formel{sf}{n_{\ce{HCl}} = n_{\ce{NaOH}}}
+\formel{sf2}{c_{\ce{HCl}} \cdot V_{\ce{HCl}} = c_{\ce{NaOH}} \cdot V_{\ce{NaOH}}}
+\formel{sf3}{c_{\ce{HCl}} = \frac{c_{\ce{NaOH}} \cdot V_{\ce{NaOH}}}{V_{\ce{HCl}}}}
 
 
 
 \subsubsection{Experimenteller Teil}
+
+Ein 100 mL Messkolben wurde von den Assistenten übergeben. Dieser enthielt eine Salzsäurelösung unbekannter Konzentration.
+Der Messkolben wurde auf 100 mL mit demineralisiertem Wasser gefüllt. Nach dem Auffüllen war mittels einer Titration die Konzentration der Salzsäurelösung des Messkolbens zu bestimmen.
+Zur Titration wurde Natronlauge ($0,0979 \ \mathrm{\frac{mol}{L}}$) verwendet.
+
+Im ersten Durchgang wurden 20 mL aus dem Messkolben mit einer Vollpipette entnommen und in einen Weithalserlenmeyerkolben gegeben.
+Der Erlenmeyerkolben wurde auf 100 bis 120 mL demin. Wasser gefüllt und es wurden sechs Tropfen Tymolphthalein dazugegeben.
+Es wurde nach jedem mL zugegebener Natronlauge ein Tropfen aus dem Weithalserlenmeyerkolben mit einem Glasstab entnommen
+und auf ein Stück Universalindikatorpapier getropft.
+
+Nach dem 17. mL zugegebener Natronlauge war ein hellblauer Farbumschlag zu beobachten. Die Messungen erfolgten bis zum 34. mL Natronlauge.
+
+Im zweiten Durchgang wurde der Weithalserlenmeyerkolben geleert und gereinigt, um diesen dann mit weiteren 20 mL der unbekannten Salzsäurelösung zu befüllen.
+Zur Titration wurden erneut sechs Tropfen Tymolphthalein und 80 bis 100 mL demin. Wasser dazugegeben.
+Ein hellblauer Farbumschlag war nach 16,3 mL zugegebener Natronlauge zu beobachten.
+\newpage
+\subsubsection{Ergebnisse und Diskussion}
+
+Das genaue Volumen des zugegebenen demin. Wassers in den Erlenmeyerkolben ist de facto irrelevant,
+da allein die Stoffmenge an Salzsäure für den Umschlagspunkt relevant ist.
+Zu viel demin. Wasser kann dennoch kontraproduktiv sein,
+da der Farbstoff weniger intensiv erscheint und nach jeder Zugabe die Lösung gründlicher durchmischen werden muss,
+um Konzentrationsgradienten zu vermeiden.
+
+ Die ermittelten pH-Werte wurden in \prettyref{fig: pH_stark.png} graphisch dargestellt.
 
 \bild
 		{pH_stark.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
@@ -304,9 +365,29 @@ Mit der Einführung der pH- und pOH-Werte gelten demnach folgende Beziehungen\zi
 		{scale=1}		%angle, draft, scale, height, width
 		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
 
-\subsubsection{Ergebnisse und Diskussion}
+Es ist eine Ähnlichkeit zu der theoretischen Titrationskurve in \prettyref{fig: tit.png} zu erkennen, allerdings nicht mit einem derartig 'scharfen' Umschlag.
+Dies lässt sich wahrscheinlich darauf zurückführen, dass der Erlenmeyerkolben nicht nach jedem zugegebenen Milliliter stark genug geschwenkt wurde,
+weshalb einzelne Tropfen möglicherweise einen lokalen Überschuss beinhalteten. Außerdem musste der pH-Wert nach Augenmaß ermittelt werden,
+da Farbunterschiede keine absoluten Werte ermöglichen.
+
+Aus dem zugegebenen Volumen im zweiten Durchgang ließ sich die Konzentration der Salzsäurelösung mittels Gl. \prettyref{eq: sf3} ermitteln.
+\formel{sf5}{c_{\ce{HCl}} = \frac{0,0979 \ \mathrm{\frac{mol}{L}} \cdot 16,3\mathrm{\ mL}}{20\mathrm{\ mL}} = 0,080\ \mathrm{\frac{mol}{L}}}
+
+Die ermittelte Konzentration stimmte mit der Zielkonzentration von $0,08 \ \mathrm{\frac{mol}{L}}$ überein und wich damit nicht um mehr als $\pm0,01 \ \mathrm{\frac{mol}{L}}$ ab.
+
+Mit der Gl. \prettyref{eq: hs} lässt sich nun der theoretische pH-Wert vor der Zugabe von Natronlauge berechnen.
+Hier wird die Aktivität näherungsweise mit der Konzentration gleichgesetzt, wobei $c^{\circ}$ die Standardkonzentration von $1\ \mathrm{\frac{mol}{L}}$ ist.
+Da die Lösung im Erlenmeyerkolben ca. auf das fünffache Volumen verdünnt wurde, wird die ermittelte Konzentration durch 5 geteilt.
+
+\formel{hh9}{\mathrm{pH} \approx -\lg(\frac{\frac{1}{5} \cdot [\ce{HCl}]_{0}}{c^{\circ}})}
+\formel{hh10}{\mathrm{pH} \approx -\lg(\frac{\frac{1}{5} \cdot 0,080\ \mathrm{\frac{mol}{L}}}{1,0\ \mathrm{\frac{mol}{L}}}) = 1,8}
+Der erste gemessene pH-Wert in \prettyref{fig: pH_stark.png} stimmt also grob mit dem theoretischen Wert überein.
 
 \subsubsection{Zusammenfassung}
+
+Es konnte mit einer NaOH-Maßlösung sowohl eine theoriekonforme Titrationkurve einer Salzsäurelösung erstellt werden
+als auch die genaue Konzentration der Salzsäurelösung ermittelt werden,
+wobei die Fehlertoleranz innerhalb des zulässigen Bereichs lag.
 
 \subsubsection{Sicherheit und Entsorgung}
 		
@@ -384,6 +465,24 @@ Entsorgung: \\
 			\textbf	{2022}, 
 			S.			{348-352}.
 
+	\bibitem{tym}
+						{E. Riedel, H. Meyer}, 
+			\textit	{Allgemeine und Anorganische Chemie}, 
+						{12. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2018}, 
+			S.			{220}.
+
+	\bibitem{titr}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{365}.
+
 	\bibitem{test}
 						{DGUV}, 
 						„{GESTIS-Stoffdatenbank}“, zu finden unter 
@@ -408,16 +507,126 @@ Entsorgung: \\
 
 \subsubsection{Einleitung und Aufgabenstellung}
 
+Es war die Konzentration einer Essigsäurelösung mittels Titration in zwei Druchgängen zu bestimmen.
+Dabei waren die gemessenen pH-Werte aus dem ersten Durchgang graphisch aufzutragen.
 
 \subsubsection{Theoretischer Hintergrund}
 
+Anders als starke Säuren, dissoziieren schwache Säuren nicht vollständig in wässrigen Lösungen.
+Essigsäure (\ce{CH3COOH}) ist mit einem p$K_{\mathrm{S}}$-Wert von $+4,75$ ein Beispiel für eine schwache Säure.\zitat{scs}
+
+Da schwache Säuren nicht vollständig dissoziieren, kann Folgendes näherungsweise angenommen werden:
+\formel{ess1}{a(\ce{A-}) \approx a(\ce{H3O+})}
+\formel{ess2}{a(\ce{HA}) \approx a_{0}(\ce{HA})}
+In das MWG \prettyref{eq: kses} eingesetzt ergibt die Näherung für den pH-Wert einer schwachen Säure in wässriger Lösung \prettyref{eq: hh5}:
+\formel{kses}{K_{\mathrm{S}} = \frac{a(\ce{H3O+}) \cdot a({\ce{A-}})}{a(\ce{HA})}}
+\formel{hh1}{K_{\mathrm{S}} = \frac{a(\ce{H3O+})^2}{a_{0}(\ce{HA})}}
+\formel{hh2}{a(\ce{H3O+}) = \sqrt{a_{0}(\ce{HA}) \cdot K_{\mathrm{S}}}}
+\formel{hh3}{-\lg(a(\ce{H3O+})) = -\frac{1}{2}\lg(a_{0}(\ce{HA}) \cdot K_{\mathrm{S}})}
+\formel{hh4}{\mathrm{pH} = \frac{-\lg(a_{0}(\ce{HA})) -\lg(K_{\mathrm{S}})}{2}}
+\formel{hh5}{\mathrm{pH} = \frac{\mathrm{p}K_{\mathrm{S}} -\lg(a_{0}(\ce{HA}))}{2}}
+
+Der Dissoziations- bzw. der Protolysegrad $\alpha$ lässt sich ähnlich einführen. Dieser ist als Verhältnis zwischen der Konzentration der protolysierten Säure und der Anfangskonzentration der Säure definiert.
+Alternativ lässt sich dieser als Verhältnis zwischen der Konzentration der Hydronium-Ionen (\ce{H3O+}) und der Anfangskonzentration der Säure definieren.\zitat{alpha}
+\formel{a1}{\alpha = \frac{[\ce{HA}]_{0} - [\ce{HA}]}{[\ce{HA}]_{0}} = \frac{[\ce{A-}]}{[\ce{HA}]_{0}} = \frac{[\ce{H3O+}]}{[\ce{HA}]_{0}}}
+Dabei nimmt der Protolysegrad einen Wert zwischen 0 und 1 an, wobei ein Wert von 1 eine vollständige Dissoziation bedeutet,
+während ein Wert von 0 absolut keine Dissoziation beschreibt.\\
+
+Für das MWG kann näherungsweise angenommen werden, dass die Aktivität in etwa gleich der Konzentration ist. Dabei ist $c^{\circ} = 1\ \mathrm{\frac{mol}{L}}$:
+\formel{n}{a(\mathrm{X}) \approx \frac{[\mathrm{X}]}{c^{\circ}}}
+\formel{mwg6}{K_{\mathrm{S}} = \frac{a(\ce{H3O+}) \cdot a({\ce{A-}})}{a(\ce{HA})} \approx \frac{[\ce{H3O+}] \cdot [{\ce{A-}}]}{[\ce{HA}] \cdot c^{\circ}}}
+\formel{mwg7}{K_{\mathrm{S}} \cdot c^{\circ} \approx \frac{[\ce{H3O+}] \cdot [{\ce{A-}}]}{[\ce{HA}]_{0} \cdot (1-\alpha)}}
+\formel{mwg8}{K_{\mathrm{S}} \cdot c^{\circ} \approx \frac{[\ce{HA}]_{0} \cdot \alpha^2}{1-\alpha}}
+\formel{mwg8}{\frac{K_{\mathrm{S}} \cdot c^{\circ}}{[\ce{HA}]_{0}}\approx \frac{\alpha^2}{1-\alpha}}
+
+$\frac{\alpha^2}{1-\alpha}$ kann durch eine Taylor-Reihe ausgedrückt werden:
+\formel{taylor}{\frac{\alpha^2}{1-\alpha} = \alpha^2 + \alpha^3 + \alpha^4 + ...}
+
+Für schwache Säuren gilt $\alpha << 1$, weshalb die Taylor-Reihe nach dem ersten Term abgebrochen wird:
+\formel{taylor2}{\frac{\alpha^2}{1-\alpha} \approx \alpha^{2}}
+\formel{mwg9}{\frac{K_{\mathrm{S}} \cdot c^{\circ}}{[\ce{HA}]_{0}} \approx \alpha^2}
+
+Nach $\alpha$ umgestellt ergibt sich das Ostwald'sche Verdünnungsgesetz für schwache Säuren\zitat{alpha}:
+\formel{ost}{\alpha \approx \sqrt{\frac{K_{\mathrm{S}} \cdot c^{\circ}}{[\ce{HA}]_{0}}}}
+
+Nach dem Gesetz hängt die Dissoziation von schwachen Säuren von ihrer Anfangskonzentration ab.
+Schwach konzentrierte Säuren dissoziieren also stärker als stark konzentrierte Säuren.
+Als Beispiel: Für eine \ce{CH3COOH}-Konzentration von 0,1 $\mathrm{\frac{mol}{L}}$ ergibt sich folgender Protolysegrad:
+\formel{bsp}{\alpha \approx \sqrt{\frac{10^{-4,75} \cdot 1,0\ \mathrm{\frac{mol}{L}}}{0,1\ \mathrm{\frac{mol}{L}}}} = 1,3\ \%}
+
+Bei der Titrationskurve (\prettyref{fig: titcopy.png}) lässt sich zeigen, dass durch den geringen Protolysegrad der pH-Wert nicht allzu niedrig ist und die Essigsäure als eine Art Puffer fungiert.
+Das hat den Effekt, dass die Zugabe von Hydroxid-Ionen (\ce{OH-}) durch eine Base den pH-Wert nicht drastsich ändert.
+Außerdem liegt der Aquivalenzpunkt nicht in der Nähe des Neutralpunktes,
+da bei einem vollständigen Umsatz der Essigsäure die konjugierten Basen - die Acetat-Ionen (\ce{CH3COO-}) - basisch reagieren,
+weshalb der Umschlagspunkt im basischen Milleu liegt. Zum Titrieren eignet sich hier Tymolphthalein, da der Farbumschalg im ähnlichen pH-Bereich $(9,3 - 10,6)$ vorliegt.\zitat{tym}
+
+\bild
+		{titcopy.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Titrationskurve von Essig- und Salzäsure.%Text, der unter dem Bild erscheint
+		\zitat{titr}}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.55}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+Der Äquivalenzpunkt lässt sich identisch zu einer starken Säure berechnen:
+\formel{scf}{n_{\ce{CH3COOH}} = n_{\ce{NaOH}}}
+\formel{scf2}{[\ce{CH3COOH}] \cdot V_{\ce{CH3COOH}} = [\ce{NaOH}] \cdot V_{\ce{NaOH}}}
+\formel{scf3}{[\ce{CH3COOH}] = \frac{[\ce{NaOH}] \cdot V_{\ce{NaOH}}}{V_{\ce{CH3COOH}}}}
 
 \subsubsection{Experimenteller Teil}
 
+Ein 100 mL Messkolben wurde von den Assistenten übergeben. Dieser enthielt eine Essigsäurelösung unbekannter Konzentration.
+Der Messkolben wurde auf 100 mL mit demineralisiertem Wasser gefüllt. Nach dem Auffüllen war mittels einer Titration die Konzentration der Essigsäurelösung des Messkolbens zu bestimmen.
+Zur Titration wurde Natronlauge ($0,0979 \ \mathrm{\frac{mol}{L}}$) verwendet.
+
+Im ersten Durchgang wurden 20 mL aus dem Messkolben mit einer Vollpipette entnommen und in einen Weithalserlenmeyerkolben gegeben.
+Der Erlenmeyerkolben wurde auf 100 bis 120 mL demin. Wasser gefüllt und es wurden sechs Tropfen Tymolphthalein dazugegeben.
+Es wurde nach jedem mL zugegebener Natronlauge ein Tropfen aus dem Weithalserlenmeyerkolben mit einem Glasstab entnommen
+und auf ein Stück Universalindikatorpapier getropft.
+
+Nach dem 21. mL zugegebener Natronlauge war ein hellblauer Farbumschlag zu beobachten. Die Messungen erfolgten bis zum 42. mL Natronlauge.
+
+Im zweiten Durchgang wurde der Weithalserlenmeyerkolben geleert und gereinigt, um diesen dann mit weiteren 20 mL der unbekannten Essigsäurelösung zu befüllen.
+Zur Titration wurden erneut sechs Tropfen Tymolphthalein und 80 bis 100 mL demin. Wasser dazugegeben.
+Ein hellblauer Farbumschlag war nach 20,6 mL zugegebener Natronlauge zu beobachten.
 
 \subsubsection{Ergebnisse und Diskussion}
 
+Wie schon bei der starken Säure in 6.3 ist das genaue Volumen demin. Wasser im Weithalserlenmeyerkolben irrelevant,
+da für die zu ermittelnden Konzentrationen allein die Stoffmengen relevant sind.
+
+Die ermittelten pH-Werte wurden in \prettyref{fig: pH_schwach.png} graphisch dargestellt.
+
+\bild
+		{pH_schwach.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Gemessene pH-Werte aufgetragen gegen das Volumen der zugegebenen NaOH-Maßlösung.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.90}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+Aus der \prettyref{fig: pH_schwach.png} geht hervor, dass im Vergleich zu einer starken Säure (\prettyref{fig: pH_stark.png}) der pH-Wert nicht genauso stark ansteigt.
+Stattdessen stieg der pH-Wert mit jedem zugegebenen Milliliter Natronlauge zwar nicht linear, allerdings auch nicht schlagartig an,
+was auf die Pufferwirkung einer schwachen Säure zurückzuführen ist.
+Der Äquivalenzpunkt ist aus der Abbildung nicht direkt abzulesen, da der eindeutige Umschlag nicht zu identifizieren ist.
+Dies liegt wahrscheinlich an der natürlichen Ungenauigkeit von Universalindikatoren in Papierform, da diese keinen absoluten Wert wiedergeben
+und ein Beobachter den pH-Wert farblich einordnen muss.
+
+Aus dem zugegebenen Volumen im zweiten Durchgang ließ sich die Konzentration der Essigsäurelösung mittels Gl. \prettyref{eq: scf3} ermitteln.
+\formel{scf4}{[\ce{CH3COOH}] = \frac{0,0979 \ \mathrm{\frac{mol}{L}} \cdot 20,6\mathrm{\ mL}}{20\mathrm{\ mL}} = 0,10\ \mathrm{\frac{mol}{L}}}
+
+Die ermittelte Konzentration stimmte mit der Zielkonzentration von $0,10 \ \mathrm{\frac{mol}{L}}$ überein und wich damit nicht um mehr als $\pm0,01 \ \mathrm{\frac{mol}{L}}$ ab.
+
+Mit der Gl. \prettyref{eq: hh5} lässt sich nun der theoretische pH-Wert vor der Zugabe von Natronlauge berechnen.
+Hier wird die Aktivität näherungsweise mit der Konzentration gleichgesetzt.
+Da die Lösung im Erlenmeyerkolben ca. auf das fünffache Volumen verdünnt wurde, wird die ermittelte Konzentration durch 5 geteilt.
+\formel{hh6}{\mathrm{pH} \approx \frac{\mathrm{p}K_{\mathrm{S}} -\lg(\frac{\frac{1}{5} \cdot [\ce{HA}]_{0}}{c^{\circ}})}{2}}
+\formel{hh7}{\mathrm{pH} \approx \frac{4,75 - \lg(\frac{\frac{1}{5} \cdot 0,1\ \mathrm{\frac{mol}{L}}}{1,0\ \mathrm{\frac{mol}{L}}})}{2} = 3,2}
+Der erste gemessene pH-Wert in \prettyref{fig: pH_schwach.png} stimmt damit nur teilweise mit dem theoretischen Wert überein,
+was wahrscheinlich auf die Ungenauigkeit des Indikatorpapiers zurückzuführen ist.
 \subsubsection{Zusammenfassung}
+
+Es konnte mit einer NaOH-Maßlösung sowohl eine theoriekonforme Titrationkurve einer Essigsäurelösung erstellt werden
+als auch die genaue Konzentration der Essigsäurelösung ermittelt werden,
+wobei die Fehlertoleranz innerhalb des zulässigen Bereichs lag.
 
 \subsubsection{Sicherheit und Entsorgung}
 
@@ -469,14 +678,50 @@ Entsorgung: \\
 
 \begin{thebibliography}{4}		%manuelles Quellenverzeichnis
 
-	
+
+	\bibitem{scs}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{350}. 
+
+	\bibitem{alpha}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{353}.
+
+	\bibitem{tym}
+						{E. Riedel, H. Meyer}, 
+			\textit	{Allgemeine und Anorganische Chemie}, 
+						{12. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2018}, 
+			S.			{220}.
+
+	\bibitem{titr}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{365}.
+
 	\bibitem{hauke2}
 						{DGUV}, 
 						„{GESTIS-Stoffdatenbank}“, zu finden unter 
 			\url		{https://gestis.dguv.de/}, 
 			\textbf	{01.11.2026}.
 
-	\bibitem{indikator2 }
+	\bibitem{indikator2}
 						{Carl Roth}, 
 						„{Sicherheitsdatenblatt: Thymolphthalein - Indikatorlösung}“, zu finden unter 
 			\url		{https://www.carlroth.com/}, 
