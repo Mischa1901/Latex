@@ -270,9 +270,9 @@ Secondary substances are called solutes.
 
 \ce{H2O} is a typical solvent. It is simultaneously a polar solvent, due to its partial charge between the oxygen atom and the hydrogen atoms.
 Many chemical compounts in water can dissolve (or react) into differently charged ions, such as most salts (\ce{MX}), acids (\ce{HA}) and bases (\ce{B}).
-\cformel[a1]{MX_{(s)} ->[H2O][protolysis] M^{+}_{(aq)} + X^{-}_{(aq)}}
-\cformel[a2]{HA_{(aq)} + H2O_{(l)} ->[][dissociation] A^{-}_{(aq)} + H3O^{+}_{(aq)}}
-\cformel[a3]{B_{(aq)} + H2O_{(l)} -> HB^{+}_{(aq)} + OH^{-}_{(aq)}}
+\cformel[a1]{MX_{(s)} <=>[H2O][dissociation] M^{+}_{(aq)} + X^{-}_{(aq)}}
+\cformel[a2]{HA_{(aq)} + H2O_{(l)} <=>[][protolysis] A^{-}_{(aq)} + H3O^{+}_{(aq)}}
+\cformel[a3]{B_{(aq)} + H2O_{(l)} <=> HB^{+}_{(aq)} + OH^{-}_{(aq)}}
 
 These solutes are being hydrated,
 which means that the charged ions form a hydration shell with the opposite charged side of the solvent.\zitat{kopie1}
@@ -300,8 +300,88 @@ The conductance $L$ and specific conductivity $\kappa$ are defined as the recipr
 \formel{streber4}{L = \frac{1}{R}}
 \formel{streber5}{\kappa = \frac{1}{\rho}}
 
+The specific conductivity can now be used to introduce the molar conductivity $\Lambda_{\mathrm{m}}$:
+\formel{streber6}{\Lambda_{\mathrm{m}} = \frac{\kappa}{c}}
+Since some ions hold a different charge number it is sensible to also introduce the equivalent conductivity $\Lambda_{\mathrm{eq}}$,
+where $z$ is defined as the charge number of the ion:
+\formel{streber7}{\Lambda_{\mathrm{eq}} = \frac{\Lambda_{\mathrm{m}}}{z} = \frac{\kappa}{c \cdot z}}
+
+As Ostwald's dilution law states, the degree of dissociation $\alpha$ of weak electrolytes is proportional to the square root of the reciprocal of the concentration of the solute.
+\formel{streber8}{\alpha \propto \frac{1}{\sqrt{c}}}
+
+A higher concentration means however, that the solutes interact with each other, lowering the 'effective' concentration.
+In these cases, the activity $a$ is introduced, which itself is proportional to its activity coefficient $\gamma_{\pm}$.
+The activity coefficient effectivly measures the degree of 'ideality' by assuming a value between 0 and 1, whereas a $\gamma_{\pm}$ of 1 means 'fully ideal'.
+$c^{\circ}$ is defined as the standard concetration of $1\ \mathrm{\frac{mol}{L}}$:
+\formel{a1}{a = \gamma_{\pm} \cdot \frac{c}{c^{\circ}}}
+An ideal solution can be achieved by fully diluting it.
+The molar limiting conductivity $\Lambda^{\circ}_{\infty}$ is therefore introduced as the molar conductivity of an infinitly diluted solution.
+As per eq. \prettyref{eq: streber8}, the molar conductivity for weak electrolytes can be described as\zitat{kopie4}:
+\formel{a2}{\Lambda_{\mathrm{m}} = \alpha \cdot \Lambda^{\circ}_{\infty}}
+Analogous to weak electrolytes, Kohlrausch's square root law applies to strong electrolytes for $c < 0.1 \ \mathrm{\frac{mol}{L}}$, whereas $K$ is the Kohlrausch constant\zitat{kopie5}:
+\formel{a3}{\Lambda_{\mathrm{m}} =\Lambda^{\circ}_{\infty} - K \cdot \sqrt{c}}
+It is valuable to mention that solutions involving hydronium (\ce{H3O+}) and hydroxide (\ce{OH-}) ions possess a high specific conductivity,
+since the charge transport does not include the whole ion, but rather the proton (\ce{H+}) commits a 'change of place' towards other molecules,
+resulting in a relatively low resistance.\zitat{kopie4}
 
 \subsubsection{Experimental Section}
+
+\langetabelle
+	{LF1}
+	{Measured specific conductivities of solutions.}
+	{H}
+	{p{5cm} p{5cm}}
+	{Solution (0.01 $\mathrm{\frac{mol}{L}}$) & $\kappa$ / ${\frac{\mu\mathrm{S}}{\mathrm{cm}}}$ \\}
+	{
+	Glucose
+	& 20.5 \\
+
+	Urea
+	& 226 \\
+
+	\ce{CH3COOH}
+	& 177 \\
+
+	\ce{NH3}
+	& 79,2 \\
+
+	\ce{NaCH3COO}
+	& 955 \\
+
+	\ce{NaCl}
+	& 285 \\
+
+	\ce{HCl}
+	& 3850 \\
+
+	\ce{NaOH}
+	& 2150 \\
+	
+	}
+
+\langetabelle
+	{LF2}
+	{Measured specific conductivities of solutions.}
+	{H}
+	{p{5cm} p{5cm}}
+	{Solution (0.05 $\mathrm{\frac{mol}{L}}$) & $\kappa$ / ${\frac{\mu\mathrm{S}}{\mathrm{cm}}}$ \\}
+	{ 
+	-
+	& - \\
+	
+	}
+
+\langetabelle
+	{LF3}
+	{Measured specific conductivities of solutions.}
+	{H}
+	{p{5cm} p{5cm}}
+	{Solution (0.05 $\mathrm{\frac{mol}{L}}$) & $\kappa$ / ${\frac{\mu\mathrm{S}}{\mathrm{cm}}}$  \\}
+	{
+	-
+	& - \\
+	
+	}
 
 \subsubsection{Results and Discussion} 
 
@@ -388,6 +468,24 @@ Disposal: \\
 						{Berlin}, 
 			\textbf	{2022}, 
 			S.			{338}.
+	
+	\bibitem{kopie4}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{339-341}.
+
+	\bibitem{kopie5}
+						{P. Kurzweil}, 
+			\textit	{Chemie: Grundlagen, technische Anwendungen, Rohstoffe, Analytik und Expermiente}, 
+						{11. Auflage}, 
+						{Springer Vieweg}, 
+						{Wiesbaden}, 
+			\textbf	{2020}, 
+			S.			{222}.
 
 
 	\bibitem{test}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  14 NOV 2026 03:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  14 NOV 2026 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1274,6 +1274,10 @@ File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 ) (V7.aux
 Package babel Info: 'ngerman' activates 'german' shorthands.
 (babel)             Reported on input line 10.
+
+
+LaTeX Warning: Label `tab: Chemikalien' multiply defined.
+
 )
 \openout1 = `V7.aux'.
 
@@ -1453,37 +1457,45 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.296 \formel{streber2}{U = R \cdot I}
-                                      ] [2 <./NaCl.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+                                      ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./NaCl.png>] [3]
+c:/Users/Mischa/Desktop/Latex/Versuchsreihe 7/V7.tex:426: ignored error: Infinite glue shrinkage found in box being split [4]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 444--445
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
 
  []
 
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [5] [6] (V7.aux)
+ [7] [8] (V7.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 49676 strings out of 467871
- 1176517 string characters out of 5417891
- 1837238 words of memory out of 5000000
- 77572 multiletter control sequences out of 15000+600000
- 678362 words of font info for 256 fonts, out of 8000000 for 9000
+ 49734 strings out of 467871
+ 1177013 string characters out of 5417891
+ 1839239 words of memory out of 5000000
+ 77589 multiletter control sequences out of 15000+600000
+ 680601 words of font info for 280 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,20n,108p,11253b,1317s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V7.pdf (7 pages, 198890 bytes).
+ 108i,20n,108p,11253b,1357s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on V7.pdf (9 pages, 224785 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
+ 223 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
  96914 words of extra memory for PDF output out of 106986 (max. 10000000)
 
