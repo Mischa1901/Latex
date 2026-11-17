@@ -242,7 +242,7 @@
 			\hspace{3cm}\=\kill
 			Assistent: \> Helena Casara \\						% Name Assistent
 			Version: \> 1 \\									%Version
-			Date: \> 13.11.2026 \\								%Datum
+			Date: \> 15.11.2026 \\								%Datum
 		\end{tabbing}
 		\hrule														%Waagerechte Linie
 \end{titlepage}
@@ -312,7 +312,7 @@ As Ostwald's dilution law states, the degree of dissociation $\alpha$ of weak el
 A higher concentration means however, that the solutes interact with each other, lowering the 'effective' concentration.
 In these cases, the activity $a$ is introduced, which itself is proportional to its activity coefficient $\gamma_{\pm}$.
 The activity coefficient effectivly measures the degree of 'ideality' by assuming a value between 0 and 1, whereas a $\gamma_{\pm}$ of 1 means 'fully ideal'.
-$c^{\circ}$ is defined as the standard concetration of $1\ \mathrm{\frac{mol}{L}}$:
+$c^{\circ}$ is defined as the standard concentration of $1\ \mathrm{\frac{mol}{L}}$:
 \formel{a1}{a = \gamma_{\pm} \cdot \frac{c}{c^{\circ}}}
 An ideal solution can be achieved by fully diluting it.
 The molar limiting conductivity $\Lambda^{\circ}_{\infty}$ is therefore introduced as the molar conductivity of an infinitly diluted solution.
@@ -326,6 +326,9 @@ resulting in a relatively low resistance.\zitat{kopie4}
 
 \subsubsection{Experimental Section}
 
+The specific conductivities of several solutions with a concentration of 0.01 $\mathrm{\frac{mol}{L}}$ were measured with a combination measuring instrument,
+as represented in \prettyref{tab: LF1}.
+
 \langetabelle
 	{LF1}
 	{Measured specific conductivities of solutions.}
@@ -334,30 +337,37 @@ resulting in a relatively low resistance.\zitat{kopie4}
 	{Solution (0.01 $\mathrm{\frac{mol}{L}}$) & $\kappa$ / ${\frac{\mu\mathrm{S}}{\mathrm{cm}}}$ \\}
 	{
 	Glucose
-	& 20.5 \\
+	& 20.50 \\
 
 	Urea
-	& 226 \\
+	& 22.60 \\
 
 	\ce{CH3COOH}
-	& 177 \\
+	& 177.0 \\
 
 	\ce{NH3}
-	& 79,2 \\
+	& 79.20 \\
 
 	\ce{NaCH3COO}
-	& 955 \\
+	& 955.0 \\
 
 	\ce{NaCl}
-	& 285 \\
+	& 985.0 \\
 
 	\ce{HCl}
 	& 3850 \\
 
 	\ce{NaOH}
 	& 2150 \\
+
+	\ce{MgSO4}
+	& 2440 \\
+
 	
 	}
+
+Later on, the specific conductivities of \ce{NaCl, CH3COOH and NaCH3COO} solutions were measured with a combination measuring instrument,
+as represented in \prettyref{tab: LF2}; however this time with a concentration of 0.05 $\mathrm{\frac{mol}{L}}$.
 
 \langetabelle
 	{LF2}
@@ -366,10 +376,19 @@ resulting in a relatively low resistance.\zitat{kopie4}
 	{p{5cm} p{5cm}}
 	{Solution (0.05 $\mathrm{\frac{mol}{L}}$) & $\kappa$ / ${\frac{\mu\mathrm{S}}{\mathrm{cm}}}$ \\}
 	{ 
-	-
-	& - \\
+	
+	\ce{CH3COOH}
+	& 388.0 \\
+
+	\ce{NaCH3COO}
+	& 5280 \\
+
+	\ce{NaCl}
+	& 5580 \\
 	
 	}
+
+Lastly, the specific conductivity of ammonia (\ce{NH3}) and acetic acid (\ce{CH3COOH}) solutions were measured, along with a 1:1 mixture of said solutions.
 
 \langetabelle
 	{LF3}
@@ -378,14 +397,64 @@ resulting in a relatively low resistance.\zitat{kopie4}
 	{p{5cm} p{5cm}}
 	{Solution (0.05 $\mathrm{\frac{mol}{L}}$) & $\kappa$ / ${\frac{\mu\mathrm{S}}{\mathrm{cm}}}$  \\}
 	{
-	-
-	& - \\
+	
+	\ce{NH3}
+	& 380.0 \\
+
+	\ce{CH3COOH}
+	& 388.0 \\
+
+	\ce{NH3 + CH3COOH}
+	& 1884 \\
 	
 	}
 
 \subsubsection{Results and Discussion} 
 
+The measured specific conductivities are roughly compatible with the values that could have been predicted.
+Glucose and urea do not dissolve easily in demineralised water,
+thus their specific conductivity is approximately on par with pure demineralised water.
+
+Ammonia (\ce{NH3}) and acetic acid (\ce{CH3COOH}) are weak bases/acids, which results in next to zero deprotolysis/dissociation and a small conductivity.
+
+Hydrochloric acid (\ce{HCl}) and sodium hydroxide (\ce{NaOH}) however nearly fully dissolve in water.
+The dissolution also results in hydronium and hydroxide ions being involved, further increasing the specific conductivities.
+
+Sodium acetate (\ce{NaCH3COO}), sodium chloride (\ce{NaCl}) and magnesium sulfate (\ce{MgSO4}) also fully dissolve in water,
+thus are strong electrolytes, but since each magnesium and sulfate ion carries twice the charge of a sodium or a chloride ion,
+their measured conductivity should also be substantually larger.\\
+The molar conductivity of sodium chloride and magnesium sulfate can now be calculated as shown in eq. \prettyref{eq: streber6}:
+
+\formel{b1}{\Lambda_{\mathrm{m, \ce{NaCl}}} = \frac{\kappa_{\ce{NaCl}}}{c} = \frac{985.0\ \mathrm{\frac{\mu S}{cm}}}{0.01\ \mathrm{\frac{mol}{L}}} = 98.5\ \mathrm{\frac{\mu S \cdot cm^2}{mol}}}
+\formel{b2}{\Lambda_{\mathrm{m, \ce{MgSO4}}} = \frac{\kappa_{\ce{MgSO4}}}{c} = \frac{2440\ \mathrm{\frac{\mu S}{cm}}}{0.01\ \mathrm{\frac{mol}{L}}} = 244\ \mathrm{\frac{\mu S \cdot cm^2}{mol}}}
+
+The equivalent conductivity as per eq. \prettyref{eq: streber7} is as follows:
+
+\formel{b3}{\Lambda_{\mathrm{eq, \ce{NaCl}}} = \frac{\Lambda_{\mathrm{m, \ce{NaCl}}}}{z} = \frac{98.5\ \mathrm{\frac{\mu S \cdot cm^2}{mol}}}{1} = 98.5\ \mathrm{\frac{\mu S \cdot cm^2}{mol}}}
+\formel{b4}{\Lambda_{\mathrm{eq, \ce{MgSO4}}} = \frac{\Lambda_{\mathrm{m, \ce{MgSO4}}}}{z} = \frac{244\ \mathrm{\frac{\mu S \cdot cm^2}{mol}}}{2} = 122\ \mathrm{\frac{\mu S \cdot cm^2}{mol}}}
+
+If the concentration of a weak acid (such as acetic acid) is quintupled, its degree of dissociation $\alpha$ gets smaller, resulting in 'only' double the specific conductivity,
+as seen in \prettyref{tab: LF2}.
+But since sodium chloride and sodium acetate fully dissolve in water, their specific conductivity also roughly quintuples.
+
+\formel{c1}{ \frac{\kappa_{\ce{NaCl}, 2}}{\kappa_{\ce{NaCl}, 1}} = \frac{5580\ \mathrm{\frac{\mu S}{cm}}}{985.0\ \mathrm{\frac{\mu S}{cm}}} = 5.665 > 5}
+\formel{c2}{ \frac{\kappa_{\ce{NaCH3COO}, 2}}{\kappa_{\ce{NaCH3COO}, 1}} = \frac{5280\ \mathrm{\frac{\mu S}{cm}}}{955.0\ \mathrm{\frac{\mu S}{cm}}} = 5.529 > 5}
+
+But as per Kohlrausch's square root law in eq. \prettyref{eq: a3} the ratio of the two specific conductivities should be below 5,
+because the molar conductivity gets lower, the higher the concentration is.
+This discrepancy can be attributed to measurement uncertainties and unclean containers, where the solutions were stored.
+
+Ammonia and acetic acid by themselves are weak electrolytes, since they do not fully undergo a complete (de-)protolysis.
+If mixed together, an acid-base reaction takes place:
+\cformel[d1]{NH3 + CH3COOH <=> NH4+ + CH3COO-}
+In contrast, ammonium acetate (\ce{NH4CH3COO}) fully dissolves in water, resulting in a relatively high specific conductivity.
+
 \subsubsection{Summary}
+The measured specific conductivities of the solutions were verified for consistency.
+The effect of strong and weak electrolytes can be explained through Ostwald's dilution law,
+with relatively moderate discrepancies regarding Kohlrausch's square root law.
+The specific conductivity of the mixture of two weak electrolytes can also be explained by an acid-base reaction.
+The molar and equivalent conductivities of sodium chloride and magnesium sulfate were also successfully calculated.
 
 \subsubsection{Safety and Disposal}
 		
