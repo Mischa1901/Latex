@@ -1,0 +1,1030 @@
+%Dokumentenklasse
+\documentclass[
+	a4paper,										%Format
+	12pt,											%Schriftgröße
+	twoside,										%Zweiseitig
+	headsepline,								%horizontale Linie oben
+	footsepline,									%horizontale Linie unten
+	captions=tableheading,					%Überschrift über Tabelle (nicht unter)
+]{scrartcl}
+
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\thesection.\arabic{subsection}.\arabic{subsubsection}. \hspace{2pt}}
+\renewcommand{\theparagraph}{\thesection.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.}
+
+%Pakete:
+\usepackage[exponent-product = \cdot, output-decimal-marker = {,}]{siunitx}
+\usepackage{textalpha}
+\usepackage{floatrow}
+\floatsetup[table]{style=plaintop}
+\floatsetup[longtable]{LTcapwidth=table}
+%\usepackage{overcite}
+\usepackage{siunitx}
+\usepackage[ngerman]{babel} 			%Neue deutsche Rechtschreibung
+\usepackage{grffile}
+\usepackage{graphicx} 					%Bilder einbinden
+\usepackage{xcolor}						%Farben für Schrift und Plots
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}					%Plots und Tabellen aus Datensätzen.
+\usepackage{amsmath}						%Mathe
+\usepackage{amssymb}					%Mathesymbole
+\usepackage{longtable}					%Seitenübergreifende Tabellen zulassen
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{geometry}					%Seitenränder
+\usepackage{ae}								%skalierbare Schriften (im PDF-File)
+\usepackage[activate]{microtype}		%optischer Randausgleich
+\usepackage{setspace}					%Zeilenabstand: \onehalfspacing
+\usepackage[utf8]{inputenc}				%Zeichenkodierung für Umlaute
+\usepackage{scrlayer-scrpage}					%für Dokumentformatierung mit Pagestyle
+\usepackage[version=4]{mhchem}						%Chemische Formeln (mit \ce )
+\usepackage{chemfig}
+\usepackage{siunitx}
+\usepackage{caption}										%Überschriften formatieren
+\captionsetup{labelfont={bf,it},tablename=Tab.,figurename=Abb.}				%Überschriften formatieren
+\captionsetup[table]{singlelinecheck=false,justification=raggedright}
+\captionsetup[figure]{justification=raggedright}				
+
+%Abbildungs und Tabellennummerierung anpassen
+\renewcommand*\figureformat {\figurename~\arabic{section}.\arabic{subsection}.\thefigure.}	%Punkt nach Abb. #
+\renewcommand*\tableformat {\tablename~\arabic{section}.\arabic{subsection}.\thetable:}		%Doppelpunkt nach Tab. #
+\renewcommand*\captionformat {~}								%Nur Abstand, kein Zeichen nach Tab. #: bzw Abb. #. 
+
+%Literatur als Subsubsection definieren und von Literaturverzeichnis in Literatur umbenennen
+\makeatletter
+\renewcommand*\bib@heading{\subsubsection{\bibname}			
+\@mkboth{\subsubsectionmarkformat \bibname}{\subsubsectionmarkformat \bibname}}
+\makeatother
+\addto\captionsngerman{\renewcommand*\bibname{Literatur}} 
+
+\usepackage{prettyref}						%Nummerierung der Tabellen und Abbildungen im Text an Tab. x.x.# anpassen
+%%% Für Abbildungen %%%
+\newrefformat{fig}{Abb.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+%%% Für Tabellen %%%
+\newrefformat{tab}{Tab.~\arabic{section}.\arabic{subsection}.\ref{#1}}
+
+%Links im Dokument:
+\usepackage[									%als letztes Paktet einbinden!
+	linkcolor=black,							%Farbe der Links
+	citecolor=black,							%Farbe der Link-Ziele
+	urlcolor=black,								%Farbe von URLs
+	colorlinks=true,							%Links nicht als Kasten, sondern direkt als Text anzeigen
+]{hyperref}										%Links im PDF-File, unterstützung von URLs mit /url{}
+
+%Dokumentformatierungen
+\setkomafont{sectioning}{\bfseries} 	%Serifenschrift in Überschriften
+\setkomafont{subsection}{\LARGE}
+\setkomafont{subsubsection}{\large}
+\pagenumbering{arabic}					%arabische Seitenzahlen
+\geometry{left=3cm, right=2cm, top=2.5cm, bottom=2cm} 	%Seitenränder
+\parindent0pt 									%Absätze einrücken um 0Pt
+\parskip 10pt									%Abstand nach Absatz
+\onehalfspacing								%Zeilenabstand
+\pagestyle{scrheadings}					%Kopf- und Fussleistenformatierung
+\headsep0.4cm								%Abstand Kopfleiste-Text
+\footskip0.8cm									%Abstand Fussleiste-Text
+\urlstyle{same}								%URLs normal formatieren, nicht als Typewriter
+
+%Befehle definieren
+
+%%%%% create chemequation environment
+
+\newcounter{chemequation}
+\renewcommand*\thechemequation{(\Roman{chemequation})}
+\newenvironment{chemequation}{%
+	\stepcounter{chemequation}%
+	\begin{equation}}%
+{\tag*{\thechemequation}%
+	\end{equation}}
+
+%%%%% create chemtag to iterate and ref chemequations in an align environment
+
+\newcommand*\chemtag{%
+	\stepcounter{chemequation}%
+	\tag*{\thechemequation}}
+
+%%%%% to create a chemicalequation float
+
+\usepackage{float}
+\newfloat{chemicalequation}{htbp}{cex}%[chapter]
+\floatname{chemicalequation}{}
+
+\newcommand{\zitat}[1]{\textsuperscript{\cite{#1}}}
+
+\newcommand{\bild}[4]{					%Bilder mit Beschriftung einfügen
+	\begin{figure}[#4]						%#4: Platzierung (htbp)
+		\centering								%Bilder mittig einfügen
+		\captionbox								%Beschriftungsumgebung
+			{#2\label{fig: #1}}				%#2: Beschriftung
+			{\includegraphics[#3]{#1}}	%#1: Dateiname, #3: Bildeigenschaften
+	\end{figure}} 
+
+\newcommand{\formel}[2]{				%Formel einfügen und Referenz erzeugen
+	\begin{equation}
+		\label{eq: #1}							%#1: Formelname
+		#2											%Formelinhalt
+	\end{equation}}
+
+\newcommand{\cformel}[2][]{				%Chemische Formel einügen und Referenz erzeugen
+	\begin{chemequation}
+		\label{ceq: #1}					%#1: Formelname (optional)
+		\ce{#2}							%#2: Formelinhalt
+	\end{chemequation}\\}
+
+	% 2. Ein neuer, eigener Befehl NUR für Formeln mit Zusatz auf der rechten Seite:
+\newcommand{\cformelpot}[3]{%
+    \begin{chemequation}
+        \label{ceq: #1}
+        \ce{#2} \hspace{2cm} #3
+    \end{chemequation}%
+}
+
+\newcommand{\ox}[2]{
+	\overset{\text{#2}}{\ce{#1}}}
+	
+\newcommand{\tabelle}[6]{				%Tabelle mit Beschriftung einfügen
+\begin{table}[#3]							%#3: Platzierung (htbp)
+\centering										%Tabelle mittig einfügen
+\captionbox										%Beschriftungsumgebung
+{#2												%#2: Tabellenbeschriftung
+\label{tab: #1}}								%#1: Tabellenname
+{\begin{tabular}{#4}						%#4: Anzahl und Ausrichtung Spalten (l c r)
+\hline 											%horizontale Linie
+#5													%#5: Obere Zeile
+\hline
+#6													%#6: Datenzeilen
+\hline 
+\end{tabular}}
+\end{table}}
+
+\usepackage{array,ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}p{#1}} %Verhindert ungewollte Lücken in Tabellen
+
+\newcommand{\langetabelle}[6]{  %Seitenübergreifende Tabelle, Kopfzeile wird 
+	\begin{centering}           %auf jeder neuen Seite ebenfalls angezeigt
+		{\begin{longtable}[#3]{#4}
+				\caption{#2\label{tab: #1}}\\				
+				\hline
+				#5
+				\hline
+				\endfirsthead
+                \caption{#2\label{tab: #1}}\\
+				\hline
+				#5
+				\hline
+				\endhead
+				#6												
+				\hline 
+		\end{longtable}}
+\end{centering}}
+
+%Plots erstellen&&&&&&&&
+
+%#1: Referenz
+%#2: Name
+%#3: x label
+%#4: y label
+%#5: x-werte,y-werte (Spaltenweise)
+%#6: Quelle (.txt Datei)
+%#7: "Nummerierung" (manuell) <.<
+
+\newcommand{\plot}[6]{
+	\begin{figure}[H]	
+		\centering
+		\begin{tikzpicture}
+	
+		\begin{axis}[
+		title style={at={(0.5,0)},
+		anchor=north,
+		yshift=-40},
+		xlabel={#3},
+		ylabel={#4},
+		legend pos=south east,
+		legend entries={},
+		]
+		\addplot[color=black,mark=*,only marks] table [#5] {#6};
+		\label{plot: plot1}
+		\end{axis}
+		\end{tikzpicture}
+		\caption{#2}
+		\label{fig: #1}
+	\end{figure}
+}
+
+\newcommand{\molL}[1]{\ensuremath{\mathrm{\SI{#1}{\frac{mol}{L}}}}} % \molL{1} => \SI{1}{\frac{mol}{L}}
+\newcommand{\mL}[1]{\ensuremath{\mathrm{\SI{#1}{mL}}}} % \mL{1} => \SI{1}{mL}
+
+\newcommand{\Rn}[1]{\romannumeral#1\relax}                   %\Rn{1} = i
+\newcommand{\RN}[1]{\uppercase\expandafter{\romannumeral#1}} %\RN{1} = I
+
+%Dokument:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%Titelseite
+	\begin{titlepage}
+		\begin{center}
+			\hrule													%waagerechte Linie
+			\vspace*{5cm}
+			\Huge {\textbf {Versuchsreihe 5}}\\						%Titel Versuchsreihe
+			\vspace*{0.5cm}
+			%		\large {\bf {Untertitel}}\\						%Untertitel
+			\vspace*{1cm}
+			\normalsize
+			Protokoll	\\									
+			Praktikum für Nanowissenschaftler:innen\\
+			im Studiengang Nanowissenschaften\\
+			\vspace*{0.5cm}
+			\Large {\textbf{Elif Öner, Friederike Penk, Maxim Popow, Michael Quint}}		\\						%Name
+			\vspace*{0.5cm}
+					\normalsize{Plätze 7a, 8a, 8b, 9a}								%Platznummer
+			\vfill
+		\end{center}
+		\begin{tabbing}
+			\hspace{3cm}\=\kill
+			Assistent: \> Lisa Huber \\						% Name Assistent
+			Version: \> 2 \\									%Version
+			Datum: \> 17.11.2026 \\								%Datum
+		\end{tabbing}
+		\hrule														%Waagerechte Linie
+\end{titlepage}
+
+\setcounter{page}{1}
+\setcounter{section}{5}								%Versuchstag #.x.x bzw Versuchsreihe
+\setcounter{subsection}{0}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Galvanisches Element}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+Ein Galvanisches Element war mit einem U-Rohr, verschiedenen Elektrolyten und Elektroden aufzubauen und die Potentialdifferenz sollte gemessen werden.
+Es war der Name der aufgebauten Zelle zu benennen und der theoretische Wert mit dem Messergebnis zu vergleichen und zu diskutieren.
+
+\subsubsection{Theoretischer Hintergrund}
+
+	Die Grundlage für das Verständnis von Galvanischen Zellen besteht darin, das 'Bestreben' von Stoffen bei Elektronenübertragungsreaktionen (auch Redox-Reaktionen genannt) zu beschreiben.
+	Es werden standardmäßig Halbreaktionen als Reduktionsreaktionen geschrieben.
+	\cformel[r1]{Ox + $z$e^- <=> Red}
+	Dabei ist es wichtig anzumerken, dass in einer Lösung keine freien Elektronen als 'klassische' Reaktanden vorkommen. Diese Form dient als Darstellung für die in der Reaktion übertragenen Elektronen.\\
+	Formal lässt sich dann der Reaktionsquotient $Q$ wie folgt definieren, wobei $a$ die Aktivität des jeweiligen Stoffes ist:
+	\formel{Q1}{Q = \frac{a(\mathrm{Red})}{a(\mathrm{Ox})}}
+
+	Demnach gilt für die freie Reaktionsenthalpie $\Delta_{\mathrm{R}}G$ folgende Gleichung\zitat{deltaG}:
+	\formel{G1}{\Delta_{\mathrm{R}}G = \Delta_{\mathrm{R}}G^{\circ} + RT \cdot \ln Q = \Delta_{\mathrm{R}}G^{\circ} + RT \cdot \ln(\frac{a(\mathrm{Red})}{a(\mathrm{Ox})})}
+	Thermodynamisch ist die gesamte umgesetzte elektrische Arbeit $W_{\mathrm{el}}$ gleich der negativen freien Reaktionsenthalpie $\Delta_{\mathrm{R}}G$;
+
+	dabei gilt, dass die elektrische Arbeit $W_{\mathrm{el}}$ das Produkt aus der Gesamtladung $q$ und der Spannung $\Delta E$ ist, je nach Konvention des Vorzeichens:
+	\formel{Arbeit}{\Delta_{\mathrm{R}}G = -W_{\mathrm{el}} = -q \cdot \Delta E}
+
+	Dabei hängt die Gesamtladung $q$ von der Anzahl der übertragenen Elektronen pro\\ Formelumsatz $z$ und von der Faraday-Konstante $F$ ab.
+	Dabei ist die Faraday-Konstante als die übertragene Ladung je ein Mol Elektronen definiert.
+	\formel{q}{q = z\cdot F}
+	\formel{Arbeit2}{\Delta_{\mathrm{R}}G = -z \cdot F \cdot \Delta E}
+
+	Eingesetzt in die Gleichung \prettyref{eq: G1} ergibt sich dann die Nernst'sche Gleichung:
+	\formel{E1}{-z \cdot F \cdot \Delta E = -z \cdot F \cdot \Delta E^{\circ} + RT \cdot \ln Q}
+	\formel{E2}{\Delta E = \Delta E^{\circ} - \frac{RT}{zF} \cdot \ln Q}
+
+	Die el. Spannung ist per Definition eine Potentialdifferenz. Das bedeutet, dass für den Vergleich immer zwei Potentiale benötigt werden. 
+	Für das Standard-Reduktionspotential $E^{\circ}$ wird deshalb mittels der Standardwasserstoffelektrode (SHE) ein willkürlich gewählter Nullpunkt bei $T$ = 298 K definiert.
+	Für die Reduktion von Wasserstoff gilt demnach\zitat{H2}:
+	\cformelpot{H2}{2H+ + 2e- -> H2}{E^{\circ} = 0\ \mathrm{V}}
+	Für Kupfer (Cu) und Zink (Zn) gelten folgende Reduktionspotentiale\zitat{DEQ}:
+	\cformelpot{Cu}{Cu^{2+} + 2e- -> Cu}{E^{\circ} = +0,34\ \mathrm{V}}
+	\cformelpot{Zn}{Zn^{2+} + 2e- -> Zn}{E^{\circ} = -0,76\ \mathrm{V}}
+	Da Kupfer ein positives Reduktionspotential aufweist, liegt es thermodynamisch (relativ zur Wasserstoffreduktion) eher in reduzierter Form vor.
+	Zink liegt dementsprechend eher in oxidierter Form vor.\\
+	Das Galvanische Element nutzt diese Reduktionspotentiale aus, um chemische Energie in elektrische Energie umzuwandeln. Dabei werden zwei sogenannte Halbzellen über einen elektrischen Leiter miteinander verbunden.
+	Eine Halbzelle besteht aus einer festen Elektrode, welche in Kontakt zu einer Elektrolytlösung steht.
+	Feste Metallatome gehen dann oxidiert in Lösung, während die Elektronen an der Elektrode bleiben und diese negativ aufladen.
+	An der anderen Elektrode werden Metallionen mit Elektronen reduziert und setzen sich als Feststoff auf der Elektrode ab, wodurch die Elektrode positiv wird.
+	Zwei Halbzellen werden dann über eine poröse Trennwand bzw. ein Diaphragma miteinander verbunden, sodass zum Ladungsausgleich Ionen von einer Halbzelle in die andere wandern können.
+	In dem Fall handelt es sich bei der negativen Elektrode um die Anode, da an dieser Metallatome oxidiert werden, und bei der positiven Elektrode dementsprechend um die Kathode.
+
+	In einem Daniell-Element - wie in \prettyref{fig: DEBild.png} gezeigt - kommen Zink- und Kupferelektroden zum Einsatz, während eine Zinksulfat- (\ce{ZnSO4}) und eine Kupfersulfatlösung (\ce{CuSO4}) als Elektrolyt fungieren\zitat{DEEE}.
+	Verbindet man nun beide Halbzellen mit einem elektrischen Leiter, finden die Reaktionen zwar räumlich getrennt voneinander statt,
+	allerdings lässt sich die Gesamtreaktion als eine Redox-Reaktion aus den Gleichungen \prettyref{ceq: Cu} und \prettyref{ceq: Zn} zusammenfassen:
+	\cformel[CuZn]{Cu^{2+} + 2e- + Zn -> Cu + Zn^{2+} + 2e-}
+	\cformel[CuZnR]{Cu^{2+} + Zn -> Cu + Zn^{2+}}
+	\bild
+		{DEBild.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Schematische Darstellung eines Daniell-Elements: \ce{Zn|ZnSO4\ ||\ CuSO4|Cu}\\Dabei ist die Cu-Elektrode die Kathode und die Zn-Elektrode die Anode.%Text, der unter dem Bild erscheint
+		\zitat{Bild}}			%Name der Quelle im Literaturverzeichnis
+		{scale=1}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+	Aus der Nernst'schen Gleichung \prettyref{eq: E2} lassen sich dann zwei Halbzellenpotentiale ermitteln:
+	\formel{Cu1}{E_{\mathrm{Cu}} = E^{\circ}_{\mathrm{Cu}} - \frac{RT}{z_{\mathrm{Cu}}F} \cdot \ln Q_{\mathrm{Cu}}}
+	\formel{Zn1}{E_{\mathrm{Zn}} = E^{\circ}_{\mathrm{Zn}} - \frac{RT}{z_{\mathrm{Zn}}F} \cdot \ln Q_{\mathrm{Zn}}}
+
+	Da für beide Halbzellreaktionen zwei Elektronen übertragen werden ($z=2$) und die Zellspannung die Potentialdifferenz beider Halbzellen ist, lässt sich die Zellspannung wie folgt ermitteln:
+	\formel{E3}{\Delta E = E_{\mathrm{Kathode}} - E_{\mathrm{Anode}} = E_{\mathrm{Cu}} - E_{\mathrm{Zn}}}
+	\formel{E4}{\Delta E = E^{\circ}_{\mathrm{Cu}} - \frac{RT}{z_{\mathrm{Cu}}F} \cdot \ln Q_{\mathrm{Cu}} - (E^{\circ}_{\mathrm{Zn}} - \frac{RT}{z_{\mathrm{Zn}}F} \cdot \ln Q_{\mathrm{Zn}})}
+	\formel{E5}{\Delta E = E^{\circ}_{\mathrm{Cu}} - E^{\circ}_{\mathrm{Zn}} - \frac{RT}{2F} \cdot \ln Q_{\mathrm{Cu}} + \frac{RT}{2F} \cdot \ln Q_{\mathrm{Zn}}}
+	\formel{E6}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot (\ln Q_{\mathrm{Cu}} - \ln Q_{\mathrm{Zn}})}
+	\formel{E7}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (\frac{Q_{\mathrm{Cu}}}{Q_{\mathrm{Zn}}})}
+	\formel{E8}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (\frac{a(\mathrm{Cu}) \cdot a(\mathrm{Zn^{2+}})}{a(\mathrm{Zn}) \cdot a(\mathrm{Cu^{2+}})})}%Bisschen unübersichtlich ich weiß :(
+
+	Da die Aktivität von Feststoffen (Cu, Zn) per Definition 1 beträgt und die Aktivität von Kupfer- und Zinkionen der Einfachheit halber mit deren Konzentrationen approximiert werden können,
+	lautet die letztendliche Gleichung:
+	\formel{E9}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (\frac{[\mathrm{Zn^{2+}}]}{[\mathrm{Cu^{2+}}]})}
+
+	Wenn Kupfersulfat und Zinksulfat in der gleichen Konzentration vorliegen, verschwindet der logarithmische Term.
+	\formel{E10}{\Delta E = \Delta E^{\circ} - \frac{RT}{2F} \cdot \ln (1) = \Delta E^{\circ} - \frac{RT}{2F} \cdot 0}
+	\formel{E11}{\Delta E = \Delta E^{\circ} = 0,34\ \mathrm{V} - (-0,76\ \mathrm{V}) = 1,10\ \mathrm{V}}
+
+\subsubsection{Experimenteller Teil}
+
+	Ein U-Rohr mit Fritte wurde auf der einen Seite mit einer blauen Kupfersulfatlösung ($1\ \mathrm{\frac{mol}{L}}$) und auf der anderen Seite mit einer farblosen Zinksulfatlösung ($1\ \mathrm{\frac{mol}{L}}$) befüllt.
+	Die Kupferelektrode wurde auf der Seite der Kupfersulfatlösung fixiert und die Zinkelektrode auf der Seite der Zinksulfatlösung.
+	Ein Spannungsmessgerät wurde wie in \prettyref{fig: URohr.png} angeschlossen und es wurde eine Gleichspannung von 1,084 V gemessen.
+
+	\bild
+		{URohr.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Versuchsaufbau und Messung des Daniell-Elements.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.29}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+\newpage
+\subsubsection{Ergebnisse und Diskussion}
+Der abgelesene Wert aus dem Voltmeter fiel um 0,016 V geringer aus als der theoretisch ermittelte Wert, was einer Abweichung von ca. 1,45\ \% entspricht.
+\formel{Abweichung}{1 - \frac{E_{\mathrm{real}}}{E_{\mathrm{Nernst}}} = 1-\frac{1,084\ \mathrm{V}}{1,10\ \mathrm{V}}\approx 1,45\ \%}
+Mögliche Gründe sind ein Messfehler des Voltmeters, ungenaue Konzentrationen der Lösungen oder Diffusionseffekte, durch welche Kupfer- (\ce{Cu^{2+}}) bzw. Zinkionen (\ce{Zn^{2+}}) hätten diffundieren können,
+wodurch die effektive Zellspannung verringert werden könnte. Außerdem ist die Verwendung der Konzentrationen in der Nernst-Gleichung eine Approximation,
+da bei \ce{Cu^{2+}}- und \ce{Zn^{2+}}-Ionen selbst bei identischen Konzentrationen unterschiedliche Aktivitätskoeffizienten $\gamma_{\pm}$ vorliegen können.
+
+\subsubsection{Zusammenfassung}
+Mit Hilfe der Nernst'schen Gleichung und den Reduktionspotentialen von Kupfer und Zink ließ sich die Zellspannung des Daniell-Elements vorhersagen.
+Die Zellspannung der Zelle konnte gemessen werden und wich um ca. 1,45\ \% vom theoretischen Wert ab, was sich durch diverse kleine äußere Fehler erklären lässt.
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{test} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer} aufgeführt.\zitat{test}
+	
+\langetabelle
+	{Chemikalien}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+
+  \ce{CuSO4}
+    & \begin{tabular}[t]{l} GHS07 \\ GHS09 \end{tabular}
+    & 302, 315 \newline 319, 410 
+    & 264, 270, 273, \newline 301+312, 302+352, \newline 305+351+338
+    & (1) \\
+
+	\ce{ZnSO4.7H2O}
+		& \begin{tabular}[t]{l} GHS05 \\ GHS07 \\ GHS09 \end{tabular}
+		& 302, 318 \newline 410 
+		&  264, 273, 280, \newline 301+312, \newline 305+351+338, 391
+		& (1) \\
+	}
+
+\langetabelle
+	{KMR_leer}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die Lösung wurde im Behälter für nicht-nitrathaltige Säuren entsorgt
+\end{itemize}	
+
+
+\begin{thebibliography}{4} %manuelles Quellenverzeichnis
+
+	\bibitem{deltaG}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{315}.
+
+	\bibitem{H2}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{384}.
+
+	\bibitem{DEQ}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{379}.
+
+	\bibitem{DEEE}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{10. Auflage}, 
+						{de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2022}, 
+			S.			{377}.
+	
+	\bibitem{Bild}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{7. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{348}.
+
+	\bibitem{test}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{30.10.2026}.
+
+			
+\end{thebibliography}
+
+%---------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\setcounter{subsection}{1}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Konzentrationskette}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+Es sollte gezeigt werden, dass eine messbare Spannung durch einen Konzentrationsunterschied zweier Lösungen zustande kommen kann.
+
+\subsubsection{Theoretischer Hintergrund}
+Bei einem Galvanischen Element entsteht durch einen Elektronenfluss eine Spannung, wie schon in 5.1 beschrieben. Dafür braucht es entweder zwei unterschiedliche Lösungen oder zwei Lösungen mit unterschiedlichen Konzentrationen, welche über ein Diaphragma oder Salzbrücke verbunden sind. Über diese können trotz der räumlich getrennten Zellen, die Ionen wandern. Sobald die Konzentrationen der Ionen angeglichen sind, wird es als eine Konzentrationskette bezeichnet. Die Ionen wandern, um die Konzentrationen auszugleichen, von der höher konzentrierten Lösung zur niedrig konzentrierten Lösung. Gleichzeitig wandern ebenfalls die Elektronen über das Strommessgerät.\zitat{Seminar} Dies geschieht so lange, bis sich schließlich ein Gleichgewicht eingestellt hat und beide Lösungen die selbe Konzentration besitzen.  Hat sich dieses Gleichgewicht eingestellt, ist keine Spannung mehr messbar, da keine Potentialdifferenz mehr existiert. Die höher konzentrierte Kupfersulfatlösung diente bei diesem Versuch dementsprechend als Kathode.
+Das Zellpotential lässt sich mit Hilfe der Nernst´schen Gleichung berechnen \prettyref{eq: gl1}.
+
+\formel{gl1}{E(X)=E^{\circ}_X + \frac{RT}{zF}\cdot \text{ln}(a_{x^+}) \approx E^{\circ}_X +\frac{RT}{zF}\cdot \text{ln}(c_{X^+})}
+
+Hierbei steht z für die Anzahl der ausgetauschter Elektronen, F für die Faraday Konstante, R für die ideale Gaskonstante, T für die Temperatur, a für die Aktivität und c für die Konzentration. E$_0$ ist das Standardpotential. In diesem Fall darf die Formel angenähert werden und die Aktivität mit der Konzentration ersetzt werden. 
+Die Zellspannung kann aus dem Potential der Reduktions- und Oxidationshalbzelle berechnet werden \prettyref{eq: gl2}.
+
+\formel{gl2}{\Delta E=E_X\text{(Red.)} - E_X\text{(Ox.)}= \frac{RT}{zF}\cdot \text{ln}(\frac{c_{X^+}\text{(Red.)}}{c_{X^+}\text{(Ox.)}})}
+
+
+\subsubsection{Experimenteller Teil}
+
+Ein Schenkel eines U-Rohres mit Fritte wurde mit einmolariger Kupfersulfatlösung gefüllt.
+Der andere Schenkel wurde mit Kupfersulfatlösung (0.1\,$\mathrm{\frac{mol}{L}}$) gefüllt.
+Anschließend wurde mithilfe von zwei Kupferelektroden und einem Voltmeter die Spannung gemessen.
+Diese betrug zuerst 14.6\,mV und fiel innerhalb von fünf bis zehn Minuten auf 0.001\,mV ab. 
+Ein weiteres U-Rohr mit Fritte wurde mit einmolariger Kupfersulfatlösung gefüllt.
+In den anderen Schenkel wurde eine zur Hälfte mit Ammoniaklösung (25 \%) verdünnte und mit 5-10 Tropfen Schwefelsäure versetzte einmolarige tiefblaue Kupfersulfatlösung überführt.
+Nun wurde wieder mit zwei Kupferelektroden und einem Voltmeter die Spannung gemessen. Diese betrug 0.412\,V. 
+
+
+
+\subsubsection{Ergebnisse und Diskussion}
+
+Durch die unterschiedlichen Konzentrationen der Lösungen entstand eine Potentialdifferenz, welche mit Hilfe der Gleichung \prettyref{eq: gl2} berechnet werden kann.
+Die gemessenen Werte sind der Abb. 5.2.3. zu entnehmen. 
+\bild
+		{Spannungsverlauf.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Spannungsverlauf in Abhängigkeit von der Zeit.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.45}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\linewidth]{V5/Spannung in Abhängigkeit von der Zeit.pdf}
+   % \caption{Spannungsverlauf in Abhängigkeit von der Zeit.}
+    %\label{Graph_5.2}
+%\end{figure}
+Dieser Versuch wurde bei Raumtemperatur durchgeführt weshalb $T$=298.15\,K geschätzt werden kann.
+Die in diesem Versuch übertragene Anzahl an Elektronen ist zwei ($z$=2). Daraus ergibt sich der Wert 29\,mV.
+Der in diesem Versuch stark abweichende gemessene Wert könnte durch die ungenaue Temperaturangabe
+oder den Austausch der Aktivitätskoeffizienten durch die Konzentrationen in der Nernst Gleichung und somit die Vernachlässigung des Diffusionspotentials entstanden sein. Durch das Diffusionspotential entsteht ebenfalls eine Spannung, da die Ionen unterschiedlich schnell diffundieren können. Was dafür gesorgt haben könnte, dass der hier gemessene Wert deutlich niedriger ist als der Literaturwert.\\
+Die Spannung fällt hierbei ab, da die Ionen durch das Diaphragma diffundieren.
+Im zweiten Teil des Versuchs führte die Zugabe von Ammioniaklösung zur Bildung von Tetraaminkupfer(II)-Komplexen \prettyref{ceq: r11}:
+
+\cformel[r11]{Cu^2+ + SO^2-_4 + 4NH_3 <=> [Cu(NH_3)_4]^2+ + SO^2-_4}
+
+Dieser Komplex ist tiefblau gefärbt und erklärt somit die Farbe der Lösung. Die Schwefelsäure erhöhte bei diesem Versuch durch eine Erhöhung der Konzentration der Schwefelanionen die Leitfähigkeit. 
+Durch die entstandenen Komplexe verringert sich die Konzentration der Kupferionen und es entstand wieder eine Potentialdifferenz zwischen den beiden Zellen und somit ebenfalls eine Konzentrationskette. 
+Die Ionenkonzentration kann durch umstellen der Gleichung \prettyref{eq: gl2} und der gemessenen Spannung (0.421\,V) berechnet werden und beträgt ungefähr $5.841 \cdot 10^{-15}\,\mathrm{\frac{mol}{L}}$ \prettyref{eq: gl3}.
+
+\formel{gl3}{c_{Cu^{2+}}\text{(Ox.)} = \frac{c_{Cu^{2+}}\text{(Red.)}}{e^{\frac{\Delta E \cdot zF}{RT}}}=\frac{1\,\frac{\text{mol}}{\text{L}}}{e^{\frac{0.421\,\text{V} \cdot 2 \cdot  96 485.332\,\frac{\text{C}}{\text{mol}}}{8.314\,\frac{\text{J}}{\text{K}\cdot \text{mol}}\cdot 298.15\,\text{K}}}}\approx5.841\cdot 10^{-15}\,\frac{\text{mol}}{\text{L}}}
+
+\subsubsection{Zusammenfassung}
+
+
+In diesem Versuch wurde die Funktionsweise einer Konzentrationskette verdeutlicht.
+Es wurde gezeigt, dass durch unterschiedliche Konzentrationen der Kupfersulfatlösungen eine Spannung zustande kommt. Außerdem wurde ein Spannungsabfall durch Diffusion der Ionen festgestellt.
+
+
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+\langetabelle
+	{Chemikalien2}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ Kupfersulfat & GHS07 GHS07 & H290 H315 H319 H410 & P264 P273 P280 P301+P312 P302+P352 P305+P351+P338 P321 P330 P332+P313 P337+P313
+    P362 P391 P501 & (1) \\
+    Ammoniaklösung (25 \%) & GHS05 GHS07 GHS09 & H290 H314 H335 H400 & P260 P264 P273 P280 P301+P330+P331 P303+P361+P353 P304+P340 P305+P351+P338
+    P310 P321 P391 P405 P501 & (2) \\
+    Schwefelsäure (1 $\mathrm{\frac{mol}{L}}$) & GHS05 & H290 H314 & P260 P264 P280 P301+P330+P331 P303+P361+P353 P304+P340 P305+P351+P338 P310
+    P321 P405 P501  & (1) \\}
+
+\langetabelle
+	{KMR_leer2}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die Lösung wurde im Behälter für andere Säuren entsorgt.
+    \item[(2)] Ammioniakhaltige Lösungen wurden mit Salzsäure vorsichtig angesäuert und im Behälter für andere Säuren entsorgt.
+\end{itemize}	
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{Seminar}
+						{H. Heller}, 
+			\textit	{Elektrochemie im Gleichgewicht Teil 1}, 
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2026}, 
+			S.			{1-14}.
+	
+	\bibitem{hauke2}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{30.10.2026}.
+
+
+\end{thebibliography}
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+\newpage
+
+\setcounter{subsection}{2}							%Versuchsnummer x.#.x startet bei 0 für 1 
+\setcounter{secnumdepth}{4}
+	
+\subsection{Korrosion des Eisens}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+Ziel des Versuchs war es, die Korrosion von Eisen an verschiedenen präparierten Eisennägeln zu demonstrieren. Die Resultate sollten beobachtet und erklärt werden.
+
+\subsubsection{Theoretischer Hintergrund}
+
+Die Korrosion von Eisen ist ein Prozess,
+der auf Redoxreaktionen beruht und durch die Elektrodenpotentiale der beteiligten Stoffe beeinflusst wird. Auf der Eisenoberfläche entstehen Lokalelemente,
+in denen Eisen zu Fe$^{2+}$-Ionen oxidiert wird.
+Durch weitere Reaktionen bilden sich Eisenoxide und Eisenoxidhydroxide, die als Rost bezeichnet werden.\zitat{eins}
+Die entstehenden Rostschichten sind häufig porös und schützen das darunterliegende Metall nicht dauerhaft vor Korrosion. 
+Als Voraussetzung für die hier untersuchte Sauerstoffkorrosion sind Wasser und gelöster Sauerstoff erforderlich.
+Zunächst diffundieren die durch die Oxidation entstandenen Fe$^{2+}$-Ionen in das umgebende Wasser. Bereits geringe Anteile an Wasser,
+etwa durch die Luftfeuchtigkeit, reichen hierfür aus.
+Die bei der Oxidation freigesetzten Elektronen werden innerhalb des Eisens zu kathodischen Bereichen transportiert und dort für Reduktionsreaktionen verbraucht.
+Hierbei ist insbesondere die Sauerstoffreduktion von Bedeutung.\zitat{zwei}
+
+
+\cformelpot{m1}{Fe^{2+} + 2e^{-} -> Fe}{E^{\circ} = -0,44\ \mathrm{V}}
+\cformelpot{m2}{O2 + 2H2O + 4e^- -> 4OH-}{E^{\circ} = +0,40\ \mathrm{V}}
+\cformelpot{m3}{O2 + 4H+ + 4e- -> 2H2O}{E^{\circ} = +1,23\ \mathrm{V}}
+
+Die beiden Standardpotentiale der Sauerstoffreduktion beziehen sich auf unterschiedliche pH-Bedingungen.
+
+Der Korrosionsvorgang lässt sich in zwei elektrochemische Teilreaktionen unterteilen.
+Zuerst erfolgt die Oxidation des elementaren Eisens zu Eisen(II)-Kationen.
+Die jeweiligen Teilgleichungen für die Oxidation und Reduktion sowie die Gesamtreaktion,
+die zur Bildung von Eisen(II)-hydroxid führt, sind in Gleichung \prettyref{ceq: m1}, \prettyref{ceq: m2} und \prettyref{ceq: m3} dargestellt.\zitat{drei}
+
+\cformel[m1]{2Fe -> 2Fe^{2+} + 4e-}
+\cformel[m2]{2H2O + O2 + 4e- -> 4OH^{-}}
+\cformel[m3]{2Fe_{(s)} + 2H2O_{(l)} + O2_{(g)} -> 2Fe(OH)2_{(s)}}
+
+Eisen(II) kann nach der Primäroxidation in einer zweiten Reaktion weiter zu Eisen(III) oxidiert werden.
+Diese Reaktion, die als Sekundäroxidation bekannt ist, wird in Gleichung \prettyref{ceq: m4} dargestellt.\zitat{drei}
+
+\cformel[m4]{4Fe(OH)2_{(s)} + O2_{(g)} + 2H2O_{(l)} -> 44Fe(OH)3_{(s)}}
+
+Nach einer gewissen Zeit wandeln sich die entstandenen Eisen(II)- und Eisen(III)-hydroxide durch die Abgabe von Wasser in andere Eisenoxide und -hydroxide um.
+Die Prozesse sind in den Gleichungen \prettyref{ceq: m5}, \prettyref{ceq: m6} und \prettyref{ceq: m7} vereinfacht dargestellt.\zitat{drei}
+
+\cformel[m5]{Fe(OH)3_{(s)} -> FeO(OH)_{(s)} + H_2O_{(l)}}
+\cformel[m6]{2FeO(OH)_{(s)} -> Fe_2O_3_{(s)} + H2O_{(l)}}
+\cformel[m7]{Fe(OH)2_{(s)} -> FeO_{(s)} + H_2O_{(l)}}
+
+Das Endprodukt Rost wird folglich näherungsweise durch die allgemeine Formel \prettyref{ceq: m8} dargestellt.\zitat{drei}
+
+\cformel[m8]{$x$FeO.$y$Fe2O3.$z$H2O}
+
+Es lassen sich unterschiedliche Wege beschreiten,
+um die Oxidation von Eisen zu verhindern.
+Ein Beispiel hierfür ist die Ausbildung einer Oxidschicht durch Verzunderung.
+Darüber hinaus ist es möglich, das Eisen mit unedleren Metallen wie Zink zu beschichten,
+wodurch Wasser und Sauerstoff weitgehend ausgeschlossen werden.
+Zink fungiert bei leitendem Kontakt außerdem als Opferanode und wird bevorzugt anstelle des Eisens oxidiert.\zitat{zwei}
+
+Zum Nachweis der bei der Korrosion entstehenden Fe$^{2+}$-Ionen dient Kaliumhexacyanoferrat(III),
+das mit ihnen einen dunkelblauen Niederschlag (Turnbulls Blau) bildet.\zitat{vier}
+Alizaringelb R zeigt durch einen Farbumschlag von Gelb nach Orange bis Rot einen stark erhöhten pH-Wert an,
+der infolge der kathodischen Sauerstoffreduktion lokal entstehen kann.
+Die Gelatine verlangsamt die Durchmischung der Stoffe, während das zugesetzte Kaliumnitrat die Leitfähigkeit der Lösung erhöht.
+
+\subsubsection{Experimenteller Teil}
+
+Für die Durchführung des Versuchs wurden fünf Eisennägel auf unterschiedliche Weise präpariert. Die Präparationen sind in der folgenden Tabelle dargestellt:
+
+\langetabelle
+	{Tabelle}
+	{Präparationen der Eisennägel.}
+	{H}
+	{p{2cm} p{9cm}}
+	{Nagel & Präparation\\}
+	{ 1 & Wurde rechtwinkelig gebogen. \\
+	2 & Wurde auf der Hälfte seiner Länge mithilfe eines Bunsenbrenners verzundert. \\
+	3 & Wurde auf etwa einem Drittel seiner Länge mit Kupferdraht umwickelt. \\
+	4 & Wurde mit einem Stück Zinkblech mithilfe eines Kupferdrahts verbunden. \\
+	5 & Unbehandelt. \\
+	}
+
+Parallel dazu wurde die Indikatorlösung zum Übergießen der Nägel vorbereitet.
+Dazu wurden in einem 250-mL-Becherglas unter Erhitzen 16~g Gelatine,
+1~g KNO$_3$,\\ 2~mL 0,5 \%ige Alizaringelb-R-Lösung (Mordant Orange I) in Ethanol und 4~mL 1 \%ige K$_3$[Fe(CN)$_6$]-Lösung in 100~mL demineralisiertem Wasser vollständig gelöst.\\
+Anschließend wurden die präparierten Nägel in einer Petrischale angeordnet und mit der warmen Gelatinelösung übergossen. Die Petrischale wurde bis zu zwei Tage im Abzug stehen gelassen.\\
+Bei der anschließenden Beobachtung zeigten sich in der Gelatine je nach Präparation der Nägel blau-grüne und schwarze Verfärbungen.
+Am und um den Nagel, welcher mit Zinkblech in Kontakt stand, war keine Veränderung zu erkennen. Beim unbehandelten Nagel waren leichte grünliche Spuren an der Gelatine erkennbar.
+Der verzunderte Nagel zeigte am verzunderten Stück eine schwarze Färbung, die Gelatine drum herum blieb unverändert.\\
+Auch beim mit Kupferdraht umwickelten Nagel bildete sich unter dem Kupfer eine schwarze Schicht und die Gelatine drum herum wurde grün.
+Der gebogene Nagel wurde an der Biegung schwarz und die Gelatine grünlich.
+
+\bild
+		{ENagel.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Eisennägel nach zwei Tagen in Gelatine.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.13}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+\bild
+		{gelatine.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Rückstände im Gelatinefeststoff.%Text, der unter dem Bild erscheint
+		}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.25}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+
+\subsubsection{Ergebnisse und Diskussion}
+
+Nach zwei Tagen waren an den unterschiedlich präparierten Eisennägeln verschiedene Verfärbungen der Gelatine sowie dunkle Bereiche auf den Nageloberflächen erkennbar. 
+Die beobachteten blau-grünen Verfärbungen lassen sich grundsätzlich mit der Bildung von Eisen(II)-Ionen bei der anodischen Reaktion des Eisens erklären.
+Diese reagieren mit den in der Gelatine enthaltenen Hexacyanoferrat(III)-Ionen unter Bildung eines dunkelblauen Niederschlags (Turnbulls Blau):
+
+\cformel[m9]{3Fe^{2+}_{(aq)} + 2[Fe(CN)6]^{3-}_{(aq)} -> Fe3[Fe(CN)6]2_{(s)}}
+
+Durch eine Überlagerung der blauen Färbung mit der orangefarbenen Gelatine erscheinen die betroffenen Bereiche eher grünlich statt blau.
+An den kathodischen Bereichen findet gleichzeitig die in Gleichung \prettyref{ceq: m2} dargestellte Sauerstoffreduktion statt, bei der Hydroxid-Ionen entstehen.
+Ein dadurch erhöhter pH-Wert kann grundsätzlich durch Alizaringelb R angezeigt werden.
+Da der Indikator erst im stark basischen Bereich nach Orange bis Rot umschlägt und die Gelatine bereits eine Orange Farbe aufwies,
+ließen sich keine eindeutigen Bereiche mit einer roten Verfärbung erkennen.
+
+Am unbehandelten Nagel bzw. der anliegenden Gelatine war nur wenig Veränderung zu erkennen. 
+Dies spricht für eine eher geringe Korrosion. Der Nagel hatte vermutlich bereits intakte Oxidschichten,
+welche ihn vor Korrosion schützten. Der gebogene Nagel zeigte eine schwarze Verfärbung an der Biegung und an dieser Stelle verstärkte Grünfärbung der Gelatine.
+Durch die mechanische Verformung können Oberflächen- und Oxidschichten beschädigt werden, wodurch an dieser Stelle eine verstärkte Korrosion begünstigt wird.
+
+Beim teilweise verzunderten Nagel wurde im erhitzten Bereich ebenfalls eine schwarze Färbung beobachtet.
+Diese ist zumindest teilweise auf die bereits beim Erhitzen entstandenen Eisenoxide zurückzuführen.
+Eine Zunderschicht kann die darunterliegende Oberfläche abschirmen, sofern keine Risse oder Ähnliches vorhanden sind.
+Da keine grüne Verfärbung in der umliegenden Gelatine beobachtet wurde, lässt sich darauf schließen, dass nur wenig Korrosion stattgefunden hat.
+
+Der mit Kupferdraht umwickelte Nagel wies unter dem Kupfer eine schwarze Schicht auf. 
+Da Kupfer edler als Eisen ist, kann der Kontakt beider Metalle in der Elektrolytlösung ein Galvanisches Element bilden.
+Eisen wird dabei bevorzugt oxidiert, während an kathodischen Bereichen Sauerstoff reduziert wird.
+Die beobachtete dunkle Verfärbung und die grüne Verfärbung der Gelatine ist mit einer verstärkten lokalen Korrosion zu erklären.
+
+Der mit Zinkblech verbundene Nagel zeigte keine Veränderung. Da Zink unedler als Eisen ist, sollte es als Opferanode bevorzugt oxidiert werden:
+
+\cformel[m10]{Zn -> Zn^{2+} + 2e-}
+
+Dadurch wird die Oxidation des Eisens größtenteils unterdrückt.
+
+\subsubsection{Zusammenfassung}
+
+In diesem Versuch wurde die Korrosion unterschiedlich präparierter Eisennägel mithilfe einer Gelatine-Indikatorlösung untersucht.
+Nach 2 Tagen in der Lösung traten je nach Präparation grünliche Verfärbungen der Gelatine und dunkle Bereiche an den Nageloberflächen auf,
+während am Nagel mit Zinkkontakt keine sichtbare Veränderung festgestellt wurde. Dies ist grundsätzlich mit der Schutzwirkung von Zink als Opferanode zu erklären.
+Besonders die Beobachtungen am gebogenen und am mit Kupferdraht umwickelten Nagel deuten auf eine verstärkte lokale Eisenkorrosion hin.
+Die schwarze Färbung des verzunderten Bereichs kann dagegen bereits durch das vorherige Erhitzen entstanden sein.
+
+\subsubsection{Sicherheit und Entsorgung}
+		
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: Chemikalien3} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{hauke3} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR_leer3} aufgeführt.\zitat{hauke3}
+	
+\langetabelle
+	{Chemikalien3}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.9cm} p{2.2cm} p{3.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{ % Erster Stoff
+	\ce{KNO3}
+    & \begin{tabular}[t]{l} GHS03 \end{tabular}
+    & 272 
+    & 210, 220, 221, 280 \newline 370+378, 501
+    & (1) \\
+
+	Alizaringelb R \\ (Mordant Orange I, in Ethanol)
+		& \begin{tabular}[t]{l} GHS02 \\ GHS07 \end{tabular}
+		& 225, 302 \newline 319 
+		&  210, 233, 240, 241, \newline 242, 243, 280, \newline 301+312, \newline 303+361+353, \newline P05+351+338, \newline 370+378, 391, \newline 403+235, 501
+		& (1) \\
+
+	\ce{K3[Fe(CN)6]}
+    & \begin{tabular}[t]{l} - \end{tabular}
+    & EUH302
+    & -
+    & (1) \\
+
+	\ce{Zink}
+    & \begin{tabular}[t]{l} GHS09 \end{tabular}
+    & 410
+    & 273, 391, 501
+    & (1) \\
+
+    }
+
+\langetabelle
+	{KMR_leer3}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+	
+Entsorgung: \\
+\begin{itemize}
+    \item[(1)] Die Eisennägel wurden mit der Gelatine im Behälter für kontaminierte Betriebsmittel entsorgt.
+\end{itemize}	
+
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+
+	\bibitem{eins}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{7. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{367}.
+
+	\bibitem{zwei}
+						{C. E. Mortimer, U. Müller}, 
+			\textit	{Chemie}, 
+						{9. Auflage}, 
+						{Georg Thieme Verlag KG}, 
+						{Stuttgart}, 
+			\textbf	{2007}, 
+			S.			{371}.
+
+	\bibitem{drei}
+						{H. Heller, Seminarfoliensatz 5 zum}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften},  
+						{Universität Hamburg}, 
+						{Hamburg}, 
+			\textbf	{2026}, 
+			S.			{9-10}.
+
+	\bibitem{vier}
+						{E. Riedel, C. Janiak}, 
+			\textit	{Anorganische Chemie}, 
+						{7. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{2007}, 
+			S.			{856}.
+	
+	\bibitem{hauke3}
+						{DGUV}, 
+						„{GESTIS-Stoffdatenbank}“, zu finden unter 
+			\url		{https://gestis.dguv.de/}, 
+			\textbf	{30.10.2026}.
+
+
+\end{thebibliography}
+
+\end{document}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Neuer Versuch:
+\subsection{Versuchsname}
+
+\subsubsection{Einleitung und Aufgabenstellung}
+\subsubsection{Theoretischer Hintergrund}
+\subsubsection{Experimenteller Teil}
+\subsubsection{Ergebnisse und Diskussion}
+\subsubsection{Zusammenfassung}
+\subsubsection{Sicherheit und Entsorgung}	
+Die für den Versuch verwendeten Chemikalien sind in \prettyref{tab: entsorgung1} mit Gefahrensymbolen, H- und P-Sätzen sowie Hinweisen zur Entsorgung aufgeführt.\zitat{Gefahren1} Verwendete KMR-Stoffe sind in \prettyref{tab: KMR1} aufgeführt.
+	
+\langetabelle
+	{entsorgung1}
+	{Verwendete Chemikalien.}
+	{H}  % hier ggf. ein großes H eintragen, wenn die Tabelle sonst im Anhang verschwindet
+	{l p{1.4cm} p{2.2cm} p{4.5cm} c}
+	{Substanz & Symbol & H-Sätze & P-Sätze & Entsorgung \\}
+	{\\}
+    
+
+\langetabelle
+	{KMR1}
+	{Verwendete kanzerogene, mutagene oder reproduktionstoxische Gefahrstoffe (KMR).}
+	{H}
+	{l P{3.8cm} P{2.4cm} P{3.5cm} c}
+	{Substanz & H-Sätze & KMR-Einstufung & Verwendete Menge & Entsorgung \\}
+	{ - & - & - & - & - \\}
+Entsorgung: \\
+\begin{itemize}
+    \item[(1) Die verwendete Lösung wurde mit Salzsäure angesäuert und im Behälter für nicht-nitrathaltige Säuren entsorgt.] 
+\end{itemize}	
+
+\newpage
+
+\begin{thebibliography}{4}		%manuelles Quellenverzeichnis
+	\bibitem{Gefahren1}
+						{H. Heller}, 
+			\textit	{Grundlagenpraktikum der Chemie für Studierende der Nanowissenschaften}, 
+						{Version 1.18},
+                        {Universität Hamburg},
+						{Hamburg}, 
+			\textbf	{2023}, 
+			S.{34}.
+			
+			
+\end{thebibliography} 
+\newpage
+
+Nützliche Beispiele:
+
+%Tabelle für Reagenzgläserinhalte
+\tabelle
+	{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.}	%Inhalt der Reagenzgläser ... bis...
+		{htb}	
+		{l l l}					
+		{Reagenzglas & Inhalt & Beschreibung}				
+		{1 & 2~mL NaOH & klare, farblose Lsg.\\
+		2 & & 
+		}										
+
+
+%Formel Löslichkeit KClO4 -> chemische Formel
+\begin{align}
+    \chemtag
+    \ce{KClO4(aq) <=> K+(aq) + ClO4-(aq)}
+\end{align}
+
+%hier allgemeine Formel 
+\formel
+		{formel2}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{L_{\mathrm{A}_{a} B_{b}} = \sqrt[m+n]{\frac{K_{\mathrm{L}}}{a^{a} \cdot b^{b}}}  }
+
+
+Bilder:
+	\bild
+		{bildname}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Bildbeschreibung.		%Text, der unter dem Bild erscheint
+		\zitat{Quelle}}			%Name der Quelle im Literaturverzeichnis
+		{Bildeigenschaften}		%angle, draft, scale, height, width
+		{Platzierung}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.
+	
+		
+	Bildeigenschaften:
+		angle - Bestimmt den Drehwinkel um einen Referenzpunkt für die Grafik. Positive Werte drehen die Grafik gegen den Uhrzeigersinn, negative mit ihm. 
+		draft - Ist draft gesetzt, wird nur ein Platzhalter der Grafik angezeigt. Beschleunigt den Übersetzungsvorgang des Dokuments erheblich. 
+		scale - Skaliert die Grafik anhand eines Skalierungsfaktors. 
+		height - Skaliert die Grafik auf die angegebene Höhe. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 
+		width - Skaliert die Grafik auf die angegebene Breite. Die Angabe der Größe muss in einer LaTeX-spezifischen Einheit erfolgen. 	
+	
+
+Formeln:
+	\formel
+		{formelname}				%eindeutige Bezeichnung der Formel, Verweis: \ref{eq: formelname}
+		{Formel}						%
+
+
+Tabellen:
+	\tabelle
+		{Tabellenname}												%Eindeutige Bezeichnung der Tabelle. \prettyref{tab: Tabellenname}
+		{Tabellenüberschrift.\zitat{Quelle}}						%Text, der über der Tabelle erscheint, Quelle der Daten
+		{Platzierung}													%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird. p: spezielle Seite für Abbildungen und Tabellen, Kombinationen möglich, Versuch der Platzierung gemäß Reihenfolge.		
+		{Spaltenanzahl_und_Ausrichtung}						%{ l c r }: 3 Spalten, links mittig und rechts; { c c c c }: 4 Spalten, alle mittig
+		{Titelzeile}														%Obere Zeile(n), danach folgt ein waagerechter Strich, Spalten durch & trennen, Neue Zeile durch \\
+		{Datenzeilen}													%Zeilen unter dem waagerechten Strich, Spalten durch & trennen, Neue Zeile durch \\
+		
+	Zellen verbinden:	
+		\multicolumn{Anzahl_der_verbunden_Spalten}{Ausrichtung (l/c/r}{Inhalt}
+	
+Reaktionen:
+Formeln: 
+\begin{center}
+\ce{NH+4}, \ce{Fe3(CO)12}, \ce{Al^{3+}},\ce{Cr2O^{2-}7}
+\end{center}
+
+Isotope:
+\begin{center}
+\ce{^{37}_{17}Cl}, \ce{^{32}_{16}S^{2-}}
+\end{center}
+
+Bindungen: 
+\begin{center}
+\ce{H-O-N=S}, \ce{Cl-C#N}
+\end{center}
+
+Reaktionsgleichungen: 
+\begin{center}
+\ce{2H2 + O2 -> 2H2O}
+\ce{MgCl2 ->[\text{Elektrolyse}] Mg\,(l) + Cl_{2}\,(g)}
+\end{center}
+
+Redoxreaktion:
+\begin{center}
+$\overset{0}{\ce{S}} + \overset{0}{\ce{O2}} \ce{->} \overset{+\text{IV}}{\ce{S}}+\overset{-\text{II}}{\ce{O2}}$
+\end{center}
+
+
+Literaturverweise:
+		\bibitem{zeitschrift}
+						{A. Autor}, 
+			\textit	{Zeitschrift} 
+			\textbf	{Jahr}, 
+			\textit	{Band} 
+						{Seite-Seite}.
+		
+		\bibitem{buch_ohne_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{buch_mit_herausgeber}
+						{A. Autor}, 
+			\textit	{Titel}, 
+						{Auflage}, 
+						{Verlag}, 
+						{Ort}, 
+			\textbf	{Jahr}, 
+			S.			{Seite-Seite}.
+			
+		\bibitem{dissertation}
+						{A. Autor}, 
+						{Dissertation}, 
+						{Universität}, 
+			\textbf	{Jahr}.
+			
+		\bibitem{internetseite}
+						{A. Autor}, 
+						„{Titel}“, zu finden unter 
+			\url		{www.xyz.de}, 
+			\textbf	{Jahr}.
+
+% Kommentare Sophie:
+
+% <- Für Kommentare oder Code der gerade nicht gebraucht wird, wird beim kompilieren nicht beachtet
+%Um Bilder einzufügen: \bild{'Dateiname' (Datei muss im gleichem Ordner mit der TeX Datei liegen)}{'Bildunterschrift'}{width= ...cm (Größe des Bildes)}{H (Ort des Bildes, H=Hier)}
+
+%Für Summenformeln im Text: \ce{z.B.: H2SO4 (Zahlen werden automtisch tief gestellt)}
+
+% Um Formeln im Text zu referieren: \prettyref{fig (für Bilder und Graphen)/ eq (für mathematische Formeln)/ ceq (für chemische Formeln): 'Referenz'}
+
+%Für chemische Formeln: \cformel['Referenz']{2\ox{Fe}{+\RN{3}}Cl3 + \ox{Fe}{+\RN{2}}Cl2 + 8NH4+ + 8 OH- \ce{<=>[{N2H4}]} \ox{Fe}{+\RN{2}}O\cdot \ox{Fe}{+\RN{3}}2O3 \ce{v} + 4 H2O + 8NH4+ + 4 Cl-}
+
+%Für mathematische Formeln: \formel{'Referenz'}{2\cdot d\cdot \ce{sin}(\theta)= n \lambda}
+
+%Tabellen: Online Converter um Exel Tabellen in LaTeX Format zu bringen: https://www.tablesgenerator.com
+%\tabelle{'Referenz'}{'Tabellenüberschrift'}{H}{'Breite der Spalte bzw. Textausrichtung' (Spaltenbreite passt sich Textlänge an: l=links, r=rechts, c=zentriert. Spaltenbreite fest und Blocksatz: p{...cm}), Jede Spalte muss einzeln definiert werden, z.B l l l = 3 Spalten}{'Spaltenüberschrift' muss der Anzahl an Spalten entsprechen. Spaltenüberschriften müssen durch ein & getrennt werden. Außerdem wichtig am Ende: \\}{'Tabelleneinträge', müssen ebenfalls durch ein & getrennt werden und am Ende der Zeile ein \\ haben
+%	- & - & - & \\
+%	- & - & - & \\}
+%Beispiel für eine Tabelle (zum Ausführen '%' entfernen):
+%\tabelle{Auflösungsvermögen}{Experimentell ermitteltes und theoretisches Auflösungsvermögen für Objektiv 20X und 63X bei schräger und gerader Beleuchtung.}{H}{l l p{2cm} p{3cm}  p{3cm}}{Objektiv&Beleuchtung& Spalt mit einem Peak&experimentelles Auflösungsvermögen~/~nm&theoretisches Auflösungsvermögen~/~nm\\}
+%	{20X&gerade&16&>750&1125\\
+%	20X&schräg&9&690&563\\
+%	63X&gerade&11&>750&600\\
+%	63X&schräg&7&584&300\\}
