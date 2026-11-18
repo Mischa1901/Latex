@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  18 NOV 2026 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  18 NOV 2026 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1449,28 +1449,38 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.6}) h
                                                   \__shipout_drop_firstpage_...
 l.311 
        <./LBG.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
-[3] [4] (V8.aux)
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 388--392
+[]\T1/aer/m/n/12 (+20) Dewetron, ^^RDer Un-ter-schied zwi-schen Prä-zi-si-on, Rich-tig-keit und
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--392
+\T1/aer/m/n/12 (+20) Ge-nau-ig-keit^^P, zu fin-den un-ter [][]$https : / / www . dewetron . com / de / news /
+ []
+
+[4] (V8.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 49690 strings out of 467871
- 1176485 string characters out of 5417891
- 1834238 words of memory out of 5000000
- 77556 multiletter control sequences out of 15000+600000
- 681789 words of font info for 295 fonts, out of 8000000 for 9000
+ 49706 strings out of 467871
+ 1176616 string characters out of 5417891
+ 1833238 words of memory out of 5000000
+ 77557 multiletter control sequences out of 15000+600000
+ 682835 words of font info for 307 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,19n,108p,11253b,1234s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,19n,108p,11253b,1186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V8.pdf (5 pages, 164428 bytes).
+Output written on V8.pdf (5 pages, 166932 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
+ 151 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
  96850 words of extra memory for PDF output out of 106986 (max. 10000000)
 
