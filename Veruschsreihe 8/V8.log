@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  18 NOV 2026 22:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.12)  18 NOV 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,15 +1470,15 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 49706 strings out of 467871
- 1176616 string characters out of 5417891
+ 49692 strings out of 467871
+ 1176512 string characters out of 5417891
  1833238 words of memory out of 5000000
  77557 multiletter control sequences out of 15000+600000
- 682835 words of font info for 307 fonts, out of 8000000 for 9000
+ 681789 words of font info for 295 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,19n,108p,11253b,1186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Mischa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on V8.pdf (5 pages, 166932 bytes).
+Output written on V8.pdf (5 pages, 166937 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
