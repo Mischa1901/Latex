@@ -259,6 +259,59 @@
 
 \subsubsection{Theoretischer Hintergrund}
 
+Die Photometrie ist eine Analysemethode in der Chemie,
+mit welcher die Konzentration einer in Lösung befindenden lichtabsorbierenden Substanz ermittelt werden kann.
+Dabei werden die Intensitäten der Lichtstrahlen vor und nach dem Durchgang einer Lösung miteinander verglichen.\zitat{kp}
+
+Das Lambert-Beersche Gesetz beschreibt diesen Zusammenhang mathematisch.
+Dabei ist $c$ die Konzentration der Lösung, $I$ die austretende Intensität, $I_0$ die eintretende Intensität,
+$l$ die optische Weglänge und $\epsilon^*$ der natürliche molare Absorptionskoeffizient.
+\formel{a1}{I = I_{0} \cdot \mathrm{e}^{-\epsilon^* \cdot c \cdot l}}
+\formel{a2}{\ln(\frac{I}{I_{0}}) = -\epsilon^* \cdot c \cdot l}
+
+Da es allerdings gängig ist, den dekadischen Logarithmus zu verwenden, wird der dekadische molare Absorptionskoeffizient $\epsilon$ eingeführt:
+\formel{zusatz}{\epsilon^* = \epsilon \cdot \ln(10)}
+\formel{a3}{\lg(\frac{I}{I_{0}}) = -\epsilon \cdot c \cdot l}
+
+Der logarithmische Term wird als die Extintion bzw. als die Absorbanz $A$ definiert,
+welche als Maß für das absorbierte (und ebenfalls auch gebeugte und gestreute) Licht fungiert.
+\formel{a4}{A = \lg(\frac{I_{0}}{I}) = \epsilon \cdot c \cdot l}
+
+Jede lichtabsorbierende Substanz besitzt dementsprechend einen molaren Absorptionskoeffizienten.
+Je nach optischer Weglänge und Konzentration bildet sich ein Verhältnis zwischen dem eintretenden und transmittierten Licht, wie in \prettyref{fig: LBG.png} schematisch dargestellt.
+
+\bild
+		{LBG.png}					%Dateiname des Bildes, eindeutiger Name des Bildes, Verweis: \prettyref{fig: Bildname}
+		{Schema zur Veranschaulichung des Lambert-Beerschen Gesetzes.%Text, der unter dem Bild erscheint
+		\zitat{LBG}}			%Name der Quelle im Literaturverzeichnis
+		{scale=0.1}		%angle, draft, scale, height, width
+		{h}				%h: here, t: top, b: bottom, p: page; bestimmt, wo das Bild eingefügt wird.
+
+\newpage
+
+Je mehr Licht also absorbiert wird, desto geringer ist die Intensität, welche im Detektor registriert wird.
+Dabei ist es wichtig anzumerken, dass die Messung keineswegs eine absolute Angabe über eine Lösung liefert.
+Bei einer Messung (in dem Fall mit einem Perkin Elmer Lambda 25 Spektrometer) werden zugleich zwei Proben untersucht,
+dabei ist eine Probe eine 'substanzfreie' Lösung, welche die zu untersuchende Substanz nicht beinhaltet und deshalb als Nullabgleich fungiert.
+Das liegt an der Tatsache, dass die Küvettenwände und andere Substanzen in der Lösung ebenfalls Licht absorbieren.
+In diesem Versuch werden demnach alle gemessenen Absorbanzen von Eisen(II)-Komplexen mit der eisenfreien Lösung verglichen,
+indem die Absorbanz des Nullabgleichs -- welcher wie alle anderen Proben Phenanthrolin, Natriumacetat und Ascorbinsäure enthält -- von den gemessenen Absorbanzen abgezogen wird.
+Damit werden mögliche Verfälschungen ausgeschlossen und es wird ausschließlich die Absorption der zu vergleichenden Substanz erfasst.\zitat{kp2}
+
+Da freie Eisen(II)-Ionen im sichtbaren Spektralbereich Licht nur geringfügig absorbieren, ist einer direkte photometrische Messung nicht sinnvoll.
+Durch eine Komplexierung werden diese in eine farbige Verbindung überführt.
+Durch L-Ascorbinsäure als Reduktionsmittel wird sichergestellt, dass Eisen nicht in Form von \ce{Fe^3+} vorliegt.
+Damit die Lösung begüglich der pH-Wertes stabil gehalten wird, wird ebenfalls Natriumacetat \ce{NaCH3COO} dazugegeben.
+Natriumacetat fungiert dabei als Puffer, sodass kein schwerlösliches Eisen(III)-hydroxid ausfällt.
+\cformel[c1]{{Fe^{3+}}_{(aq)} + {3OH^{-}}_{(aq)} -> Fe(OH)3_{(s)}\ce{v}}
+
+Der eigentliche Komplex wird mithilfe von 1,10-Phenanthrolin-Monohydrat (\ce{C12H8N2.H2O}) erzeugt.
+Dieses reagiert mit Eisen(II) zu einem Tris(1,10-phenanthrolin)-eisen(II)-Komplex, einem Ferroin-Komplex:
+\cformel[c2]{3C12H8N2_{(aq)} + {Fe^{2+}}_{(aq)} -> [Fe(C12H8N2)3]^{2+}_{(aq)}}
+
+
+
+
 \subsubsection{Experimenteller Teil}
 
 \subsubsection{Ergebnisse und Diskussion}
@@ -303,6 +356,30 @@ Entsorgung: \\
 
 \begin{thebibliography}{4} %manuelles Quellenverzeichnis
 
+
+	\bibitem{kp}
+						{M. Otto}, 
+			\textit	{Analytische Chemie}, 
+						{4. Auflage}, 
+						{Wiley-VCH}, 
+						{Weinheim}, 
+			\textbf	{2011}, 
+			S.			{232-235}.
+
+	\bibitem{kp2}
+						{G. Jander, K. Jahr}, 
+			\textit	{Maßanalyse}, 
+						{17. Auflage}, 
+						{Walter de Gruyter}, 
+						{Berlin}, 
+			\textbf	{209}, 
+			S.			{218-219}.
+
+	\bibitem{LBG}
+						{Wikiwand}, 
+						„{Lay de Beer-Lambert}“, zu finden unter 
+			\url		{https://www.wikiwand.com/es/Ley_de_Beer-Lambert}, 
+			\textbf	{18.11.2026}.
 
 	\bibitem{test}
 						{DGUV}, 
